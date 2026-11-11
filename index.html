@@ -112,6 +112,15 @@ details p{margin:0 0 16px;color:var(--soft)}
 .bus{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
 .bus span{border:1.5px solid var(--moss);border-radius:8px;padding:1px 9px;font-size:15px;font-weight:700}
 .trail .who a{color:var(--forest)}
+.mrt-h{margin:22px 0 6px;font-size:20px;color:var(--ink)}
+.mrt{display:block;width:100%;height:auto;margin:4px 0}
+.mrt .lb{display:inline;position:static;background:none;padding:0;overflow:visible;font-size:12.5px;fill:var(--ink);text-anchor:middle;font-family:"Noto Sans TC",sans-serif}
+.mrt .lb.goal{font-size:15px;font-weight:700}
+.mrt .dir{font-size:12px;fill:var(--soft);text-anchor:end;font-family:"Noto Sans TC",sans-serif}
+.xfer{list-style:none;margin:6px 0 0;padding:0}
+.xfer li{padding:5px 0;display:flex;gap:10px;align-items:baseline}
+.xfer i{flex:none;width:12px;height:12px;border-radius:50%;display:inline-block;transform:translateY(1px)}
+.mrt-btn{margin-top:12px}
 .contact{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:16px}
 
 /* sticky bar */
@@ -185,6 +194,63 @@ details p{margin:0 0 16px;color:var(--soft)}
         <div class="what">下山解散</div>
         <span class="who">騎車的朋友：回到原步道入口<br>搭捷運的朋友：一起走到捷運劍潭站</span></li>
     </ol>
+  </section>
+
+  <section>
+    <h2>搭捷運怎麼去、怎麼回家</h2>
+    <p class="lead">不常搭捷運也沒關係。按下面的按鈕，Google Maps 會從你現在的位置，一步步帶你到大直站。</p>
+    <a class="btn primary mrt-btn" href="https://www.google.com/maps/dir/?api=1&destination=捷運大直站&travelmode=transit" target="_blank" rel="noopener">🚇 從我這裡到大直站</a>
+
+    <h3 class="mrt-h">去程：棕色「文湖線」到大直站</h3>
+    <svg class="mrt" viewBox="0 0 360 92" role="img" aria-label="文湖線：忠孝復興、南京復興、中山國中、松山機場、大直">
+      <text class="dir" x="356" y="14">往 南港展覽館 方向 →</text>
+      <line x1="28" y1="44" x2="332" y2="44" stroke="#C48C31" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="28" cy="26" r="5" fill="#0070BD"/>
+      <circle cx="104" cy="26" r="5" fill="#008659"/>
+      <circle cx="28" cy="44" r="7" fill="#fff" stroke="#C48C31" stroke-width="3"/>
+      <circle cx="104" cy="44" r="7" fill="#fff" stroke="#C48C31" stroke-width="3"/>
+      <circle cx="180" cy="44" r="7" fill="#fff" stroke="#C48C31" stroke-width="3"/>
+      <circle cx="256" cy="44" r="7" fill="#fff" stroke="#C48C31" stroke-width="3"/>
+      <circle cx="332" cy="44" r="11" fill="#C48C31" stroke="#fff" stroke-width="3"/>
+      <text class="lb" x="28" y="76">忠孝復興</text>
+      <text class="lb" x="104" y="76">南京復興</text>
+      <text class="lb" x="180" y="76">中山國中</text>
+      <text class="lb" x="256" y="76">松山機場</text>
+      <text class="lb goal" x="332" y="78">大直</text>
+    </svg>
+    <ul class="xfer">
+      <li><i style="background:#E3002C"></i><span>坐<b>紅線</b>：在「大安站」換棕線</span></li>
+      <li><i style="background:#0070BD"></i><span>坐<b>藍線</b>：在「忠孝復興站」換棕線</span></li>
+      <li><i style="background:#008659"></i><span>坐<b>綠線</b>：在「南京復興站」換棕線</span></li>
+      <li><i style="background:#C48C31"></i><span>出站走 <b>1 號出口</b>，13:20 大家在這裡集合</span></li>
+    </ul>
+
+    <h3 class="mrt-h">回程：從劍潭站搭紅色「淡水信義線」</h3>
+    <svg class="mrt" viewBox="0 0 360 92" role="img" aria-label="淡水信義線：劍潭、圓山、民權西路、雙連、中山、台北車站">
+      <text class="dir" x="356" y="14">往 象山 方向 →</text>
+      <line x1="26" y1="44" x2="334" y2="44" stroke="#E3002C" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="149" cy="26" r="5" fill="#F8B61C"/>
+      <circle cx="272" cy="26" r="5" fill="#008659"/>
+      <circle cx="334" cy="26" r="5" fill="#0070BD"/>
+      <circle cx="26" cy="44" r="11" fill="#E3002C" stroke="#fff" stroke-width="3"/>
+      <circle cx="88" cy="44" r="7" fill="#fff" stroke="#E3002C" stroke-width="3"/>
+      <circle cx="149" cy="44" r="7" fill="#fff" stroke="#E3002C" stroke-width="3"/>
+      <circle cx="211" cy="44" r="7" fill="#fff" stroke="#E3002C" stroke-width="3"/>
+      <circle cx="272" cy="44" r="7" fill="#fff" stroke="#E3002C" stroke-width="3"/>
+      <circle cx="334" cy="44" r="7" fill="#fff" stroke="#E3002C" stroke-width="3"/>
+      <text class="lb goal" x="26" y="78">劍潭</text>
+      <text class="lb" x="88" y="76">圓山</text>
+      <text class="lb" x="149" y="76">民權西路</text>
+      <text class="lb" x="211" y="76">雙連</text>
+      <text class="lb" x="272" y="76">中山</text>
+      <text class="lb" x="334" y="76">台北車站</text>
+    </svg>
+    <ul class="xfer">
+      <li><i style="background:#F8B61C"></i><span>要轉<b>橘線</b>：在「民權西路站」換</span></li>
+      <li><i style="background:#008659"></i><span>要轉<b>綠線</b>：在「中山站」換</span></li>
+      <li><i style="background:#0070BD"></i><span>要轉<b>藍線</b>：在「台北車站」換</span></li>
+    </ul>
+    <a class="btn mrt-btn" style="width:100%" href="https://www.google.com/maps/dir/?api=1&origin=捷運劍潭站&travelmode=transit" target="_blank" rel="noopener">🏠 從劍潭站回家怎麼搭</a>
   </section>
 
   <section>
