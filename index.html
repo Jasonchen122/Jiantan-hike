@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>一起走入城市秘境｜11/21 大直劍潭山步道</title>
-<meta name="description" content="11/21（六）13:30 下午輕鬆走劍潭山，到老地方觀機平台看台北。報名截止 11/19（四）。">
+<meta name="description" content="11/21（六）13:30 下午輕鬆走劍潭山，到老地方觀機平台看台北。報名截止 11/20（五）17:00。">
 <meta property="og:title" content="一起走入城市秘境｜11/21 大直劍潭山步道">
-<meta property="og:description" content="11/21（六）13:30 下午輕鬆走劍潭山，到老地方觀機平台看台北。報名截止 11/19（四）。">
+<meta property="og:description" content="11/21（六）13:30 下午輕鬆走劍潭山，到老地方觀機平台看台北。報名截止 11/20（五）17:00。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jasonchen122.github.io/Jiantan-hike/">
 <meta property="og:image" content="https://jasonchen122.github.io/Jiantan-hike/og.jpg">
@@ -42,40 +42,40 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
-  font-size:17px;line-height:1.7;-webkit-text-size-adjust:100%}
-.wrap{max-width:560px;margin:0 auto;padding-bottom:96px}
+  font-size:calc(17px*var(--fs,1));line-height:1.7;-webkit-text-size-adjust:100%}
+.wrap{max-width:560px;margin:0 auto;padding-bottom:calc(96px*var(--fs,1))}
 h1,h2,h3,.round{font-family:"Huninn","Noto Sans TC","PingFang TC",sans-serif;font-weight:400}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--maple);outline-offset:3px;border-radius:6px}
 
-.demo-note{margin:12px 16px 0;font-size:14px;color:var(--soft)}
+.demo-note{margin:12px 16px 0;font-size:calc(14px*var(--fs,1));color:var(--soft)}
 .tbd{background:var(--tbd-bg);color:var(--tbd-ink);padding:1px 7px;border-radius:6px;font-weight:500;white-space:nowrap}
 
 /* hero */
 .hero{position:relative;margin:12px 12px 0;border-radius:22px;overflow:hidden;background:#000;aspect-ratio:16/9}
 .hero video{display:block;width:100%;height:100%;object-fit:cover}
 .sound{position:absolute;right:10px;bottom:10px;border:0;border-radius:999px;padding:7px 14px;
-  background:rgba(0,0,0,.55);color:#fff;font:inherit;font-size:14px;cursor:pointer}
+  background:rgba(0,0,0,.55);color:#fff;font:inherit;font-size:calc(14px*var(--fs,1));cursor:pointer}
 .title{padding:22px 20px 4px}
 .title h1{margin:0;font-size:clamp(38px,11vw,52px);line-height:1.15;color:var(--trail);letter-spacing:.02em}
-.title p{margin:8px 0 0;font-size:18px;color:var(--soft)}
+.title p{margin:8px 0 0;font-size:calc(18px*var(--fs,1));color:var(--soft)}
 
 /* key facts */
 .facts{margin:18px 16px 0;background:var(--surface);border-radius:20px;padding:20px;border:1px solid var(--rule)}
 .when{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.when .d{font-size:30px;color:var(--forest)}
-.when .t{font-size:44px;line-height:1;color:var(--ink)}
-.where{margin:6px 0 0;font-size:18px}
+.when .d{font-size:calc(30px*var(--fs,1));color:var(--forest)}
+.when .t{font-size:calc(44px*var(--fs,1));line-height:1;color:var(--ink)}
+.where{margin:6px 0 0;font-size:calc(18px*var(--fs,1))}
 .deadline{display:flex;align-items:center;gap:10px;margin-top:14px;padding:10px 14px;border-radius:12px;
   background:color-mix(in srgb,var(--maple) 14%,transparent);color:var(--ink)}
-.deadline b{color:var(--maple);font-size:20px}
+.deadline b{color:var(--maple);font-size:calc(20px*var(--fs,1))}
 .btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
 .btn{display:flex;align-items:center;justify-content:center;gap:6px;min-height:52px;padding:10px 12px;border-radius:14px;
-  text-decoration:none;font-weight:700;font-size:16px;border:2px solid var(--forest);color:var(--forest);background:transparent;cursor:pointer;font-family:inherit}
-.btn.primary{grid-column:1/-1;background:var(--forest);color:var(--bg);font-size:18px}
+  text-decoration:none;font-weight:700;font-size:calc(16px*var(--fs,1));border:2px solid var(--forest);color:var(--forest);background:transparent;cursor:pointer;font-family:inherit}
+.btn.primary{grid-column:1/-1;background:var(--forest);color:var(--bg);font-size:calc(18px*var(--fs,1))}
 
 section{margin:34px 20px 0}
-section h2{margin:0 0 10px;font-size:26px;color:var(--forest)}
+section h2{margin:0 0 10px;font-size:calc(26px*var(--fs,1));color:var(--forest)}
 .lead{margin:0;color:var(--ink)}
 
 /* trail timeline */
@@ -87,32 +87,32 @@ section h2{margin:0 0 10px;font-size:26px;color:var(--forest)}
 .dot{position:absolute;left:4px;top:4px;width:26px;height:26px;border-radius:50%;background:var(--surface);
   border:4px solid var(--moss)}
 .trail li.goal .dot{border-color:var(--maple);background:var(--maple)}
-.trail .tm{font-weight:700;color:var(--trail);font-size:15px}
-.trail .what{font-size:18px;font-weight:700;line-height:1.45}
-.trail .who{display:inline-block;margin-top:4px;font-size:14px;color:var(--soft)}
+.trail .tm{font-weight:700;color:var(--trail);font-size:calc(15px*var(--fs,1))}
+.trail .what{font-size:calc(18px*var(--fs,1));font-weight:700;line-height:1.45}
+.trail .who{display:inline-block;margin-top:4px;font-size:calc(14px*var(--fs,1));color:var(--soft)}
 
 /* faq */
 details{border-bottom:1px solid var(--rule)}
 details:first-of-type{border-top:1px solid var(--rule)}
-summary{list-style:none;cursor:pointer;padding:15px 34px 15px 0;font-weight:700;font-size:17px;position:relative}
+summary{list-style:none;cursor:pointer;padding:15px 34px 15px 0;font-weight:700;font-size:calc(17px*var(--fs,1));position:relative}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:24px;color:var(--moss);font-weight:400}
+summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:calc(24px*var(--fs,1));color:var(--moss);font-weight:400}
 details[open] summary::after{content:"−"}
 details p{margin:0 0 16px;color:var(--soft)}
 
 .gear{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.gear span{background:var(--sky);padding:6px 14px;border-radius:999px;font-size:16px}
+.gear span{background:var(--sky);padding:6px 14px;border-radius:999px;font-size:calc(16px*var(--fs,1))}
 
 .poster-btn{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:16px;overflow:hidden}
 .poster-btn img{display:block;width:100%;height:auto}
-.hint{font-size:14px;color:var(--soft);margin-top:6px}
+.hint{font-size:calc(14px*var(--fs,1));color:var(--soft);margin-top:6px}
 
-.how{margin:14px 0 0;font-size:17px}
+.how{margin:14px 0 0;font-size:calc(17px*var(--fs,1))}
 .how b{color:var(--forest)}
 .bus{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
-.bus span{border:1.5px solid var(--moss);border-radius:8px;padding:1px 9px;font-size:15px;font-weight:700}
+.bus span{border:1.5px solid var(--moss);border-radius:8px;padding:1px 9px;font-size:calc(15px*var(--fs,1));font-weight:700}
 .trail .who a{color:var(--forest)}
-.mrt-h{margin:22px 0 6px;font-size:20px;color:var(--ink)}
+.mrt-h{margin:22px 0 6px;font-size:calc(20px*var(--fs,1));color:var(--ink)}
 .mrt{display:block;width:100%;height:auto;margin:4px 0}
 .mrt .lb{display:inline;position:static;background:none;padding:0;overflow:visible;font-size:12.5px;fill:var(--ink);text-anchor:middle;font-family:"Noto Sans TC",sans-serif}
 .mrt .lb.goal{font-size:15px;font-weight:700}
@@ -121,43 +121,69 @@ details p{margin:0 0 16px;color:var(--soft)}
 .xfer li{padding:5px 0;display:flex;gap:10px;align-items:baseline}
 .xfer i{flex:none;width:12px;height:12px;border-radius:50%;display:inline-block;transform:translateY(1px)}
 .mrt-btn{margin-top:12px}
+[hidden]{display:none !important}
 .card{background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:18px}
 .f{display:block;margin:0 0 16px;font-weight:700;border:0;padding:0}
-.f input:not([type=radio]),.f select,.pwin{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-weight:400;font-size:17px;color:var(--ink);background:var(--bg);border:1.5px solid var(--rule);border-radius:12px}
+.f input:not([type=radio]),.f select,.pwin{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-weight:400;font-size:calc(17px*var(--fs,1));color:var(--ink);background:var(--bg);border:1.5px solid var(--rule);border-radius:12px}
 .f input:focus,.f select:focus{border-color:var(--forest);outline:none}
 legend{padding:0;margin-bottom:6px}
 .opt{display:flex;align-items:center;gap:10px;font-weight:400;padding:10px 12px;border:1.5px solid var(--rule);border-radius:12px;margin-top:8px;cursor:pointer}
 .opt input{width:20px;height:20px;accent-color:var(--forest);flex:none}
 .opt:has(input:checked){border-color:var(--forest);background:color-mix(in srgb,var(--forest) 9%,transparent)}
-.opt small{color:var(--soft);font-size:14px}
+.opt small{color:var(--soft);font-size:calc(14px*var(--fs,1))}
 #srcNote{margin-top:8px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.err{color:#C0392B;min-height:1em;margin:0 0 10px;font-size:15px}
-.privacy{font-size:13px;color:var(--soft);margin:10px 0 0;text-align:center}
-.done{text-align:center}.big-ok{font-size:44px}.done h3{margin:4px 0;font-size:26px;color:var(--forest)}
+.err{color:#C0392B;min-height:1em;margin:0 0 10px;font-size:calc(15px*var(--fs,1))}
+.privacy{font-size:calc(13px*var(--fs,1));color:var(--soft);margin:10px 0 0;text-align:center}
+.done{text-align:center}.big-ok{font-size:calc(44px*var(--fs,1))}.done h3{margin:4px 0;font-size:calc(26px*var(--fs,1));color:var(--forest)}
 .closed{color:var(--soft);margin:0}
-.demo-foot{font-size:13px;color:var(--soft);text-align:center;margin:30px 16px 0}
+.demo-foot{font-size:calc(13px*var(--fs,1));color:var(--soft);text-align:center;margin:30px 16px 0}
 .admin{position:fixed;inset:0;z-index:30;background:var(--bg);overflow:auto;padding:calc(12px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
 .admin-in{max-width:620px;margin:0 auto}
 .ahead{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.ahead h2{margin:8px 0;color:var(--forest);font-size:26px}
-.btn.small{min-height:40px;font-size:14px;padding:6px 12px}
+.ahead h2{margin:8px 0;color:var(--forest);font-size:calc(26px*var(--fs,1))}
+.btn.small{min-height:40px;font-size:calc(14px*var(--fs,1));padding:6px 12px}
 .btn.danger{border-color:#C0392B;color:#C0392B}
 .btn:disabled{opacity:.6}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
 .stats div{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:12px;text-align:center}
-.stats b{display:block;font-size:32px;color:var(--forest);font-family:"Huninn",sans-serif;font-weight:400;line-height:1.2}
-.stats span{font-size:14px;color:var(--soft)}
+.stats b{display:block;font-size:calc(32px*var(--fs,1));color:var(--forest);font-family:"Huninn",sans-serif;font-weight:400;line-height:1.2}
+.stats span{font-size:calc(14px*var(--fs,1));color:var(--soft)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{background:var(--sky);border-radius:999px;padding:4px 12px;font-size:15px}
+.chips span{background:var(--sky);border-radius:999px;padding:4px 12px;font-size:calc(15px*var(--fs,1))}
 .row{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:12px 14px;margin-bottom:8px;display:grid;grid-template-columns:1fr auto;gap:2px 10px}
-.row .nm{font-weight:700;font-size:18px}
-.row .md{justify-self:end;font-size:14px;padding:2px 10px;border-radius:999px;background:color-mix(in srgb,var(--forest) 12%,transparent);color:var(--forest);align-self:start}
+.row .nm{font-weight:700;font-size:calc(18px*var(--fs,1))}
+.row .md{justify-self:end;font-size:calc(14px*var(--fs,1));padding:2px 10px;border-radius:999px;background:color-mix(in srgb,var(--forest) 12%,transparent);color:var(--forest);align-self:start}
 .row .md.bike{background:color-mix(in srgb,var(--maple) 15%,transparent);color:var(--maple)}
-.row .sub{grid-column:1/-1;font-size:14px;color:var(--soft)}
+.row .sub{grid-column:1/-1;font-size:calc(14px*var(--fs,1));color:var(--soft)}
 .row a{color:var(--forest)}
 .abtns{display:grid;gap:10px;margin-top:16px}
 .empty{color:var(--soft);text-align:center;padding:20px}
+.mine-h{margin:0 0 8px;font-weight:700;color:var(--forest)}
+.my{background:var(--surface);border:2px solid var(--forest);border-radius:16px;padding:14px;margin-bottom:10px}
+.my .who{font-weight:700;font-size:calc(18px*var(--fs,1))}
+.my .meta{color:var(--soft);font-size:calc(15px*var(--fs,1));margin:2px 0 10px}
+.my .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.my .acts .btn{min-height:44px;font-size:calc(15px*var(--fs,1))}
+#mine{margin-bottom:14px}
+.editbar{display:flex;justify-content:space-between;align-items:center;background:var(--tbd-bg);color:var(--tbd-ink);border-radius:10px;padding:8px 12px;margin-bottom:14px;font-weight:700}
+.linkbtn{background:none;border:0;padding:6px 0;font:inherit;color:var(--forest);text-decoration:underline;cursor:pointer}
+.editbar .linkbtn{color:inherit}
+.lookup-link{text-align:center;margin:12px 0 0}
+#lookup{margin-top:8px}
+.row.off{opacity:.55}.row.off .nm{text-decoration:line-through}
+.tag{font-size:calc(12px*var(--fs,1));padding:1px 8px;border-radius:999px;background:var(--tbd-bg);color:var(--tbd-ink);margin-left:6px;font-weight:400}
+.foot-admin{text-align:center;margin:28px 0 0;font-size:calc(13px*var(--fs,1))}
+.foot-admin a{color:var(--soft)}
+.dstat{margin:2px 0 0;font-size:calc(15px*var(--fs,1));color:var(--maple);font-weight:700}
+.bar2{display:flex;height:34px;border-radius:10px;overflow:hidden;background:var(--rule)}
+.bar2 span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:calc(14px*var(--fs,1));font-weight:700;white-space:nowrap;min-width:0}
+.legend{display:flex;justify-content:space-between;font-size:calc(14px*var(--fs,1));color:var(--soft);margin-top:4px}
+.hb{display:grid;grid-template-columns:minmax(0,7.5em) 1fr auto;align-items:center;gap:10px;margin:8px 0;font-size:calc(15px*var(--fs,1))}
+.hb .tr{height:14px;border-radius:7px;background:var(--rule);overflow:hidden}
+.hb .tr i{display:block;height:100%;border-radius:7px;background:var(--moss)}
+.hb b{text-align:right;font-weight:700}
+.hb .lbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .contact{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:16px}
 
 /* sticky bar */
@@ -175,13 +201,27 @@ legend{padding:0;margin-bottom:6px}
 .lb img{display:block;max-width:100%;margin:0 auto}
 .lb button{position:sticky;top:0;float:right;border:0;border-radius:999px;padding:8px 16px;background:#fff;color:#000;font:inherit;font-weight:700}
 .toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:var(--bg);
-  padding:8px 16px;border-radius:999px;font-size:15px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
+  padding:8px 16px;border-radius:999px;font-size:calc(15px*var(--fs,1));opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
 .toast.on{opacity:1}
 @media (prefers-reduced-motion:reduce){.toast{transition:none}}
+
+.fsbar{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin:10px 12px 0;flex-wrap:wrap}
+.fsbar>span{font-size:calc(14px*var(--fs,1));color:var(--soft);margin-right:2px}
+.fsbar button{font:inherit;font-size:calc(15px*var(--fs,1));font-weight:700;min-height:36px;padding:2px 12px;border-radius:999px;border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer}
+.fsbar button[aria-pressed="true"]{background:var(--forest);border-color:var(--forest);color:var(--bg)}
+.btn{text-align:center;line-height:1.3}
+.when .d,.when .t{white-space:nowrap}
+.row .nm,.row .sub{min-width:0;overflow-wrap:anywhere}
+.ahead{flex-wrap:wrap}
+.title h1{font-size:clamp(30px,9.4vw,52px)}
+.deadline{flex-wrap:wrap;column-gap:10px;row-gap:0}
+.bar .in{grid-template-columns:auto 1fr}
+.bar .btn{white-space:nowrap;font-size:calc(16px*min(var(--fs,1),1.15));padding:10px 14px}
 </style>
 </head>
 <body>
 <div class="wrap">
+<div class="fsbar" role="group" aria-label="字體大小"><span>字體大小</span><button type="button" data-fs="1" aria-pressed="true">標準</button><button type="button" data-fs="1.2" aria-pressed="false">大</button><button type="button" data-fs="1.4" aria-pressed="false">特大</button></div>
   
   <div class="hero">
     <video id="vid" src="video.mp4" poster="video-cover.jpg" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="活動邀請短片"></video>
@@ -196,7 +236,7 @@ legend{padding:0;margin-bottom:6px}
   <div class="facts">
     <div class="when"><span class="d round">11/21（六）</span><span class="t round">13:30</span></div>
     <p class="where">大直劍潭山步道，終點老地方觀機平台<br>約 16:30 結束</p>
-    <div class="deadline">報名截止 11/19（四）<b id="countdown"></b></div>
+    <div class="deadline">報名截止 11/20（五）17:00 <b id="countdown"></b></div>
     <p class="how">想參加？填一下報名資料，<b>30 秒完成</b>。</p>
     <div class="btns">
       <a class="btn primary" href="#signup" data-go="signup">✍️ 我要報名</a>
@@ -293,8 +333,15 @@ legend{padding:0;margin-bottom:6px}
 
   <section id="signup-sec">
     <h2>報名</h2>
+    <div id="mine" hidden>
+      <p class="mine-h">你在這支手機上的報名</p>
+      <div id="mineList"></div>
+      <button class="btn" type="button" id="addMore" hidden style="width:100%">＋ 再幫另一組報名</button>
+    </div>
+    <p class="closed card" id="closedMsg" hidden>新報名已截止，謝謝大家！已報名的朋友仍可修改或取消。</p>
     <div class="card" id="formCard">
       <form id="form" novalidate>
+        <div class="editbar" id="editBar" hidden><span>✏️ 正在修改報名</span><button type="button" class="linkbtn" id="cancelEdit">不改了</button></div>
         <label class="f">姓名<input name="name" autocomplete="name" required maxlength="30"></label>
         <label class="f">手機<input name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="0912345678" required maxlength="12"></label>
         <label class="f">總共幾位（含自己）
@@ -318,6 +365,14 @@ legend{padding:0;margin-bottom:6px}
         <p class="privacy">你的資料只給這次活動聯絡用，活動結束後會刪除。</p>
       </form>
     </div>
+    <p class="lookup-link"><button type="button" class="linkbtn" id="openLookup">已經報名過，想修改或取消？</button></p>
+    <div class="card" id="lookup" hidden>
+      <p style="margin:0 0 8px">輸入報名時填的<b>手機</b>和<b>姓名</b>，就能找到你的報名。</p>
+      <label class="f">手機<input id="lkPhone" type="tel" inputmode="numeric" placeholder="0912345678" maxlength="12"></label>
+      <label class="f">姓名<input id="lkName" maxlength="30"></label>
+      <p class="err" id="lkErr" role="alert"></p>
+      <button class="btn primary" type="button" id="lkGo" style="width:100%">找我的報名</button>
+    </div>
     <div class="card done" id="done" hidden>
       <div class="big-ok">🎉</div>
       <h3 class="round">報名成功！</h3>
@@ -329,7 +384,8 @@ legend{padding:0;margin-bottom:6px}
 
   <section>
     <h2>新朋友常問</h2>
-    <details><summary>怎麼報名？</summary><p>在這頁下方「報名」填寫資料就完成了，家人朋友一起來的話，填一次並選同行人數即可。11/19（四）前報名。</p></details>
+    <details><summary>報名後想修改或取消？</summary><p>回到這個網頁，在「報名」區塊就會看到你的報名，可以直接修改或取消。換了手機也沒關係，點「已經報名過，想修改或取消？」輸入手機和姓名就能找回。11/21（六）中午 12:00 前都可以改。</p></details>
+    <details><summary>怎麼報名？</summary><p>在這頁下方「報名」填寫資料就完成了，家人朋友一起來的話，填一次並選同行人數即可。11/20（五）下午 5 點前報名。</p></details>
     <details><summary>下雨怎麼辦？</summary><p>11/20（五）18:00 若預報會下雨就取消，會在 LINE 社群公告。</p></details>
     <details><summary>要帶什麼？</summary>
       <div class="gear"><span>好走的鞋</span><span>足夠的水</span><span>想分享的零食</span></div><p></p></details>
@@ -343,6 +399,7 @@ legend{padding:0;margin-bottom:6px}
 
 </div>
 
+<p class="foot-admin"><a href="#admin">主辦人後台</a></p>
 <nav class="bar" aria-label="快速動作">
   <div class="in">
     <button class="btn share" type="button" id="share"><i></i>分享給朋友</button>
@@ -366,8 +423,13 @@ legend{padding:0;margin-bottom:6px}
         <div><b id="sBike">0</b><span>騎車</span></div>
       </div>
       <p class="hint" id="sRows"></p>
-      <h3 class="mrt-h">從哪裡知道（人數）</h3>
-      <div id="srcStat" class="chips"></div>
+      <p class="dstat" id="dStat"></p>
+      <h3 class="mrt-h">集合方式</h3>
+      <div id="modeBar"></div>
+      <h3 class="mrt-h">怎麼知道這個活動（人數）</h3>
+      <div id="srcStat"></div>
+      <div id="refBox" hidden><h3 class="mrt-h">朋友邀請：誰帶來最多人</h3><div id="refStat"></div></div>
+      <div id="otherBox" hidden><h3 class="mrt-h">「其他」的說明</h3><div id="otherStat" class="chips"></div></div>
       <h3 class="mrt-h">報名名單</h3>
       <div id="list"></div>
       <div class="abtns">
@@ -384,7 +446,7 @@ legend{padding:0;margin-bottom:6px}
 <script>
 (function(){
   // countdown (Taipei time)
-  var dl = new Date("2026-11-19T23:59:59+08:00");
+  var dl = new Date("2026-11-20T17:00:00+08:00");
   var days = Math.ceil((dl - new Date()) / 86400000);
   document.getElementById("countdown").textContent = days > 0 ? "還有 " + days + " 天" : "已截止";
 
@@ -400,7 +462,7 @@ legend{padding:0;margin-bottom:6px}
 
   // share to LINE
   document.getElementById("share").addEventListener("click",function(){
-    var msg = "11/21（六）下午一起走劍潭山！13:30 出發，到老地方觀機平台看台北 🌿\n點連結就能報名（11/19 截止）：\n" + location.href.split("#")[0];
+    var msg = "11/21（六）下午一起走劍潭山！13:30 出發，到老地方觀機平台看台北 🌿\n點連結就能報名（11/20 下午 5 點截止）：\n" + location.href.split("#")[0];
     location.href = "https://line.me/R/share?text=" + encodeURIComponent(msg);
   });
 
@@ -411,46 +473,114 @@ legend{padding:0;margin-bottom:6px}
 
   // ===== 報名 =====
   var API_URL = "https://script.google.com/macros/s/AKfycbw1lARt4ddmuFRadPbglRrmcnI3hl6JDkxUd1N2wTX7h22JICP9LtBDd7EysbJsuh-p4A/exec"; // 空白 = 示範模式（資料只存在這支手機）
-  var KEY="jt-signups-demo", mem=[];
+  var EDIT_DEADLINE = new Date("2026-11-21T12:00:00+08:00");
+  var KEY="jt-signups-demo", MYKEY="jt-my-signups", mem=[], myMem=[];
   function dLoad(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){return mem}}
   function dSave(a){mem=a;try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
+  function myLoad(){try{return JSON.parse(localStorage.getItem(MYKEY)||"[]")}catch(e){return myMem}}
+  function mySave(a){myMem=a;try{localStorage.setItem(MYKEY,JSON.stringify(a))}catch(e){}}
+  function tok(){var s="",c="abcdefghijkmnpqrstuvwxyz23456789";for(var i=0;i<20;i++)s+=c[Math.floor(Math.random()*c.length)];return s}
+  var FIELDS=["name","phone","count","src","note","mode"];
+  function pub(r){var o={token:r.token};FIELDS.forEach(function(k){o[k]=r[k]});o.status=r.status;return o}
+  function demoApi(b){
+    var a=dLoad(), now=new Date().toISOString(), i;
+    function find(t){for(var j=0;j<a.length;j++) if(a[j].token===t) return j; return -1}
+    if(b.action==="signup"){var r={token:tok(),at:now,updated:"",status:"ok"};FIELDS.forEach(function(k){r[k]=b[k]});a.push(r);dSave(a);return {ok:true,token:r.token}}
+    if(b.action==="get"){i=find(b.token);return i<0?{ok:false,error:"找不到報名"}:{ok:true,rec:pub(a[i])}}
+    if(b.action==="update"){i=find(b.token);if(i<0)return {ok:false,error:"找不到報名"};FIELDS.forEach(function(k){a[i][k]=b[k]});a[i].updated=now;a[i].status="ok";dSave(a);return {ok:true}}
+    if(b.action==="cancel"){i=find(b.token);if(i<0)return {ok:false,error:"找不到報名"};a[i].status="cancelled";a[i].updated=now;dSave(a);return {ok:true}}
+    if(b.action==="find"){var t=a.filter(function(r){return r.phone===b.phone&&r.name===b.name&&r.status==="ok"}).map(function(r){return r.token});return t.length?{ok:true,tokens:t}:{ok:false,error:"找不到符合的報名，請確認手機和姓名跟報名時一樣"}}
+    if(b.action==="list"){return b.password==="1121"?{ok:true,rows:a}:{ok:false,error:"密碼不正確"}}
+    return {ok:false,error:"未知的動作"};
+  }
   function api(body){
-    if(!API_URL){
-      if(body.action==="signup"){var a=dLoad();body.at=new Date().toISOString();a.push(body);dSave(a);return Promise.resolve({ok:true});}
-      if(body.action==="list"){return Promise.resolve(body.password==="1121"?{ok:true,rows:dLoad()}:{ok:false,error:"密碼不正確"});}
-    }
+    if(!API_URL) return Promise.resolve(demoApi(JSON.parse(JSON.stringify(body))));
     return fetch(API_URL,{method:"POST",body:JSON.stringify(body)}).then(function(r){return r.json()});
   }
-  var closed = new Date() > dl;
-  var form=document.getElementById("form"), err=document.getElementById("err"), srcNote=document.getElementById("srcNote");
-  if(closed){document.getElementById("formCard").innerHTML='<p class="closed">報名已截止，謝謝大家！</p>';}
+  var closed = new Date() > dl, editClosed = new Date() > EDIT_DEADLINE, editing=null;
+  var form=document.getElementById("form"), err=document.getElementById("err"), srcNote=document.getElementById("srcNote"),
+      formCard=document.getElementById("formCard"), done=document.getElementById("done"), btn=document.getElementById("submitBtn");
+  function showForm(){ formCard.hidden = closed && !editing; document.getElementById("closedMsg").hidden = !(closed && !editing); }
+  showForm();
+  if(editClosed){document.getElementById("openLookup").parentNode.hidden=true;}
   document.querySelectorAll('[data-go="signup"]').forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();document.getElementById("signup-sec").scrollIntoView({behavior:"smooth"});})});
-  form && form.addEventListener("change",function(e){
-    if(e.target.name!=="src") return;
-    var v=e.target.value; srcNote.value="";
-    if(v==="LINE 群組"){srcNote.hidden=true;return;}
-    srcNote.hidden=false; srcNote.placeholder = v==="朋友邀請"?"是誰邀請你的？":"請簡單說明從哪裡知道的"; srcNote.focus();
+  function setSrc(v,keep){ if(!keep) srcNote.value=""; if(v==="LINE 群組"||!v){srcNote.hidden=true;return;}
+    srcNote.hidden=false; srcNote.placeholder = v==="朋友邀請"?"是誰邀請你的？":"請簡單說明從哪裡知道的"; }
+  form.addEventListener("change",function(e){ if(e.target.name==="src"){setSrc(e.target.value);srcNote.focus();} });
+  function modeText(m){return m==="大直站"?"13:20 大直站 1 號出口集合":"13:30 步道入口會合（騎車）"}
+
+  // 我的報名
+  function renderMine(){
+    var ts=myLoad(), box=document.getElementById("mine"), list=document.getElementById("mineList");
+    if(!ts.length){box.hidden=true;return;}
+    Promise.all(ts.map(function(t){return api({action:"get",token:t}).catch(function(){return null})})).then(function(rs){
+      var keep=[], html="";
+      rs.forEach(function(r,i){ if(!r||!r.ok||r.rec.status!=="ok") return; keep.push(ts[i]); var x=r.rec;
+        html+='<div class="my"><div class="who">'+esc(x.name)+(+x.count>1?"　共 "+x.count+" 位":"")+'</div><div class="meta">'+esc(modeText(x.mode))+'</div>'
+          +(editClosed?'<div class="meta">已過修改時間，如有變動請告訴邀請你的朋友。</div>':'<div class="acts"><button class="btn" type="button" data-edit="'+x.token+'">✏️ 修改</button><button class="btn danger" type="button" data-cancel="'+x.token+'">取消報名</button></div>')+'</div>';
+      });
+      mySave(keep); list.innerHTML=html; box.hidden=!keep.length;
+      var has=keep.length>0, add=document.getElementById("addMore");
+      if(!editing && done.hidden){ formCard.hidden = has || closed; add.hidden = !has || closed; document.getElementById("closedMsg").hidden=!closed; }
+    });
+  }
+  document.getElementById("mineList").addEventListener("click",function(e){
+    var t=e.target.closest("button"); if(!t) return;
+    if(t.dataset.edit) startEdit(t.dataset.edit);
+    if(t.dataset.cancel){ if(!confirm("確定要取消這筆報名嗎？")) return; t.disabled=true;
+      api({action:"cancel",token:t.dataset.cancel}).then(function(r){ if(!r.ok) throw new Error(r.error); toast("已取消報名"); renderMine(); }).catch(function(x){toast(x.message||"取消失敗");t.disabled=false;}); }
   });
-  form && form.addEventListener("submit",function(e){
+  function startEdit(token){
+    api({action:"get",token:token}).then(function(r){
+      if(!r.ok) throw new Error(r.error); var x=r.rec; editing=token; showForm(); done.hidden=true; formCard.hidden=false;
+      form.name.value=x.name; form.phone.value=x.phone; form.count.value=String(x.count||1);
+      form.querySelectorAll('input[name=src]').forEach(function(i){i.checked=i.value===x.src}); setSrc(x.src,true); srcNote.value=x.note||"";
+      form.querySelectorAll('input[name=mode]').forEach(function(i){i.checked=i.value===x.mode});
+      document.getElementById("editBar").hidden=false; document.getElementById("addMore").hidden=true; btn.textContent="儲存修改"; err.textContent="";
+      formCard.scrollIntoView({behavior:"smooth",block:"start"});
+    }).catch(function(x){toast(x.message||"讀取失敗")});
+  }
+  function endEdit(){ editing=null; form.reset(); setSrc(""); document.getElementById("editBar").hidden=true; btn.textContent="送出報名"; showForm(); }
+  document.getElementById("cancelEdit").addEventListener("click",function(){endEdit();renderMine();});
+  document.getElementById("addMore").addEventListener("click",function(){formCard.hidden=false;this.hidden=true;form.name.focus();});
+
+  form.addEventListener("submit",function(e){
     e.preventDefault(); var d=new FormData(form);
-    var rec={action:"signup",name:(d.get("name")||"").trim(),phone:(d.get("phone")||"").replace(/[^0-9]/g,""),count:+d.get("count")||1,
+    var rec={action:editing?"update":"signup",token:editing||undefined,name:(d.get("name")||"").trim(),phone:(d.get("phone")||"").replace(/[^0-9]/g,""),count:+d.get("count")||1,
       src:d.get("src")||"",note:(d.get("srcNote")||"").trim(),mode:d.get("mode")||"",website:d.get("website")||""};
     if(!rec.name) return err.textContent="請填寫姓名";
     if(!/^09\d{8}$/.test(rec.phone)) return err.textContent="請填寫正確的手機號碼（09 開頭共 10 碼）";
     if(!rec.src) return err.textContent="請選擇怎麼知道這個活動";
     if(rec.src==="朋友邀請"&&!rec.note) return err.textContent="請填寫邀請你的朋友是誰";
     if(rec.src==="其他"&&!rec.note) return err.textContent="請簡單說明從哪裡知道的";
+    if(rec.src==="LINE 群組") rec.note="";
     if(!rec.mode) return err.textContent="請選擇當天怎麼來";
-    err.textContent=""; var btn=document.getElementById("submitBtn"); btn.disabled=true; btn.textContent="送出中…";
+    err.textContent=""; var wasEdit=!!editing; btn.disabled=true; btn.textContent="送出中…";
     api(rec).then(function(r){
       if(!r||!r.ok) throw new Error(r&&r.error||"送出失敗");
-      document.getElementById("formCard").hidden=true; var dn=document.getElementById("done"); dn.hidden=false;
-      document.getElementById("doneText").textContent = rec.name+(rec.count>1?"（共 "+rec.count+" 位）":"")+"，11/21（六）見！"+(rec.mode==="大直站"?"13:20 在大直站 1 號出口集合。":"13:30 在步道入口會合。");
-      document.getElementById("cal2").href=cal; dn.scrollIntoView({behavior:"smooth",block:"center"});
+      if(!wasEdit){var m=myLoad(); m.push(r.token); mySave(m);}
+      endEdit(); formCard.hidden=true; done.hidden=false;
+      done.querySelector("h3").textContent = wasEdit?"已更新報名！":"報名成功！";
+      document.getElementById("doneText").textContent = rec.name+(rec.count>1?"（共 "+rec.count+" 位）":"")+"，11/21（六）見！"+modeText(rec.mode)+"。之後想修改或取消，回到這個網頁就可以。";
+      document.getElementById("cal2").href=cal; renderMine(); done.scrollIntoView({behavior:"smooth",block:"center"});
     }).catch(function(x){err.textContent=(x.message||"送出失敗")+"，請稍後再試，或直接告訴邀請你的朋友。";})
-      .then(function(){btn.disabled=false;btn.textContent="送出報名";});
+      .then(function(){btn.disabled=false; if(!editing) btn.textContent="送出報名"; else btn.textContent="儲存修改";});
   });
-  document.getElementById("again").addEventListener("click",function(){form.reset();srcNote.hidden=true;document.getElementById("done").hidden=true;document.getElementById("formCard").hidden=false;});
+  document.getElementById("again").addEventListener("click",function(){endEdit();done.hidden=true;formCard.hidden=closed;document.getElementById("addMore").hidden=true;});
+
+  // 找回報名
+  document.getElementById("openLookup").addEventListener("click",function(){var l=document.getElementById("lookup");l.hidden=!l.hidden;if(!l.hidden)document.getElementById("lkPhone").focus();});
+  document.getElementById("lkGo").addEventListener("click",function(){
+    var ph=document.getElementById("lkPhone").value.replace(/[^0-9]/g,""), nm=document.getElementById("lkName").value.trim(), le=document.getElementById("lkErr"), b=this;
+    if(!/^09\d{8}$/.test(ph)||!nm){le.textContent="請填寫手機和姓名";return;}
+    le.textContent=""; b.disabled=true;
+    api({action:"find",phone:ph,name:nm}).then(function(r){
+      if(!r.ok) throw new Error(r.error); var m=myLoad(); r.tokens.forEach(function(t){if(m.indexOf(t)<0)m.push(t)}); mySave(m);
+      document.getElementById("lookup").hidden=true; renderMine(); toast("找到了！可以修改或取消");
+      document.getElementById("mine").scrollIntoView({behavior:"smooth"});
+    }).catch(function(x){le.textContent=x.message||"查詢失敗"}).then(function(){b.disabled=false;});
+  });
+  renderMine();
 
   // ===== 後台 =====
   var adm=document.getElementById("admin"), pw="", rows=[];
@@ -468,31 +598,62 @@ legend{padding:0;margin-bottom:6px}
   document.getElementById("refresh").addEventListener("click",function(){fetchList(pw).then(function(){toast("已更新")},function(x){toast(x.message)});});
   function esc(s){var x=document.createElement("span");x.textContent=String(s==null?"":s);return x.innerHTML}
   function n(r){return +r.count||1}
+  function act(r){return r.status!=="cancelled"}
   function render(){
     document.getElementById("lock").hidden=true; document.getElementById("panel").hidden=false;
-    var all=0,mrt=0,c={}; rows.forEach(function(r){all+=n(r); if(r.mode==="大直站")mrt+=n(r);
+    var live=rows.filter(act), all=0,mrt=0,c={}; live.forEach(function(r){all+=n(r); if(r.mode==="大直站")mrt+=n(r);
       var k=r.src==="朋友邀請"&&r.note?r.note+" 邀請":r.src==="其他"&&r.note?"其他："+r.note:r.src; c[k]=(c[k]||0)+n(r);});
     document.getElementById("sAll").textContent=all; document.getElementById("sMrt").textContent=mrt; document.getElementById("sBike").textContent=all-mrt;
-    document.getElementById("sRows").textContent="共 "+rows.length+" 筆報名";
-    document.getElementById("srcStat").innerHTML=Object.keys(c).sort(function(x,y){return c[y]-c[x]}).map(function(k){return "<span>"+esc(k)+" × "+c[k]+"</span>"}).join("")||'<span>尚無資料</span>';
-    document.getElementById("list").innerHTML = rows.length? rows.map(function(r,i){
-      var t=new Date(r.at), when=isNaN(t)?"":(t.getMonth()+1)+"/"+t.getDate()+" "+String(t.getHours()).padStart(2,"0")+":"+String(t.getMinutes()).padStart(2,"0");
-      return '<div class="row"><span class="nm">'+(i+1)+'. '+esc(r.name)+(n(r)>1?'　<small>共 '+n(r)+' 位</small>':'')+'</span><span class="md'+(r.mode==="騎車"?" bike":"")+'">'+(r.mode==="騎車"?"騎車":"大直站")+'</span>'
+    var cx=rows.length-live.length;
+    document.getElementById("sRows").textContent="共 "+live.length+" 筆報名"+(cx?"，另有 "+cx+" 筆已取消（不計入人數）":"");
+    var left=Math.ceil((dl-new Date())/86400000);
+    document.getElementById("dStat").textContent = new Date()>dl ? "報名已截止（11/20 17:00）" : "距離報名截止還有 "+left+" 天";
+    var bike=all-mrt, pm=all?Math.round(mrt/all*100):0;
+    document.getElementById("modeBar").innerHTML = all ? '<div class="bar2"><span style="width:'+pm+'%;background:#1F4D3A">'+(mrt?'大直站 '+mrt:'')+'</span><span style="width:'+(100-pm)+'%;background:#D9661F">'+(bike?'騎車 '+bike:'')+'</span></div><div class="legend"><span>大直站 '+pm+'%</span><span>騎車 '+(100-pm)+'%</span></div>' : '<p class="empty">尚無資料</p>';
+    var cat={"朋友邀請":0,"LINE 群組":0,"其他":0}, ref={}, oth={};
+    live.forEach(function(r){ cat[r.src]=(cat[r.src]||0)+n(r);
+      if(r.src==="朋友邀請"&&r.note) ref[r.note]=(ref[r.note]||0)+n(r);
+      if(r.src==="其他"&&r.note) oth[r.note]=(oth[r.note]||0)+n(r); });
+    function bars(o,label){ var ks=Object.keys(o).sort(function(a,b){return o[b]-o[a]}), mx=Math.max.apply(null,ks.map(function(k){return o[k]}).concat([1]));
+      return ks.map(function(k){return '<div class="hb"><span class="lbl">'+esc(label?label(k):k)+'</span><span class="tr"><i style="width:'+(o[k]/mx*100)+'%"></i></span><b>'+o[k]+' 位</b></div>'}).join(""); }
+    document.getElementById("srcStat").innerHTML = all ? bars(cat,function(k){return k==="LINE 群組"?"LINE 群組":k}) : '<p class="empty">尚無資料</p>';
+    document.getElementById("refBox").hidden=!Object.keys(ref).length; document.getElementById("refStat").innerHTML=bars(ref);
+    document.getElementById("otherBox").hidden=!Object.keys(oth).length;
+    document.getElementById("otherStat").innerHTML=Object.keys(oth).map(function(k){return "<span>"+esc(k)+" × "+oth[k]+"</span>"}).join("");
+    var sorted=live.concat(rows.filter(function(r){return !act(r)})), k=0;
+    document.getElementById("list").innerHTML = rows.length? sorted.map(function(r){
+      var on=act(r), t=new Date(r.at), when=isNaN(t)?"":(t.getMonth()+1)+"/"+t.getDate()+" "+String(t.getHours()).padStart(2,"0")+":"+String(t.getMinutes()).padStart(2,"0");
+      return '<div class="row'+(on?"":" off")+'"><span class="nm">'+(on?(++k)+". ":"")+esc(r.name)+(n(r)>1?'　<small>共 '+n(r)+' 位</small>':'')
+        +(on?(r.updated?'<span class="tag">已修改</span>':''):'<span class="tag">已取消</span>')+'</span><span class="md'+(r.mode==="騎車"?" bike":"")+'">'+(r.mode==="騎車"?"騎車":"大直站")+'</span>'
         +'<span class="sub"><a href="tel:'+esc(r.phone)+'">'+esc(r.phone)+'</a>　'+esc(r.src)+(r.note?"："+esc(r.note):"")+'　'+when+'</span></div>'}).join("")
       : '<p class="empty">還沒有人報名</p>';
   }
   document.getElementById("copy").addEventListener("click",function(){
-    function grp(m){var g=rows.filter(function(r){return (r.mode==="騎車")===(m==="騎車")}),s=0;g.forEach(function(r){s+=n(r)});
+    var live=rows.filter(act);
+    function grp(m){var g=live.filter(function(r){return (r.mode==="騎車")===(m==="騎車")}),s=0;g.forEach(function(r){s+=n(r)});
       return m+"（"+s+" 位）\n"+g.map(function(r,i){return (i+1)+". "+r.name+" "+r.phone+(n(r)>1?"（共 "+n(r)+" 位）":"")}).join("\n");}
-    var all=0; rows.forEach(function(r){all+=n(r)});
+    var all=0; live.forEach(function(r){all+=n(r)});
     var txt="【11/21 劍潭山 報名名單】共 "+all+" 位\n\n"+grp("大直站集合")+"\n\n"+grp("騎車");
     (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){toast("已複製，可以貼到 LINE")},function(){prompt("請複製：",txt)});
   });
   var seed=document.getElementById("seed"), clr=document.getElementById("clear");
   seed && seed.addEventListener("click",function(){var a=dLoad(),t=new Date().toISOString();
-    a.push({name:"王小明",phone:"0912345678",count:3,src:"朋友邀請",note:"Jason",mode:"大直站",at:t},{name:"林美華",phone:"0922333444",count:1,src:"LINE 群組",note:"",mode:"騎車",at:t},{name:"陳大同",phone:"0933555666",count:2,src:"其他",note:"教會公布欄",mode:"大直站",at:t});dSave(a);fetchList(pw);});
-  clr && clr.addEventListener("click",function(){ if(confirm("確定清空示範資料？")){dSave([]);fetchList(pw);} });
+    a.push({token:tok(),name:"王小明",phone:"0912345678",count:3,src:"朋友邀請",note:"Jason",mode:"大直站",at:t,updated:"",status:"ok"},
+           {token:tok(),name:"林美華",phone:"0922333444",count:1,src:"LINE 群組",note:"",mode:"騎車",at:t,updated:t,status:"ok"},
+           {token:tok(),name:"陳大同",phone:"0933555666",count:2,src:"其他",note:"教會公布欄",mode:"大直站",at:t,updated:t,status:"cancelled"});dSave(a);fetchList(pw);});
+  clr && clr.addEventListener("click",function(){ if(confirm("確定清空示範資料？")){dSave([]);mySave([]);fetchList(pw);renderMine();} });
 
+
+  // ===== 字體大小 =====
+  (function(){
+    var btns=document.querySelectorAll(".fsbar button");
+    function setFs(v){ document.documentElement.style.setProperty("--fs",v);
+      btns.forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.fs===v))});
+      try{localStorage.setItem("jt-fs",v)}catch(e){} }
+    btns.forEach(function(b){b.addEventListener("click",function(){setFs(b.dataset.fs)})});
+    var saved=null; try{saved=localStorage.getItem("jt-fs")}catch(e){}
+    if(saved&&["1","1.2","1.4"].indexOf(saved)>=0) setFs(saved);
+  })();
   // lightbox
   var lb=document.getElementById("lb");
   document.getElementById("posterBtn").addEventListener("click",function(){lb.classList.add("on")});
