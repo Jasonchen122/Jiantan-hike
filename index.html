@@ -121,6 +121,43 @@ details p{margin:0 0 16px;color:var(--soft)}
 .xfer li{padding:5px 0;display:flex;gap:10px;align-items:baseline}
 .xfer i{flex:none;width:12px;height:12px;border-radius:50%;display:inline-block;transform:translateY(1px)}
 .mrt-btn{margin-top:12px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:18px}
+.f{display:block;margin:0 0 16px;font-weight:700;border:0;padding:0}
+.f input:not([type=radio]),.f select,.pwin{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-weight:400;font-size:17px;color:var(--ink);background:var(--bg);border:1.5px solid var(--rule);border-radius:12px}
+.f input:focus,.f select:focus{border-color:var(--forest);outline:none}
+legend{padding:0;margin-bottom:6px}
+.opt{display:flex;align-items:center;gap:10px;font-weight:400;padding:10px 12px;border:1.5px solid var(--rule);border-radius:12px;margin-top:8px;cursor:pointer}
+.opt input{width:20px;height:20px;accent-color:var(--forest);flex:none}
+.opt:has(input:checked){border-color:var(--forest);background:color-mix(in srgb,var(--forest) 9%,transparent)}
+.opt small{color:var(--soft);font-size:14px}
+#srcNote{margin-top:8px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.err{color:#C0392B;min-height:1em;margin:0 0 10px;font-size:15px}
+.privacy{font-size:13px;color:var(--soft);margin:10px 0 0;text-align:center}
+.done{text-align:center}.big-ok{font-size:44px}.done h3{margin:4px 0;font-size:26px;color:var(--forest)}
+.closed{color:var(--soft);margin:0}
+.demo-foot{font-size:13px;color:var(--soft);text-align:center;margin:30px 16px 0}
+.admin{position:fixed;inset:0;z-index:30;background:var(--bg);overflow:auto;padding:calc(12px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
+.admin-in{max-width:620px;margin:0 auto}
+.ahead{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.ahead h2{margin:8px 0;color:var(--forest);font-size:26px}
+.btn.small{min-height:40px;font-size:14px;padding:6px 12px}
+.btn.danger{border-color:#C0392B;color:#C0392B}
+.btn:disabled{opacity:.6}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.stats div{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:12px;text-align:center}
+.stats b{display:block;font-size:32px;color:var(--forest);font-family:"Huninn",sans-serif;font-weight:400;line-height:1.2}
+.stats span{font-size:14px;color:var(--soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--sky);border-radius:999px;padding:4px 12px;font-size:15px}
+.row{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:12px 14px;margin-bottom:8px;display:grid;grid-template-columns:1fr auto;gap:2px 10px}
+.row .nm{font-weight:700;font-size:18px}
+.row .md{justify-self:end;font-size:14px;padding:2px 10px;border-radius:999px;background:color-mix(in srgb,var(--forest) 12%,transparent);color:var(--forest);align-self:start}
+.row .md.bike{background:color-mix(in srgb,var(--maple) 15%,transparent);color:var(--maple)}
+.row .sub{grid-column:1/-1;font-size:14px;color:var(--soft)}
+.row a{color:var(--forest)}
+.abtns{display:grid;gap:10px;margin-top:16px}
+.empty{color:var(--soft);text-align:center;padding:20px}
 .contact{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:16px}
 
 /* sticky bar */
@@ -160,8 +197,9 @@ details p{margin:0 0 16px;color:var(--soft)}
     <div class="when"><span class="d round">11/21（六）</span><span class="t round">13:30</span></div>
     <p class="where">大直劍潭山步道，終點老地方觀機平台<br>約 16:30 結束</p>
     <div class="deadline">報名截止 11/19（四）<b id="countdown"></b></div>
-    <p class="how">想參加？<b>直接回覆邀請你的朋友</b>就完成報名了。</p>
+    <p class="how">想參加？填一下報名資料，<b>30 秒完成</b>。</p>
     <div class="btns">
+      <a class="btn primary" href="#signup" data-go="signup">✍️ 我要報名</a>
       <a class="btn" href="https://maps.app.goo.gl/644i3cwKW65WkDb3A" target="_blank" rel="noopener">📍 步道入口導航</a>
       <a class="btn" id="cal" href="#" target="_blank" rel="noopener">📅 加入行事曆</a>
     </div>
@@ -253,9 +291,45 @@ details p{margin:0 0 16px;color:var(--soft)}
     <a class="btn mrt-btn" style="width:100%" href="https://www.google.com/maps/dir/?api=1&origin=捷運劍潭站&travelmode=transit" target="_blank" rel="noopener">🏠 從劍潭站回家怎麼搭</a>
   </section>
 
+  <section id="signup-sec">
+    <h2>報名</h2>
+    <div class="card" id="formCard">
+      <form id="form" novalidate>
+        <label class="f">姓名<input name="name" autocomplete="name" required maxlength="30"></label>
+        <label class="f">手機<input name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="0912345678" required maxlength="12"></label>
+        <label class="f">總共幾位（含自己）
+          <select name="count">
+            <option value="1">1 位（只有我）</option><option value="2">2 位</option><option value="3">3 位</option><option value="4">4 位</option>
+            <option value="5">5 位</option><option value="6">6 位</option><option value="7">7 位</option><option value="8">8 位</option>
+          </select></label>
+        <fieldset class="f"><legend>怎麼知道這個活動？</legend>
+          <label class="opt"><input type="radio" name="src" value="朋友邀請" required> 朋友邀請</label>
+          <label class="opt"><input type="radio" name="src" value="LINE 群組"> LINE 群組／社群</label>
+          <label class="opt"><input type="radio" name="src" value="其他"> 其他</label>
+          <input name="srcNote" id="srcNote" maxlength="30" hidden>
+        </fieldset>
+        <fieldset class="f"><legend>當天怎麼來？</legend>
+          <label class="opt big"><input type="radio" name="mode" value="大直站" required><span><b>搭捷運</b><br><small>13:20 大直站 1 號出口集合</small></span></label>
+          <label class="opt big"><input type="radio" name="mode" value="騎車"><span><b>自行騎車</b><br><small>13:30 步道入口會合</small></span></label>
+        </fieldset>
+        <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn primary" type="submit" id="submitBtn" style="width:100%">送出報名</button>
+        <p class="privacy">你的資料只給這次活動聯絡用，活動結束後會刪除。</p>
+      </form>
+    </div>
+    <div class="card done" id="done" hidden>
+      <div class="big-ok">🎉</div>
+      <h3 class="round">報名成功！</h3>
+      <p id="doneText"></p>
+      <a class="btn" id="cal2" href="#" target="_blank" rel="noopener" style="width:100%;margin-top:8px">📅 加入行事曆</a>
+      <button class="btn" type="button" id="again" style="width:100%;margin-top:10px">再幫另一組報名</button>
+    </div>
+  </section>
+
   <section>
     <h2>新朋友常問</h2>
-    <details><summary>怎麼報名？</summary><p>直接回覆邀請你的朋友就可以，11/19（四）前告訴我們。</p></details>
+    <details><summary>怎麼報名？</summary><p>在這頁下方「報名」填寫資料就完成了，家人朋友一起來的話，填一次並選同行人數即可。11/19（四）前報名。</p></details>
     <details><summary>下雨怎麼辦？</summary><p>11/20（五）18:00 若預報會下雨就取消，會在 LINE 社群公告。</p></details>
     <details><summary>要帶什麼？</summary>
       <div class="gear"><span>好走的鞋</span><span>足夠的水</span><span>想分享的零食</span></div><p></p></details>
@@ -272,10 +346,38 @@ details p{margin:0 0 16px;color:var(--soft)}
 <nav class="bar" aria-label="快速動作">
   <div class="in">
     <button class="btn share" type="button" id="share"><i></i>分享給朋友</button>
-    <a class="btn primary" href="https://maps.app.goo.gl/644i3cwKW65WkDb3A" target="_blank" rel="noopener">📍 步道入口導航</a>
+    <a class="btn primary" href="#signup" data-go="signup">✍️ 我要報名</a>
   </div>
 </nav>
 
+<div class="admin" id="admin" hidden>
+  <div class="admin-in">
+    <div class="ahead"><h2 class="round">報名後台</h2><a href="#" class="btn small" id="aclose">回活動頁</a></div>
+    <div id="lock" class="card">
+      <p>請輸入後台密碼</p>
+      <input id="pw" type="password" placeholder="密碼" class="pwin" autocomplete="current-password">
+      <button class="btn primary" type="button" id="unlock" style="width:100%;margin-top:10px">進入</button>
+      
+    </div>
+    <div id="panel" hidden>
+      <div class="stats">
+        <div><b id="sAll">0</b><span>總人數</span></div>
+        <div><b id="sMrt">0</b><span>大直站</span></div>
+        <div><b id="sBike">0</b><span>騎車</span></div>
+      </div>
+      <p class="hint" id="sRows"></p>
+      <h3 class="mrt-h">從哪裡知道（人數）</h3>
+      <div id="srcStat" class="chips"></div>
+      <h3 class="mrt-h">報名名單</h3>
+      <div id="list"></div>
+      <div class="abtns">
+        <button class="btn primary" type="button" id="refresh">🔄 重新整理</button>
+        <button class="btn" type="button" id="copy">📋 複製名單（可貼到 LINE）</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
 <div class="lb" id="lb" role="dialog" aria-label="海報"><button type="button" id="lbClose">關閉</button><img src="poster.jpg" alt="活動海報大圖"></div>
 <div class="toast" id="toast" role="status"></div>
 
@@ -298,7 +400,7 @@ details p{margin:0 0 16px;color:var(--soft)}
 
   // share to LINE
   document.getElementById("share").addEventListener("click",function(){
-    var msg = "11/21（六）下午一起走劍潭山！13:30 出發，到老地方觀機平台看台北 🌿\n想參加就回覆我，11/19 前報名，詳情看這裡：\n" + location.href.split("#")[0];
+    var msg = "11/21（六）下午一起走劍潭山！13:30 出發，到老地方觀機平台看台北 🌿\n點連結就能報名（11/19 截止）：\n" + location.href.split("#")[0];
     location.href = "https://line.me/R/share?text=" + encodeURIComponent(msg);
   });
 
@@ -306,6 +408,90 @@ details p{margin:0 0 16px;color:var(--soft)}
   var v=document.getElementById("vid"), s=document.getElementById("sound");
   s.addEventListener("click",function(){ v.muted=!v.muted; if(!v.muted){v.currentTime=0;v.play();} s.textContent=v.muted?"🔈 點我聽邀請":"🔊 關聲音"; });
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; }
+
+  // ===== 報名 =====
+  var API_URL = "https://script.google.com/macros/s/AKfycbw1lARt4ddmuFRadPbglRrmcnI3hl6JDkxUd1N2wTX7h22JICP9LtBDd7EysbJsuh-p4A/exec"; // 空白 = 示範模式（資料只存在這支手機）
+  var KEY="jt-signups-demo", mem=[];
+  function dLoad(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){return mem}}
+  function dSave(a){mem=a;try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
+  function api(body){
+    if(!API_URL){
+      if(body.action==="signup"){var a=dLoad();body.at=new Date().toISOString();a.push(body);dSave(a);return Promise.resolve({ok:true});}
+      if(body.action==="list"){return Promise.resolve(body.password==="1121"?{ok:true,rows:dLoad()}:{ok:false,error:"密碼不正確"});}
+    }
+    return fetch(API_URL,{method:"POST",body:JSON.stringify(body)}).then(function(r){return r.json()});
+  }
+  var closed = new Date() > dl;
+  var form=document.getElementById("form"), err=document.getElementById("err"), srcNote=document.getElementById("srcNote");
+  if(closed){document.getElementById("formCard").innerHTML='<p class="closed">報名已截止，謝謝大家！</p>';}
+  document.querySelectorAll('[data-go="signup"]').forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();document.getElementById("signup-sec").scrollIntoView({behavior:"smooth"});})});
+  form && form.addEventListener("change",function(e){
+    if(e.target.name!=="src") return;
+    var v=e.target.value; srcNote.value="";
+    if(v==="LINE 群組"){srcNote.hidden=true;return;}
+    srcNote.hidden=false; srcNote.placeholder = v==="朋友邀請"?"是誰邀請你的？":"請簡單說明從哪裡知道的"; srcNote.focus();
+  });
+  form && form.addEventListener("submit",function(e){
+    e.preventDefault(); var d=new FormData(form);
+    var rec={action:"signup",name:(d.get("name")||"").trim(),phone:(d.get("phone")||"").replace(/[^0-9]/g,""),count:+d.get("count")||1,
+      src:d.get("src")||"",note:(d.get("srcNote")||"").trim(),mode:d.get("mode")||"",website:d.get("website")||""};
+    if(!rec.name) return err.textContent="請填寫姓名";
+    if(!/^09\d{8}$/.test(rec.phone)) return err.textContent="請填寫正確的手機號碼（09 開頭共 10 碼）";
+    if(!rec.src) return err.textContent="請選擇怎麼知道這個活動";
+    if(rec.src==="朋友邀請"&&!rec.note) return err.textContent="請填寫邀請你的朋友是誰";
+    if(rec.src==="其他"&&!rec.note) return err.textContent="請簡單說明從哪裡知道的";
+    if(!rec.mode) return err.textContent="請選擇當天怎麼來";
+    err.textContent=""; var btn=document.getElementById("submitBtn"); btn.disabled=true; btn.textContent="送出中…";
+    api(rec).then(function(r){
+      if(!r||!r.ok) throw new Error(r&&r.error||"送出失敗");
+      document.getElementById("formCard").hidden=true; var dn=document.getElementById("done"); dn.hidden=false;
+      document.getElementById("doneText").textContent = rec.name+(rec.count>1?"（共 "+rec.count+" 位）":"")+"，11/21（六）見！"+(rec.mode==="大直站"?"13:20 在大直站 1 號出口集合。":"13:30 在步道入口會合。");
+      document.getElementById("cal2").href=cal; dn.scrollIntoView({behavior:"smooth",block:"center"});
+    }).catch(function(x){err.textContent=(x.message||"送出失敗")+"，請稍後再試，或直接告訴邀請你的朋友。";})
+      .then(function(){btn.disabled=false;btn.textContent="送出報名";});
+  });
+  document.getElementById("again").addEventListener("click",function(){form.reset();srcNote.hidden=true;document.getElementById("done").hidden=true;document.getElementById("formCard").hidden=false;});
+
+  // ===== 後台 =====
+  var adm=document.getElementById("admin"), pw="", rows=[];
+  function route(){ adm.hidden = location.hash!=="#admin"; }
+  window.addEventListener("hashchange",route); route();
+  document.getElementById("aclose").addEventListener("click",function(e){e.preventDefault();history.replaceState(null,"",location.pathname+location.search);route();});
+  function fetchList(p){
+    return api({action:"list",password:p}).then(function(r){ if(!r||!r.ok) throw new Error(r&&r.error||"讀取失敗"); rows=r.rows||[]; pw=p; render(); });
+  }
+  document.getElementById("unlock").addEventListener("click",function(){
+    var b=this; b.disabled=true; b.textContent="讀取中…";
+    fetchList(document.getElementById("pw").value).catch(function(x){toast(x.message)}).then(function(){b.disabled=false;b.textContent="進入";});
+  });
+  document.getElementById("pw").addEventListener("keydown",function(e){if(e.key==="Enter")document.getElementById("unlock").click();});
+  document.getElementById("refresh").addEventListener("click",function(){fetchList(pw).then(function(){toast("已更新")},function(x){toast(x.message)});});
+  function esc(s){var x=document.createElement("span");x.textContent=String(s==null?"":s);return x.innerHTML}
+  function n(r){return +r.count||1}
+  function render(){
+    document.getElementById("lock").hidden=true; document.getElementById("panel").hidden=false;
+    var all=0,mrt=0,c={}; rows.forEach(function(r){all+=n(r); if(r.mode==="大直站")mrt+=n(r);
+      var k=r.src==="朋友邀請"&&r.note?r.note+" 邀請":r.src==="其他"&&r.note?"其他："+r.note:r.src; c[k]=(c[k]||0)+n(r);});
+    document.getElementById("sAll").textContent=all; document.getElementById("sMrt").textContent=mrt; document.getElementById("sBike").textContent=all-mrt;
+    document.getElementById("sRows").textContent="共 "+rows.length+" 筆報名";
+    document.getElementById("srcStat").innerHTML=Object.keys(c).sort(function(x,y){return c[y]-c[x]}).map(function(k){return "<span>"+esc(k)+" × "+c[k]+"</span>"}).join("")||'<span>尚無資料</span>';
+    document.getElementById("list").innerHTML = rows.length? rows.map(function(r,i){
+      var t=new Date(r.at), when=isNaN(t)?"":(t.getMonth()+1)+"/"+t.getDate()+" "+String(t.getHours()).padStart(2,"0")+":"+String(t.getMinutes()).padStart(2,"0");
+      return '<div class="row"><span class="nm">'+(i+1)+'. '+esc(r.name)+(n(r)>1?'　<small>共 '+n(r)+' 位</small>':'')+'</span><span class="md'+(r.mode==="騎車"?" bike":"")+'">'+(r.mode==="騎車"?"騎車":"大直站")+'</span>'
+        +'<span class="sub"><a href="tel:'+esc(r.phone)+'">'+esc(r.phone)+'</a>　'+esc(r.src)+(r.note?"："+esc(r.note):"")+'　'+when+'</span></div>'}).join("")
+      : '<p class="empty">還沒有人報名</p>';
+  }
+  document.getElementById("copy").addEventListener("click",function(){
+    function grp(m){var g=rows.filter(function(r){return (r.mode==="騎車")===(m==="騎車")}),s=0;g.forEach(function(r){s+=n(r)});
+      return m+"（"+s+" 位）\n"+g.map(function(r,i){return (i+1)+". "+r.name+" "+r.phone+(n(r)>1?"（共 "+n(r)+" 位）":"")}).join("\n");}
+    var all=0; rows.forEach(function(r){all+=n(r)});
+    var txt="【11/21 劍潭山 報名名單】共 "+all+" 位\n\n"+grp("大直站集合")+"\n\n"+grp("騎車");
+    (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){toast("已複製，可以貼到 LINE")},function(){prompt("請複製：",txt)});
+  });
+  var seed=document.getElementById("seed"), clr=document.getElementById("clear");
+  seed && seed.addEventListener("click",function(){var a=dLoad(),t=new Date().toISOString();
+    a.push({name:"王小明",phone:"0912345678",count:3,src:"朋友邀請",note:"Jason",mode:"大直站",at:t},{name:"林美華",phone:"0922333444",count:1,src:"LINE 群組",note:"",mode:"騎車",at:t},{name:"陳大同",phone:"0933555666",count:2,src:"其他",note:"教會公布欄",mode:"大直站",at:t});dSave(a);fetchList(pw);});
+  clr && clr.addEventListener("click",function(){ if(confirm("確定清空示範資料？")){dSave([]);fetchList(pw);} });
 
   // lightbox
   var lb=document.getElementById("lb");
