@@ -217,11 +217,14 @@ legend{padding:0;margin-bottom:6px}
 .deadline{flex-wrap:wrap;column-gap:10px;row-gap:0}
 .bar .in{grid-template-columns:auto 1fr}
 .bar .btn{white-space:nowrap;font-size:calc(16px*min(var(--fs,1),1.15));padding:10px 14px}
+.toprow{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 12px 0}
+.toprow .fsbar{margin:0 0 0 auto}
+.admin-link{font-size:calc(13px*var(--fs,1));color:var(--soft);text-decoration:none;padding:8px 2px}
 </style>
 </head>
 <body>
 <div class="wrap">
-<div class="fsbar" role="group" aria-label="字體大小"><span>字體大小</span><button type="button" data-fs="1" aria-pressed="true">標準</button><button type="button" data-fs="1.2" aria-pressed="false">大</button><button type="button" data-fs="1.4" aria-pressed="false">特大</button></div>
+<div class="toprow"><a class="admin-link" href="#admin">🔒 主辦人後台</a><div class="fsbar" role="group" aria-label="字體大小"><span>字體大小</span><button type="button" data-fs="1" aria-pressed="true">標準</button><button type="button" data-fs="1.2" aria-pressed="false">大</button><button type="button" data-fs="1.4" aria-pressed="false">特大</button></div></div>
   
   <div class="hero">
     <video id="vid" src="video.mp4" poster="video-cover.jpg" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="活動邀請短片"></video>
@@ -399,7 +402,6 @@ legend{padding:0;margin-bottom:6px}
 
 </div>
 
-<p class="foot-admin"><a href="#admin">主辦人後台</a></p>
 <nav class="bar" aria-label="快速動作">
   <div class="in">
     <button class="btn share" type="button" id="share"><i></i>分享給朋友</button>
