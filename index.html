@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>一起走入城市秘境｜11/21 大直劍潭山步道</title>
+<meta name="description" content="11/21（六）13:30 下午輕鬆走劍潭山，到老地方觀機平台看台北。報名截止 11/19（四）。">
+<meta property="og:title" content="一起走入城市秘境｜11/21 大直劍潭山步道">
+<meta property="og:description" content="11/21（六）13:30 下午輕鬆走劍潭山，到老地方觀機平台看台北。報名截止 11/19（四）。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://你的帳號.github.io/jiantan-hike/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F1F6F1; --surface:#FFFFFF; --ink:#1D2B24; --soft:#53655B;
+  --forest:#1F4D3A; --moss:#6E8B3D; --trail:#8A5A34; --maple:#D9661F; --sky:#DCEBF2;
+  --tbd-bg:#FFF2B8; --tbd-ink:#6B4E00; --line:#06C755; --rule:#D5E0D7;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1C16; --surface:#17281F; --ink:#E6EFE8; --soft:#A7B9AD;
+    --forest:#8FD1AE; --moss:#A9C46E; --trail:#D8A77B; --maple:#F28B4B; --sky:#1C3340;
+    --tbd-bg:#4A3B08; --tbd-ink:#FFE38A; --rule:#2A4034; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1C16; --surface:#17281F; --ink:#E6EFE8; --soft:#A7B9AD;
+  --forest:#8FD1AE; --moss:#A9C46E; --trail:#D8A77B; --maple:#F28B4B; --sky:#1C3340;
+  --tbd-bg:#4A3B08; --tbd-ink:#FFE38A; --rule:#2A4034; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  font-size:17px;line-height:1.7;-webkit-text-size-adjust:100%}
+.wrap{max-width:560px;margin:0 auto;padding-bottom:96px}
+h1,h2,h3,.round{font-family:"Huninn","Noto Sans TC","PingFang TC",sans-serif;font-weight:400}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--maple);outline-offset:3px;border-radius:6px}
+
+.demo-note{margin:12px 16px 0;font-size:14px;color:var(--soft)}
+.tbd{background:var(--tbd-bg);color:var(--tbd-ink);padding:1px 7px;border-radius:6px;font-weight:500;white-space:nowrap}
+
+/* hero */
+.hero{position:relative;margin:12px 12px 0;border-radius:22px;overflow:hidden;background:#000;aspect-ratio:16/9}
+.hero video{display:block;width:100%;height:100%;object-fit:cover}
+.sound{position:absolute;right:10px;bottom:10px;border:0;border-radius:999px;padding:7px 14px;
+  background:rgba(0,0,0,.55);color:#fff;font:inherit;font-size:14px;cursor:pointer}
+.title{padding:22px 20px 4px}
+.title h1{margin:0;font-size:clamp(38px,11vw,52px);line-height:1.15;color:var(--trail);letter-spacing:.02em}
+.title p{margin:8px 0 0;font-size:18px;color:var(--soft)}
+
+/* key facts */
+.facts{margin:18px 16px 0;background:var(--surface);border-radius:20px;padding:20px;border:1px solid var(--rule)}
+.when{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.when .d{font-size:30px;color:var(--forest)}
+.when .t{font-size:44px;line-height:1;color:var(--ink)}
+.where{margin:6px 0 0;font-size:18px}
+.deadline{display:flex;align-items:center;gap:10px;margin-top:14px;padding:10px 14px;border-radius:12px;
+  background:color-mix(in srgb,var(--maple) 14%,transparent);color:var(--ink)}
+.deadline b{color:var(--maple);font-size:20px}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.btn{display:flex;align-items:center;justify-content:center;gap:6px;min-height:52px;padding:10px 12px;border-radius:14px;
+  text-decoration:none;font-weight:700;font-size:16px;border:2px solid var(--forest);color:var(--forest);background:transparent;cursor:pointer;font-family:inherit}
+.btn.primary{grid-column:1/-1;background:var(--forest);color:var(--bg);font-size:18px}
+
+section{margin:34px 20px 0}
+section h2{margin:0 0 10px;font-size:26px;color:var(--forest)}
+.lead{margin:0;color:var(--ink)}
+
+/* trail timeline */
+.trail{list-style:none;margin:16px 0 0;padding:0;position:relative}
+.trail::before{content:"";position:absolute;left:15px;top:10px;bottom:10px;width:0;
+  border-left:4px dashed var(--trail);opacity:.55}
+.trail li{position:relative;padding:0 0 22px 48px}
+.trail li:last-child{padding-bottom:0}
+.dot{position:absolute;left:4px;top:4px;width:26px;height:26px;border-radius:50%;background:var(--surface);
+  border:4px solid var(--moss)}
+.trail li.goal .dot{border-color:var(--maple);background:var(--maple)}
+.trail .tm{font-weight:700;color:var(--trail);font-size:15px}
+.trail .what{font-size:18px;font-weight:700;line-height:1.45}
+.trail .who{display:inline-block;margin-top:4px;font-size:14px;color:var(--soft)}
+
+/* faq */
+details{border-bottom:1px solid var(--rule)}
+details:first-of-type{border-top:1px solid var(--rule)}
+summary{list-style:none;cursor:pointer;padding:15px 34px 15px 0;font-weight:700;font-size:17px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:24px;color:var(--moss);font-weight:400}
+details[open] summary::after{content:"−"}
+details p{margin:0 0 16px;color:var(--soft)}
+
+.gear{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.gear span{background:var(--sky);padding:6px 14px;border-radius:999px;font-size:16px}
+
+.poster-btn{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:16px;overflow:hidden}
+.poster-btn img{display:block;width:100%;height:auto}
+.hint{font-size:14px;color:var(--soft);margin-top:6px}
+
+.how{margin:14px 0 0;font-size:17px}
+.how b{color:var(--forest)}
+.bus{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
+.bus span{border:1.5px solid var(--moss);border-radius:8px;padding:1px 9px;font-size:15px;font-weight:700}
+.trail .who a{color:var(--forest)}
+.contact{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:16px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--rule);
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px))}
+.bar .in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:10px}
+.bar .btn.primary{grid-column:auto}
+.bar .share{border-color:var(--line);color:var(--ink)}
+.bar .share i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--line)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.9);display:none;overflow:auto;
+  padding:calc(12px + env(safe-area-inset-top,0px)) 12px calc(12px + env(safe-area-inset-bottom,0px))}
+.lb.on{display:block}
+.lb img{display:block;max-width:100%;margin:0 auto}
+.lb button{position:sticky;top:0;float:right;border:0;border-radius:999px;padding:8px 16px;background:#fff;color:#000;font:inherit;font-weight:700}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:var(--bg);
+  padding:8px 16px;border-radius:999px;font-size:15px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
+.toast.on{opacity:1}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  
+  <div class="hero">
+    <video id="vid" src="video.mp4" poster="video-cover.jpg" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="活動邀請短片"></video>
+    <button class="sound" id="sound" type="button">🔈 點我聽邀請</button>
+  </div>
+
+  <header class="title">
+    <h1>一起走入城市秘境</h1>
+    <p>放慢腳步，享受秋日的山林微風</p>
+  </header>
+
+  <div class="facts">
+    <div class="when"><span class="d round">11/21（六）</span><span class="t round">13:30</span></div>
+    <p class="where">大直劍潭山步道，終點老地方觀機平台<br>約 16:30 結束</p>
+    <div class="deadline">報名截止 11/19（四）<b id="countdown"></b></div>
+    <p class="how">想參加？<b>直接回覆邀請你的朋友</b>就完成報名了。</p>
+    <div class="btns">
+      <a class="btn" href="https://maps.app.goo.gl/644i3cwKW65WkDb3A" target="_blank" rel="noopener">📍 步道入口導航</a>
+      <a class="btn" id="cal" href="#" target="_blank" rel="noopener">📅 加入行事曆</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>這是什麼活動？</h2>
+    <p class="lead">週六下午，邀大家一起走一段城市裡的山路。不趕路、邊走邊聊，到老地方觀機平台看台北市景和飛機起降。第一次來也很歡迎，找朋友一起來更好。</p>
+  </section>
+
+  <section>
+    <h2>當天怎麼走</h2>
+    <ol class="trail">
+      <li><span class="dot"></span><div class="tm">13:20</div>
+        <div class="what">大直站 1 號出口集合</div>
+        <span class="who">搭捷運的朋友在這裡集合，會有人陪大家一起搭公車，坐到「中央電台」站下車</span>
+        <div class="bus"><span>內湖幹線</span><span>208</span><span>267</span><span>287 區間車</span></div>
+        <span class="who">約 8 分鐘，車資 $15，約 4 分鐘一班</span></li>
+      <li><span class="dot"></span><div class="tm">13:30</div>
+        <div class="what">步道入口會合，出發</div>
+        <span class="who">自行騎車的朋友直接到這裡（<a href="https://maps.app.goo.gl/644i3cwKW65WkDb3A" target="_blank" rel="noopener">看地圖</a>）</span></li>
+      <li><span class="dot"></span>
+        <div class="what">沿著步道慢慢上山</div>
+        <span class="who">邊走邊聊，會等大家</span></li>
+      <li class="goal"><span class="dot"></span>
+        <div class="what">老地方觀機平台，看 101 和台北市景</div>
+        <span class="who">拍照、分享零食</span></li>
+      <li><span class="dot"></span>
+<div class="tm">約 16:30</div>
+        <div class="what">下山解散</div>
+        <span class="who">騎車的朋友：回到原步道入口<br>搭捷運的朋友：一起走到捷運劍潭站</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>新朋友常問</h2>
+    <details><summary>怎麼報名？</summary><p>直接回覆邀請你的朋友就可以，11/19（四）前告訴我們。</p></details>
+    <details><summary>下雨怎麼辦？</summary><p>11/20（五）18:00 若預報會下雨就取消，會在 LINE 社群公告。</p></details>
+    <details><summary>要帶什麼？</summary>
+      <div class="gear"><span>好走的鞋</span><span>足夠的水</span><span>想分享的零食</span></div><p></p></details>
+  </section>
+
+  <section>
+    <h2>活動海報</h2>
+    <button class="poster-btn" type="button" id="posterBtn" aria-label="放大海報"><img src="poster.jpg" alt="一起走入城市秘境 活動海報" loading="lazy"></button>
+    <p class="hint">點一下放大，長按可存到手機。</p>
+  </section>
+
+</div>
+
+<nav class="bar" aria-label="快速動作">
+  <div class="in">
+    <button class="btn share" type="button" id="share"><i></i>分享給朋友</button>
+    <a class="btn primary" href="https://maps.app.goo.gl/644i3cwKW65WkDb3A" target="_blank" rel="noopener">📍 步道入口導航</a>
+  </div>
+</nav>
+
+<div class="lb" id="lb" role="dialog" aria-label="海報"><button type="button" id="lbClose">關閉</button><img src="poster.jpg" alt="活動海報大圖"></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  // countdown (Taipei time)
+  var dl = new Date("2026-11-19T23:59:59+08:00");
+  var days = Math.ceil((dl - new Date()) / 86400000);
+  document.getElementById("countdown").textContent = days > 0 ? "還有 " + days + " 天" : "已截止";
+
+  // calendar
+  var cal = "https://calendar.google.com/calendar/render?action=TEMPLATE"
+    + "&text=" + encodeURIComponent("一起走入城市秘境｜劍潭山健行")
+    + "&dates=20261121T132000/20261121T163000&ctz=Asia/Taipei"
+    + "&location=" + encodeURIComponent("捷運大直站1號出口")
+    + "&details=" + encodeURIComponent("13:20 大直站1號出口集合；騎車 13:30 步道入口會合。\n請穿好走的鞋、帶足飲水。");
+  document.getElementById("cal").href = cal;
+
+  function toast(t){var el=document.getElementById("toast");el.textContent=t;el.classList.add("on");setTimeout(function(){el.classList.remove("on")},1800)}
+
+  // share to LINE
+  document.getElementById("share").addEventListener("click",function(){
+    var msg = "11/21（六）下午一起走劍潭山！13:30 出發，到老地方觀機平台看台北 🌿\n想參加就回覆我，11/19 前報名，詳情看這裡：\n" + location.href.split("#")[0];
+    location.href = "https://line.me/R/share?text=" + encodeURIComponent(msg);
+  });
+
+  // sound
+  var v=document.getElementById("vid"), s=document.getElementById("sound");
+  s.addEventListener("click",function(){ v.muted=!v.muted; if(!v.muted){v.currentTime=0;v.play();} s.textContent=v.muted?"🔈 點我聽邀請":"🔊 關聲音"; });
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; }
+
+  // lightbox
+  var lb=document.getElementById("lb");
+  document.getElementById("posterBtn").addEventListener("click",function(){lb.classList.add("on")});
+  document.getElementById("lbClose").addEventListener("click",function(){lb.classList.remove("on")});
+  lb.addEventListener("click",function(e){if(e.target===lb)lb.classList.remove("on")});
+})();
+</script>
+</body>
+</html>
