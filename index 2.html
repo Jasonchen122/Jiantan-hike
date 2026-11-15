@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>一起走入城市秘境｜11/21 大直劍潭山步道</title>
+<meta name="description" content="11/21（六）13:30 從步道口出發，走到老地方觀機平台和北眼平台，鳥瞰台北。報名截止 11/20（五）17:00。">
+<meta property="og:title" content="一起走入城市秘境｜11/21 大直劍潭山步道">
+<meta property="og:description" content="11/21（六）13:30 從步道口出發，走到老地方觀機平台和北眼平台，鳥瞰台北。報名截止 11/20（五）17:00。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jasonchen122.github.io/Jiantan-hike/">
+<meta property="og:image" content="https://jasonchen122.github.io/Jiantan-hike/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1F4D3A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="劍潭山健行">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Huninn&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F1F6F1; --surface:#FFFFFF; --ink:#1D2B24; --soft:#53655B;
+  --forest:#1F4D3A; --moss:#6E8B3D; --trail:#8A5A34; --maple:#D9661F; --sky:#DCEBF2;
+  --tbd-bg:#FFF2B8; --tbd-ink:#6B4E00; --line:#06C755; --rule:#D5E0D7;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1C16; --surface:#17281F; --ink:#E6EFE8; --soft:#A7B9AD;
+    --forest:#8FD1AE; --moss:#A9C46E; --trail:#D8A77B; --maple:#F28B4B; --sky:#1C3340;
+    --tbd-bg:#4A3B08; --tbd-ink:#FFE38A; --rule:#2A4034; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1C16; --surface:#17281F; --ink:#E6EFE8; --soft:#A7B9AD;
+  --forest:#8FD1AE; --moss:#A9C46E; --trail:#D8A77B; --maple:#F28B4B; --sky:#1C3340;
+  --tbd-bg:#4A3B08; --tbd-ink:#FFE38A; --rule:#2A4034; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  font-size:calc(17px*var(--fs,1));line-height:1.7;-webkit-text-size-adjust:100%}
+.wrap{max-width:560px;margin:0 auto;padding-bottom:calc(96px*var(--fs,1))}
+h1,h2,h3,.round{font-family:"Huninn","Noto Sans TC","PingFang TC",sans-serif;font-weight:400}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--maple);outline-offset:3px;border-radius:6px}
+
+.demo-note{margin:12px 16px 0;font-size:calc(14px*var(--fs,1));color:var(--soft)}
+.tbd{background:var(--tbd-bg);color:var(--tbd-ink);padding:1px 7px;border-radius:6px;font-weight:500;white-space:nowrap}
+
+/* hero */
+.hero{position:relative;margin:12px 12px 0;border-radius:22px;overflow:hidden;background:#000;aspect-ratio:16/9}
+.hero video{display:block;width:100%;height:100%;object-fit:cover}
+.sound{position:absolute;right:10px;bottom:10px;border:0;border-radius:999px;padding:7px 14px;
+  background:rgba(0,0,0,.55);color:#fff;font:inherit;font-size:calc(14px*var(--fs,1));cursor:pointer}
+.title{padding:22px 20px 4px}
+.title h1{margin:0;font-size:clamp(38px,11vw,52px);line-height:1.15;color:var(--trail);letter-spacing:.02em}
+.title p{margin:8px 0 0;font-size:calc(18px*var(--fs,1));color:var(--soft)}
+
+/* key facts */
+.facts{margin:18px 16px 0;background:var(--surface);border-radius:20px;padding:20px;border:1px solid var(--rule)}
+.when{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.when .d{font-size:calc(30px*var(--fs,1));color:var(--forest)}
+.when .t{font-size:calc(44px*var(--fs,1));line-height:1;color:var(--ink)}
+.where{margin:6px 0 0;font-size:calc(18px*var(--fs,1))}
+.deadline{display:flex;align-items:center;gap:10px;margin-top:14px;padding:10px 14px;border-radius:12px;
+  background:color-mix(in srgb,var(--maple) 14%,transparent);color:var(--ink)}
+.deadline b{color:var(--maple);font-size:calc(20px*var(--fs,1))}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.btn{display:flex;align-items:center;justify-content:center;gap:6px;min-height:52px;padding:10px 12px;border-radius:14px;
+  text-decoration:none;font-weight:700;font-size:calc(16px*var(--fs,1));border:2px solid var(--forest);color:var(--forest);background:transparent;cursor:pointer;font-family:inherit}
+.btn.primary{grid-column:1/-1;background:var(--forest);color:var(--bg);font-size:calc(18px*var(--fs,1))}
+
+section{margin:34px 20px 0}
+section h2{margin:0 0 10px;font-size:calc(26px*var(--fs,1));color:var(--forest)}
+.lead{margin:0;color:var(--ink)}
+
+/* trail timeline */
+.trail{list-style:none;margin:16px 0 0;padding:0;position:relative}
+.trail::before{content:"";position:absolute;left:15px;top:10px;bottom:10px;width:0;
+  border-left:4px dashed var(--trail);opacity:.55}
+.trail li{position:relative;padding:0 0 22px 48px}
+.trail li:last-child{padding-bottom:0}
+.dot{position:absolute;left:4px;top:4px;width:26px;height:26px;border-radius:50%;background:var(--surface);
+  border:4px solid var(--moss)}
+.trail li.goal .dot{border-color:var(--maple);background:var(--maple)}
+.trail .tm{font-weight:700;color:var(--trail);font-size:calc(15px*var(--fs,1))}
+.trail .what{font-size:calc(18px*var(--fs,1));font-weight:700;line-height:1.45}
+.trail .who{display:inline-block;margin-top:4px;font-size:calc(14px*var(--fs,1));color:var(--soft)}
+
+/* faq */
+details{border-bottom:1px solid var(--rule)}
+details:first-of-type{border-top:1px solid var(--rule)}
+summary{list-style:none;cursor:pointer;padding:15px 34px 15px 0;font-weight:700;font-size:calc(17px*var(--fs,1));position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:calc(24px*var(--fs,1));color:var(--moss);font-weight:400}
+details[open] summary::after{content:"−"}
+details p{margin:0 0 16px;color:var(--soft)}
+
+.gear{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.gear span{background:var(--sky);padding:6px 14px;border-radius:999px;font-size:calc(16px*var(--fs,1))}
+
+.poster-btn{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:16px;overflow:hidden}
+.poster-btn img{display:block;width:100%;height:auto}
+.hint{font-size:calc(14px*var(--fs,1));color:var(--soft);margin-top:6px}
+
+.how{margin:14px 0 0;font-size:calc(17px*var(--fs,1))}
+.how b{color:var(--forest)}
+.bus{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
+.bus span{border:1.5px solid var(--moss);border-radius:8px;padding:1px 9px;font-size:calc(15px*var(--fs,1));font-weight:700}
+.trail .who a{color:var(--forest)}
+.mrt-h{margin:22px 0 6px;font-size:calc(20px*var(--fs,1));color:var(--ink)}
+.mrt{display:block;width:100%;height:auto;margin:4px 0}
+.mrt .lb{display:inline;position:static;background:none;padding:0;overflow:visible;font-size:12.5px;fill:var(--ink);text-anchor:middle;font-family:"Noto Sans TC",sans-serif}
+.mrt .lb.goal{font-size:15px;font-weight:700}
+.mrt .dir{font-size:12px;fill:var(--soft);text-anchor:end;font-family:"Noto Sans TC",sans-serif}
+.xfer{list-style:none;margin:6px 0 0;padding:0}
+.xfer li{padding:5px 0;display:flex;gap:10px;align-items:baseline}
+.xfer i{flex:none;width:12px;height:12px;border-radius:50%;display:inline-block;transform:translateY(1px)}
+.mrt-btn{margin-top:12px}
+[hidden]{display:none !important}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:18px}
+.f{display:block;margin:0 0 16px;font-weight:700;border:0;padding:0}
+.f input:not([type=radio]),.f select,.pwin{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-weight:400;font-size:calc(17px*var(--fs,1));color:var(--ink);background:var(--bg);border:1.5px solid var(--rule);border-radius:12px}
+.f input:focus,.f select:focus{border-color:var(--forest);outline:none}
+legend{padding:0;margin-bottom:6px}
+.opt{display:flex;align-items:center;gap:10px;font-weight:400;padding:10px 12px;border:1.5px solid var(--rule);border-radius:12px;margin-top:8px;cursor:pointer}
+.opt input{width:20px;height:20px;accent-color:var(--forest);flex:none}
+.opt:has(input:checked){border-color:var(--forest);background:color-mix(in srgb,var(--forest) 9%,transparent)}
+.opt small{color:var(--soft);font-size:calc(14px*var(--fs,1))}
+#srcNote{margin-top:8px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.err{color:#C0392B;min-height:1em;margin:0 0 10px;font-size:calc(15px*var(--fs,1))}
+.privacy{font-size:calc(13px*var(--fs,1));color:var(--soft);margin:10px 0 0;text-align:center}
+.done{text-align:center}.big-ok{font-size:calc(44px*var(--fs,1))}.done h3{margin:4px 0;font-size:calc(26px*var(--fs,1));color:var(--forest)}
+.closed{color:var(--soft);margin:0}
+.demo-foot{font-size:calc(13px*var(--fs,1));color:var(--soft);text-align:center;margin:30px 16px 0}
+.admin{position:fixed;inset:0;z-index:30;background:var(--bg);overflow:auto;padding:calc(12px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
+.admin-in{max-width:620px;margin:0 auto}
+.ahead{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.ahead h2{margin:8px 0;color:var(--forest);font-size:calc(26px*var(--fs,1))}
+.btn.small{min-height:40px;font-size:calc(14px*var(--fs,1));padding:6px 12px}
+.btn.danger{border-color:#C0392B;color:#C0392B}
+.btn:disabled{opacity:.6}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.stats div{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:12px;text-align:center}
+.stats b{display:block;font-size:calc(32px*var(--fs,1));color:var(--forest);font-family:"Huninn",sans-serif;font-weight:400;line-height:1.2}
+.stats span{font-size:calc(14px*var(--fs,1));color:var(--soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--sky);border-radius:999px;padding:4px 12px;font-size:calc(15px*var(--fs,1))}
+.row{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:12px 14px;margin-bottom:8px;display:grid;grid-template-columns:1fr auto;gap:2px 10px}
+.row .nm{font-weight:700;font-size:calc(18px*var(--fs,1))}
+.row .md{justify-self:end;font-size:calc(14px*var(--fs,1));padding:2px 10px;border-radius:999px;background:color-mix(in srgb,var(--forest) 12%,transparent);color:var(--forest);align-self:start}
+.row .md.bike{background:color-mix(in srgb,var(--maple) 15%,transparent);color:var(--maple)}
+.row .sub{grid-column:1/-1;font-size:calc(14px*var(--fs,1));color:var(--soft)}
+.row a{color:var(--forest)}
+.abtns{display:grid;gap:10px;margin-top:16px}
+.empty{color:var(--soft);text-align:center;padding:20px}
+.mine-h{margin:0 0 8px;font-weight:700;color:var(--forest)}
+.my{background:var(--surface);border:2px solid var(--forest);border-radius:16px;padding:14px;margin-bottom:10px}
+.my .who{font-weight:700;font-size:calc(18px*var(--fs,1))}
+.my .meta{color:var(--soft);font-size:calc(15px*var(--fs,1));margin:2px 0 10px}
+.my .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.my .acts .btn{min-height:44px;font-size:calc(15px*var(--fs,1))}
+#mine{margin-bottom:14px}
+.editbar{display:flex;justify-content:space-between;align-items:center;background:var(--tbd-bg);color:var(--tbd-ink);border-radius:10px;padding:8px 12px;margin-bottom:14px;font-weight:700}
+.linkbtn{background:none;border:0;padding:6px 0;font:inherit;color:var(--forest);text-decoration:underline;cursor:pointer}
+.editbar .linkbtn{color:inherit}
+.lookup-link{text-align:center;margin:12px 0 0}
+#lookup{margin-top:8px}
+.row.off{opacity:.55}.row.off .nm{text-decoration:line-through}
+.tag{font-size:calc(12px*var(--fs,1));padding:1px 8px;border-radius:999px;background:var(--tbd-bg);color:var(--tbd-ink);margin-left:6px;font-weight:400}
+.foot-admin{text-align:center;margin:28px 0 0;font-size:calc(13px*var(--fs,1))}
+.foot-admin a{color:var(--soft)}
+.dstat{margin:2px 0 0;font-size:calc(15px*var(--fs,1));color:var(--maple);font-weight:700}
+.bar2{display:flex;height:34px;border-radius:10px;overflow:hidden;background:var(--rule)}
+.bar2 span{display:flex;align-items:center;justify-content:center;color:#fff;font-size:calc(14px*var(--fs,1));font-weight:700;white-space:nowrap;min-width:0}
+.legend{display:flex;justify-content:space-between;font-size:calc(14px*var(--fs,1));color:var(--soft);margin-top:4px}
+.hb{display:grid;grid-template-columns:minmax(0,7.5em) 1fr auto;align-items:center;gap:10px;margin:8px 0;font-size:calc(15px*var(--fs,1))}
+.hb .tr{height:14px;border-radius:7px;background:var(--rule);overflow:hidden}
+.hb .tr i{display:block;height:100%;border-radius:7px;background:var(--moss)}
+.hb b{text-align:right;font-weight:700}
+.hb .lbl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.contact{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:16px}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--rule);
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px))}
+.bar .in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:10px}
+.bar .btn.primary{grid-column:auto}
+.bar .share{border-color:var(--line);color:var(--ink)}
+.bar .share i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--line)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.9);display:none;overflow:auto;
+  padding:calc(12px + env(safe-area-inset-top,0px)) 12px calc(12px + env(safe-area-inset-bottom,0px))}
+.lb.on{display:block}
+.lb img{display:block;max-width:100%;margin:0 auto}
+.lb button{position:sticky;top:0;float:right;border:0;border-radius:999px;padding:8px 16px;background:#fff;color:#000;font:inherit;font-weight:700}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:var(--bg);
+  padding:8px 16px;border-radius:999px;font-size:calc(15px*var(--fs,1));opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
+.toast.on{opacity:1}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+
+.fsbar{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin:10px 12px 0;flex-wrap:wrap}
+.fsbar>span{font-size:calc(14px*var(--fs,1));color:var(--soft);margin-right:2px}
+.fsbar button{font:inherit;font-size:calc(15px*var(--fs,1));font-weight:700;min-height:36px;padding:2px 12px;border-radius:999px;border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer}
+.fsbar button[aria-pressed="true"]{background:var(--forest);border-color:var(--forest);color:var(--bg)}
+.btn{text-align:center;line-height:1.3}
+.when .d,.when .t{white-space:nowrap}
+.row .nm,.row .sub{min-width:0;overflow-wrap:anywhere}
+.ahead{flex-wrap:wrap}
+.title h1{font-size:clamp(30px,9.4vw,52px)}
+.deadline{flex-wrap:wrap;column-gap:10px;row-gap:0}
+.bar .in{grid-template-columns:auto 1fr}
+.bar .btn{white-space:nowrap;font-size:calc(16px*min(var(--fs,1),1.15));padding:10px 14px}
+.toprow{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 12px 0}
+.toprow .fsbar{margin:0 0 0 auto}
+.admin-link{font-size:calc(13px*var(--fs,1));color:var(--soft);text-decoration:none;padding:8px 2px}
+
+/* ===== v3: 森林木棧 palette + 文楷 for quiet lines ===== */
+:root{
+  --bg:#EEF0E4; --surface:#FFFFFF; --ink:#22352B; --soft:#5D6B5F; --rule:#D9DCCD;
+  --forest:#24493A; --wood:#8B5E3C; --maple:#C8611E; --moss:#5E7D3A; --trail:#8B5E3C; --sky:#E7D9C6;
+  --mrt:#2F6FA3; --bike:#D9661F; --shared:#3E7D4F;
+  --poem:"LXGW WenKai TC","Noto Serif TC","PingFang TC",serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141C17; --surface:#1D2822; --ink:#E6EDE6; --soft:#A8B5AA; --rule:#2F3D34;
+  --forest:#9CCFB1; --wood:#D9AE85; --maple:#F0965A; --moss:#A9C46E; --trail:#D9AE85; --sky:#3A3326;
+  --mrt:#7FB3E0; --bike:#F2995A; --shared:#8BC69A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141C17; --surface:#1D2822; --ink:#E6EDE6; --soft:#A8B5AA; --rule:#2F3D34;
+  --forest:#9CCFB1; --wood:#D9AE85; --maple:#F0965A; --moss:#A9C46E; --trail:#D9AE85; --sky:#3A3326;
+  --mrt:#7FB3E0; --bike:#F2995A; --shared:#8BC69A; color-scheme:dark}
+.btn.primary{background:var(--forest);border-color:var(--forest)}
+.bar .in{grid-template-columns:auto minmax(0,1fr);align-items:center}
+.bar .share{min-height:58px;padding:0 12px;border-radius:16px;font-size:calc(15px*min(var(--fs,1),1.1))}
+.go{display:flex;align-items:center;justify-content:center;gap:8px;min-width:0;min-height:58px;padding:0 10px;border:0;border-radius:16px;cursor:pointer;white-space:nowrap;
+  font-family:"Huninn","Noto Sans TC",sans-serif;font-size:calc(21px*min(var(--fs,1),1.1));letter-spacing:.05em;color:#F6F1E3;
+  background:linear-gradient(180deg,#2F6049,#24493A);box-shadow:0 5px 0 #16302A,0 9px 16px rgba(22,48,42,.28);transition:transform .08s ease,box-shadow .08s ease;margin-bottom:5px}
+.go svg{flex:none;width:26px;height:26px}
+.go:active{transform:translateY(4px);box-shadow:0 1px 0 #16302A,0 3px 6px rgba(22,48,42,.25)}
+.go:focus-visible{outline:3px solid #E8A33D;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.go{transition:none}}
+section h2{color:var(--forest)}
+
+/* header: poster title band melting into the invite video */
+.melt{position:relative;margin:12px 12px 0;border-radius:22px;overflow:hidden;background:#000}
+.melt img{position:absolute;left:0;top:0;width:100%;height:auto;display:block;z-index:1;
+  -webkit-mask-image:linear-gradient(#000 80%,transparent 100%);mask-image:linear-gradient(#000 80%,transparent 100%)}
+.melt video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;margin-top:calc(41.3% * .82)}
+.sticker{position:absolute;z-index:2;right:10px;bottom:10px;font:inherit;font-size:calc(14px*var(--fs,1));font-weight:700;border:0;cursor:pointer;
+  background:#FFD54A;color:#3a2a00;padding:6px 12px;border-radius:999px;box-shadow:0 3px 8px rgba(0,0,0,.3)}
+
+.facts{margin:14px 12px 0}
+.when .end{flex-basis:100%;font-size:calc(16px*var(--fs,1));color:var(--soft);margin-top:2px}
+.where{font-weight:500}
+.tips{margin:0 0 16px;padding-left:1.3em;color:var(--soft)}
+.tips li{margin:4px 0}
+.rain{margin:10px 0 0;font-size:calc(14px*var(--fs,1));color:var(--soft)}
+.where small{display:block;font-weight:400;color:var(--soft);font-size:calc(15px*var(--fs,1))}
+.quiet{font-family:var(--poem);font-size:calc(19px*var(--fs,1));line-height:1.8;color:var(--ink);margin:0}
+
+/* meeting cards */
+.meet{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:10px;margin-top:12px}
+.mcard{background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.mcard h3{margin:0;font-family:"Huninn",sans-serif;font-weight:400;font-size:calc(19px*var(--fs,1))}
+.mcard.mrt h3{color:var(--mrt)} .mcard.bike h3{color:var(--bike)}
+.mcard .k{font-size:calc(13px*var(--fs,1));color:var(--soft);margin:4px 0 0}
+.mcard .v{font-size:calc(16px*var(--fs,1));font-weight:700;line-height:1.45;margin:0}
+.mcard .v small{display:block;font-weight:400;color:var(--soft);font-size:calc(14px*var(--fs,1));margin-top:2px}
+.mcard .bus{margin:2px 0}
+.mcard .bus span{font-size:calc(13px*var(--fs,1));padding:0 7px}
+.mcard .see{margin-top:auto;font:inherit;font-size:calc(14px*var(--fs,1));font-weight:700;border:1.5px solid currentColor;background:transparent;border-radius:999px;padding:6px 10px;cursor:pointer}
+.mcard.mrt .see{color:var(--mrt)} .mcard.bike .see{color:var(--bike)}
+
+/* route map */
+.map{background:var(--surface);border:1px solid var(--rule);border-radius:20px;padding:14px;margin-top:12px}
+.mode{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:4px;background:var(--rule);border-radius:14px}
+.mode button{font:inherit;font-weight:700;font-size:calc(16px*var(--fs,1));min-height:46px;border:0;border-radius:10px;background:transparent;color:var(--soft);cursor:pointer}
+.mode button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.map svg{display:block;width:100%;height:auto;margin-top:6px}
+.map svg text{font-family:"Noto Sans TC",sans-serif;font-size:12.5px;fill:var(--ink)}
+.map svg text.big{font-size:13.5px;font-weight:700}
+.map svg text.sm{font-size:11px;fill:var(--soft)}
+.map .node{fill:var(--surface);stroke:var(--ink)}
+.plan{margin:6px 0 0;font-size:calc(15px*var(--fs,1));line-height:1.65}
+.plan b{color:var(--forest)}
+.maprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.maprow .btn{flex:1 1 160px}
+.replay{font:inherit;font-size:calc(13px*var(--fs,1));border:0;background:transparent;color:var(--soft);text-decoration:underline;cursor:pointer;padding:6px 0}
+
+/* clips, seat, find */
+.clips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.clips figure{margin:0;position:relative;border-radius:14px;overflow:hidden;background:#000}
+.clips video{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.clips figcaption{position:absolute;left:8px;top:6px;color:#fff;font-family:"Huninn",sans-serif;font-size:calc(14px*var(--fs,1));text-shadow:0 1px 4px rgba(0,0,0,.75)}
+.whisper{font-family:var(--poem);font-size:calc(17px*var(--fs,1));color:var(--wood);text-align:center;margin:12px 0 0}
+.seat{position:relative;margin:34px 12px 0;border-radius:20px;overflow:hidden}
+.seat img{display:block;width:100%;height:auto}
+.seat-txt{position:absolute;left:0;right:0;bottom:0;padding:56px 16px 14px;background:linear-gradient(transparent,rgba(18,26,20,.85))}
+.seat-txt p{margin:0;color:#F4F2E8}
+.seat-txt .quiet{color:#F4F2E8;font-size:calc(18px*var(--fs,1));line-height:1.7}
+.seat-txt small{display:block;margin-top:6px;font-size:calc(13px*var(--fs,1));opacity:.88}
+.find{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.find img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:3px solid var(--surface);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+
+/* signup sheet */
+.sheet{position:fixed;inset:0;z-index:35;display:flex;align-items:flex-end;justify-content:center}
+.sheet-bg{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.sheet-in{position:relative;width:100%;max-width:560px;max-height:92vh;max-height:92dvh;overflow:auto;-webkit-overflow-scrolling:touch;background:var(--bg);border-radius:22px 22px 0 0;
+  padding:4px max(16px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.sheet-head{position:sticky;top:0;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--bg);padding:12px 0 10px;margin-bottom:8px;border-bottom:1px solid var(--rule)}
+.sheet-head h2{margin:0;font-size:calc(21px*var(--fs,1));color:var(--forest);font-family:"Huninn",sans-serif;font-weight:400}
+.x{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--rule);color:var(--ink);font-size:18px;cursor:pointer}
+#mine{margin-bottom:14px}
+.form-head{margin:4px 0 8px;font-weight:700;color:var(--forest)}
+@media (min-width:600px){.sheet{align-items:center}.sheet-in{border-radius:22px;max-height:88vh}}
+@media (prefers-reduced-motion:reduce){.sticker{transition:none}}
+
+/* info card A: calendar page + raised tiles */
+.fx{display:grid;grid-template-columns:calc(92px*min(var(--fs,1),1.15)) minmax(0,1fr);gap:12px;margin:16px 12px 0}
+.fx-cal{grid-row:span 2;display:flex;flex-direction:column;text-align:center;border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid var(--rule);box-shadow:0 4px 0 var(--rule),0 8px 14px rgba(0,0,0,.08)}
+.fx-cal .m{flex:none;background:#B94A2C;color:#fff;font-weight:700;font-size:calc(15px*var(--fs,1));letter-spacing:.1em;padding:4px 0}
+.fx-cal .d{flex:1;display:flex;align-items:center;justify-content:center;font-family:"Huninn",sans-serif;font-size:calc(52px*min(var(--fs,1),1.15));line-height:1;color:var(--ink)}
+.fx-cal .w{flex:none;font-size:calc(14px*var(--fs,1));color:var(--soft);padding-bottom:8px}
+.fx-tile{display:flex;flex-direction:column;gap:2px;justify-content:center;border-radius:16px;padding:12px 14px;min-width:0}
+.fx-cream{background:#F6F1E3;color:#2C3A30;box-shadow:0 4px 0 #E1D6BB,0 8px 14px rgba(40,50,30,.12)}
+.fx-sand{background:#F3E3CC;color:#4A3020;box-shadow:0 4px 0 #DCC3A0,0 8px 14px rgba(95,62,37,.14)}
+.fx-forest{background:linear-gradient(180deg,#2F6049,#24493A);color:#F6F1E3;box-shadow:0 4px 0 #16302A,0 8px 14px rgba(22,48,42,.25)}
+.fx-rain{background:#E3EEF4;color:#2D5B78;box-shadow:0 4px 0 #B9D0DD,0 8px 14px rgba(45,91,120,.14)}
+.fx-big{font-family:"Huninn",sans-serif;font-size:calc(40px*var(--fs,1));line-height:1.1;color:#24493A}
+.fx-ttl{font-weight:700;font-size:calc(17px*min(var(--fs,1),1.25));line-height:1.35}
+.fx-sub{font-size:calc(13.5px*var(--fs,1));line-height:1.5;opacity:.85}
+.fx-row{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,calc(150px*var(--fs,1))),1fr));gap:12px;margin-top:2px}
+.fx-row .fx-tile{justify-content:flex-start}
+.fx-lab{font-size:calc(13.5px*var(--fs,1));font-weight:700;opacity:.9}
+.fx-main{font-family:"Huninn",sans-serif;font-size:calc(22px*var(--fs,1));line-height:1.3;margin:2px 0}
+.fx-main b{font-weight:400;font-size:1.45em;line-height:1;margin:0 2px}
+.fx-forest .fx-main b{color:#FFE7B8}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.admin{z-index:40}
+.rainq legend{line-height:1.6}
+.opt-note{margin:8px 0 0;font-size:calc(13px*var(--fs,1));color:var(--soft);font-weight:400}
+.rainstat{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-top:10px;padding:10px 12px;border-radius:14px;background:var(--surface);border:1px solid var(--rule);font-size:calc(15px*var(--fs,1))}
+.rainstat b{width:100%;color:var(--forest)}
+.rainstat span,.rtag{display:inline-block;border-radius:999px;padding:1px 10px;font-weight:700;font-size:calc(14px*var(--fs,1))}
+.rtag{grid-column:1/-1;justify-self:start;font-size:calc(12px*var(--fs,1));margin-top:2px}
+.ok{background:#DCEFD9;color:#24563A}.no{background:#F6DED2;color:#8A3B16}.un{background:#ECE6C8;color:#5E4E00}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:4px;background:var(--rule);border-radius:14px;margin:2px 0 14px}
+.seg button{font:inherit;font-weight:700;font-size:calc(15px*min(var(--fs,1),1.2));line-height:1.35;min-height:48px;padding:6px 6px;border:0;border-radius:10px;background:transparent;color:var(--soft);cursor:pointer}
+.seg button[aria-selected="true"]{background:var(--surface);color:var(--forest);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+#tabMine #lookup{margin-top:0}
+#tabMine .lookup-link{margin:4px 0 12px}
+.fx-edit{margin:14px 12px 0;text-align:center}
+.fx-edit button{font:inherit;font-size:calc(15px*var(--fs,1));font-weight:500;color:var(--forest);background:transparent;border:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:6px 4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="toprow"><a class="admin-link" href="#admin">🔒 主辦人後台</a><div class="fsbar" role="group" aria-label="字體大小"><span>字體大小</span><button type="button" data-fs="1" aria-pressed="true">標準</button><button type="button" data-fs="1.2" aria-pressed="false">大</button><button type="button" data-fs="1.4" aria-pressed="false">特大</button></div></div>
+
+  <h1 class="sr">一起走入城市秘境｜11/21 大直劍潭山步道</h1>
+  <div class="melt">
+    <video id="vid" src="video.mp4" poster="video-cover.jpg" muted autoplay loop playsinline webkit-playsinline preload="auto" aria-label="公仔邀請短片"></video>
+    <img src="band.jpg" alt="一起走入城市秘境：放慢腳步，享受秋日的山林微風。大直劍潭山步道・老地方觀機平台" width="1000" height="413">
+    <button class="sticker" id="sound" type="button">🔊 點我聽邀請</button>
+  </div>
+
+  <div class="fx">
+    <div class="fx-cal" aria-label="11 月 21 日 星期六"><span class="m">11 月</span><span class="d num">21</span><span class="w">星期六</span></div>
+    <div class="fx-tile fx-cream fx-time"><span class="fx-big num">13:30</span><span class="fx-sub">步道口出發・約 3 小時</span></div>
+    <div class="fx-tile fx-sand fx-place"><span class="fx-ttl">📍 大直劍潭山步道</span><span class="fx-sub">老地方觀機平台<br>→ 北眼平台</span></div>
+    <div class="fx-row">
+      <div class="fx-tile fx-forest"><span class="fx-lab">報名截止</span><span class="fx-main" id="countdown">還有 <b class="num">5</b> 天</span><span class="fx-sub">11/20（五）17:00<br>截止</span></div>
+      <div class="fx-tile fx-rain"><span class="fx-lab">☔ 雨天備案</span><span class="fx-main">12/5（六）</span><span class="fx-sub">上午 9:30 出發<br>11/18 公告</span></div>
+    </div>
+  </div>
+  <p class="fx-edit"><button type="button" data-go="mine">已經報名了？點這裡修改或取消 →</button></p>
+
+  <section>
+    <p class="quiet">週六午後，離開城市一下。走一段樹蔭下的山路，在平台上坐下來，看看自己每天生活的台北。</p>
+    <p class="lead" style="margin-top:10px">第一次來很歡迎，找朋友、家人一起來更好。</p>
+  </section>
+
+  <section>
+    <h2>在哪裡集合？</h2>
+    <p class="lead">兩種方式，13:30 在步道口一起出發。</p>
+    <div class="meet">
+      <div class="mcard mrt">
+        <h3>🚇 搭捷運</h3>
+        <p class="k">集合</p>
+        <p class="v">13:20 捷運大直站 1 號出口<small>一起搭公車到步道口，坐到「中央電台」站。有人陪同，不怕坐錯。</small></p>
+        <div class="bus"><span>內湖幹線</span><span>208</span><span>267</span><span>287 區間</span></div>
+        <p class="k">結束</p>
+        <p class="v">一起走到捷運劍潭站<small>回程會經過森林方舟</small></p>
+        <button class="see" type="button" data-mode="mrt">看搭捷運的路線 ↓</button>
+      </div>
+      <div class="mcard bike">
+        <h3>🛵 自己騎車</h3>
+        <p class="k">集合</p>
+        <p class="v">13:30 步道口<small>直接騎到步道口，和搭捷運的朋友會合。</small></p>
+        <p class="k">結束</p>
+        <p class="v">原路回到步道口<small>有人陪同下山，牽車回家</small></p>
+        <button class="see" type="button" data-mode="bike">看騎車的路線 ↓</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="route">
+    <h2>跟著走一遍</h2>
+    <div class="map" id="map">
+      <div class="mode" role="group" aria-label="選擇交通方式">
+        <button type="button" data-m="mrt" aria-pressed="true">🚇 我搭捷運</button>
+        <button type="button" data-m="bike" aria-pressed="false">🛵 我騎車</button>
+      </div>
+      <svg id="mapsvg" viewBox="0 0 360 380" role="img" aria-label="路線示意圖：步道口、老地方觀機平台、北眼平台、森林方舟、捷運劍潭站"></svg>
+      <p class="plan" id="plan"></p>
+      <div class="maprow" id="mapbtns"></div>
+      <button class="replay" type="button" id="replay">↻ 再走一次</button>
+    </div>
+    <div class="clips">
+      <figure><video muted loop playsinline autoplay preload="metadata" src="clip-trail.mp4"></video><figcaption>步道</figcaption></figure>
+      <figure><video muted loop playsinline autoplay preload="metadata" src="clip-laodifang.mp4"></video><figcaption>老地方</figcaption></figure>
+      <figure><video muted loop playsinline autoplay preload="metadata" src="clip-beiyan.mp4"></video><figcaption>北眼</figcaption></figure>
+    </div>
+    <p class="whisper">剩下的，留給你親自去看。</p>
+  </section>
+
+  <div class="seat">
+    <img src="seat.jpg" alt="北眼平台上，大家坐在長椅上望著台北" width="900" height="675" loading="lazy">
+    <div class="seat-txt">
+      <p class="quiet">約 3 小時的山林慢遊，不催不趕。把時間留給眼前的台北，也留給自己。</p>
+      <small>有事想先離開也沒問題，會有人陪你下山。</small>
+    </div>
+  </div>
+
+  <section>
+    <h2>到現場找找看</h2>
+    <div class="find">
+      <img src="find-1.jpg" alt="" loading="lazy"><img src="find-2.jpg" alt="" loading="lazy"><img src="find-3.jpg" alt="" loading="lazy"><img src="badge.png" alt="" loading="lazy">
+    </div>
+    <p class="whisper">這些藏在路上，你能找到幾個？</p>
+  </section>
+
+  <section>
+    <h2>新朋友常問</h2>
+    <details><summary>要注意什麼？</summary>
+      <ul class="tips">
+        <li>沿路會有一些階梯，可以自行決定是否攜帶登山杖。</li>
+        <li>挑一雙好走的鞋，穿排汗衣，帶足夠的水和隨身零食。</li>
+      </ul></details>
+    <details><summary>下雨怎麼辦？</summary><p>11/18（三）會看天氣預報決定。如果改期，會改到 <b>12/5（六）上午 9:30</b> 從步道口出發（搭捷運的朋友 9:20 在大直站 1 號出口集合），並在 LINE 社群公告。</p></details>
+    <details><summary>家人朋友可以一起來嗎？</summary><p>很歡迎！報名時填一次，選「總共幾位」就可以，不用每個人分開報。</p></details>
+    <details><summary>報名後想修改或取消？</summary><p>點畫面下方的「想要一起走」，在跳出的視窗上方選「<b>已報名，修改／取消</b>」，輸入報名時的手機和姓名就能找到。也可以直接點日期資訊下方的「已經報名了？」。換手機、換瀏覽器都找得到，11/21（六）中午 12:00 前都可以改。</p></details>
+  </section>
+</div>
+
+<nav class="bar" aria-label="快速動作">
+  <div class="in">
+    <button class="btn share" type="button" id="share"><i></i>分享給朋友</button>
+    <button class="go" type="button" data-go="signup" id="barBtn"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22 L11 11 L16 17 L21 9 L29 22"/><path d="M16 30 C14 27 19 25 17 22"/><circle cx="24" cy="5" r="2.2" fill="currentColor" stroke="none"/></g></svg><span id="barTxt">想要一起走</span></button>
+  </div>
+</nav>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-bg" data-close></div>
+  <div class="sheet-in" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet-head"><h2 id="sheetTitle">報名・11/21 劍潭山</h2><button type="button" class="x" data-close aria-label="關閉">✕</button></div>
+    <div class="seg" role="tablist" aria-label="報名或修改">
+      <button type="button" role="tab" data-tab="new" aria-selected="true">我要報名</button>
+      <button type="button" role="tab" data-tab="mine" aria-selected="false">已報名，修改／取消</button>
+    </div>
+    <div id="tabNew">
+    <p class="form-head" id="formHead" hidden>再幫另一組報名</p>
+    <p class="closed card" id="closedMsg" hidden>新報名已截止，謝謝大家！已報名的朋友仍可修改或取消。</p>
+    <div class="card" id="formCard">
+      <form id="form" novalidate>
+        <div class="editbar" id="editBar" hidden><span>✏️ 正在修改報名</span><button type="button" class="linkbtn" id="cancelEdit">不改了</button></div>
+        <label class="f">姓名<input name="name" autocomplete="name" required maxlength="30"></label>
+        <label class="f">手機<input name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="0912345678" required maxlength="12"></label>
+        <label class="f">總共幾位（含自己）
+          <select name="count">
+            <option value="1">1 位（只有我）</option><option value="2">2 位</option><option value="3">3 位</option><option value="4">4 位</option>
+            <option value="5">5 位</option><option value="6">6 位</option><option value="7">7 位</option><option value="8">8 位</option>
+          </select></label>
+        <fieldset class="f"><legend>怎麼知道這個活動？</legend>
+          <label class="opt"><input type="radio" name="src" value="朋友邀請" required> 朋友邀請</label>
+          <label class="opt"><input type="radio" name="src" value="LINE 群組"> LINE 群組／社群</label>
+          <label class="opt"><input type="radio" name="src" value="其他"> 其他</label>
+          <input name="srcNote" id="srcNote" maxlength="30" hidden>
+        </fieldset>
+        <fieldset class="f"><legend>當天怎麼來？</legend>
+          <label class="opt big"><input type="radio" name="mode" value="大直站" required><span><b>搭捷運</b><br><small>13:20 大直站 1 號出口集合</small></span></label>
+          <label class="opt big"><input type="radio" name="mode" value="騎車"><span><b>自行騎車</b><br><small>13:30 步道口會合</small></span></label>
+        </fieldset>
+        <fieldset class="f rainq"><legend>☔ 如果因雨改到 <b>12/5（六）上午 9:30</b>（搭捷運 9:20 集合），你可以參加嗎？</legend>
+          <label class="opt"><input type="radio" name="rain" value="可以" required> 可以，改期我也去</label>
+          <label class="opt"><input type="radio" name="rain" value="不參加"> 改期的話，我就不參加</label>
+          <p class="opt-note">11/18（三）會決定是否改期。之後想改答案，可以在「我的報名」修改。</p>
+        </fieldset>
+        <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn primary" type="submit" id="submitBtn" style="width:100%">送出報名</button>
+        <p class="privacy">你的資料只給這次活動聯絡用，活動結束後會刪除。</p>
+      </form>
+    </div>
+    <div class="card done" id="done" hidden>
+      <div class="big-ok">🎉</div>
+      <h3 class="round">報名成功！</h3>
+      <p id="doneText"></p>
+      <a class="btn" id="cal2" href="#" target="_blank" rel="noopener" style="width:100%;margin-top:8px">📅 加入行事曆</a>
+      <button class="btn" type="button" id="again" style="width:100%;margin-top:10px">再幫另一組報名</button>
+    </div>
+    </div>
+    <div id="tabMine" hidden>
+    <div id="mine" hidden>
+      <p class="mine-h">你的報名</p>
+      <div id="mineList"></div>
+    </div>
+    <p class="lookup-link"><button type="button" class="linkbtn" id="openLookup">找不到你的報名？用手機和姓名查詢</button></p>
+    <div class="card" id="lookup">
+      <p style="margin:0 0 8px">輸入報名時填的<b>手機</b>和<b>姓名</b>，就能找到你的報名。</p>
+      <label class="f">手機<input id="lkPhone" type="tel" inputmode="numeric" placeholder="0912345678" maxlength="12"></label>
+      <label class="f">姓名<input id="lkName" maxlength="30"></label>
+      <p class="err" id="lkErr" role="alert"></p>
+      <button class="btn primary" type="button" id="lkGo" style="width:100%">找我的報名</button>
+    </div>
+      <p class="hint" id="mineClosed" hidden>已過修改時間（11/21 中午 12:00），如有變動請直接告訴邀請你的朋友。</p>
+    </div>
+  </div>
+</div>
+
+<div class="admin" id="admin" hidden>
+  <div class="admin-in">
+    <div class="ahead"><h2 class="round">報名後台</h2><a href="#" class="btn small" id="aclose">回活動頁</a></div>
+    <div id="lock" class="card">
+      <p>請輸入後台密碼</p>
+      <input id="pw" type="password" placeholder="密碼" class="pwin" autocomplete="current-password">
+      <button class="btn primary" type="button" id="unlock" style="width:100%;margin-top:10px">進入</button>
+      
+    </div>
+    <div id="panel" hidden>
+      <div class="stats">
+        <div><b id="sAll">0</b><span>總人數</span></div>
+        <div><b id="sMrt">0</b><span>大直站</span></div>
+        <div><b id="sBike">0</b><span>騎車</span></div>
+      </div>
+      <div class="rainstat" id="rainStat"></div>
+      <p class="hint" id="sRows"></p>
+      <p class="dstat" id="dStat"></p>
+      <h3 class="mrt-h">集合方式</h3>
+      <div id="modeBar"></div>
+      <h3 class="mrt-h">怎麼知道這個活動（人數）</h3>
+      <div id="srcStat"></div>
+      <div id="refBox" hidden><h3 class="mrt-h">朋友邀請：誰帶來最多人</h3><div id="refStat"></div></div>
+      <div id="otherBox" hidden><h3 class="mrt-h">「其他」的說明</h3><div id="otherStat" class="chips"></div></div>
+      <h3 class="mrt-h">報名名單</h3>
+      <div id="list"></div>
+      <div class="abtns">
+        <button class="btn primary" type="button" id="refresh">🔄 重新整理</button>
+        <button class="btn" type="button" id="copy">📋 複製名單（可貼到 LINE）</button>
+        <button class="btn" type="button" id="copyRain">☔ 複製「改期也可以」的名單</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(function(){
+  // countdown (Taipei time)
+  var dl = new Date("2026-11-20T17:00:00+08:00");
+  var days = Math.ceil((dl - new Date()) / 86400000);
+  document.getElementById("countdown").innerHTML = days > 0 ? '還有 <b class="num">' + days + '</b> 天' : "已截止";
+
+  // calendar
+  var cal = "https://calendar.google.com/calendar/render?action=TEMPLATE"
+    + "&text=" + encodeURIComponent("一起走入城市秘境｜劍潭山健行")
+    + "&dates=20261121T132000/20261121T163000&ctz=Asia/Taipei"
+    + "&location=" + encodeURIComponent("捷運大直站1號出口")
+    + "&details=" + encodeURIComponent("搭捷運：13:20 大直站1號出口集合\n騎車：13:30 步道口出發\n約3小時，有事可先離開。請穿好走的鞋、帶足飲水。");
+
+  function toast(t){var el=document.getElementById("toast");el.textContent=t;el.classList.add("on");setTimeout(function(){el.classList.remove("on")},1800)}
+
+  // share to LINE
+  document.getElementById("share").addEventListener("click",function(){
+    var msg = "11/21（六）午後一起走劍潭山 🌿 到老地方觀機平台、北眼平台鳥瞰台北。\n點連結看路線、報名（11/20 下午 5 點截止）：\n" + location.href.split("#")[0];
+    location.href = "https://line.me/R/share?text=" + encodeURIComponent(msg);
+  });
+
+  // ===== 首頁影片聲音 =====
+  var v=document.getElementById("vid"), snd=document.getElementById("sound");
+  snd.addEventListener("click",function(){ v.muted=!v.muted; if(!v.muted){v.currentTime=0;} var p=v.play(); if(p&&p.catch)p.catch(function(){}); snd.textContent=v.muted?"🔊 點我聽邀請":"🔇 關聲音"; });
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) { v.removeAttribute("autoplay"); v.pause(); }
+  document.querySelectorAll(".clips video").forEach(function(c){ if(reduceMotion){c.removeAttribute("autoplay");c.pause();return;} var p=c.play(); if(p&&p.catch)p.catch(function(){}); });
+
+  // ===== 報名視窗 =====
+  var sheet=document.getElementById("sheet"), lastFocus=null;
+  function openSheet(){ lastFocus=document.activeElement; sheet.hidden=false; document.body.style.overflow="hidden";
+    sheet.querySelector(".sheet-in").scrollTop=0; }
+  function closeSheet(){ sheet.hidden=true; document.body.style.overflow=""; if(lastFocus&&lastFocus.focus)lastFocus.focus(); }
+  sheet.addEventListener("click",function(e){ if(e.target.closest("[data-close]")){ closeSheet(); if(window._afterClose)window._afterClose(); } });
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&!sheet.hidden){ closeSheet(); if(window._afterClose)window._afterClose(); } });
+
+  // ===== 路線圖 =====
+  (function(){
+    var NS="http://www.w3.org/2000/svg", svg=document.getElementById("mapsvg");
+    var LOGO="badge.png", MASCOT="mascot.png";
+    var SEG={
+      bus:"M318,334 C292,348 252,330 222,310",
+      up:"M222,310 C186,256 266,190 236,96",
+      cross:"M236,96 C200,70 148,96 112,144",
+      ark:"M112,144 C86,180 98,214 74,248",
+      jt:"M74,248 C56,284 70,316 40,344"
+    };
+    var ROUTE={
+      mrt:"M318,334 C292,348 252,330 222,310 C186,256 266,190 236,96 C200,70 148,96 112,144 C86,180 98,214 74,248 C56,284 70,316 40,344",
+      bike:"M222,310 C186,256 266,190 236,96 C200,70 148,96 112,144"
+    };
+    var PLAN={
+      mrt:"<b>13:20</b> 大直站 1 號出口集合 → 一起搭公車到「中央電台」站 → <b>13:30</b> 步道口出發 → 老地方觀機平台 → 北眼平台 → 經過森林方舟 → 捷運劍潭站",
+      bike:"<b>13:30</b> 步道口出發 → 老地方觀機平台 → 北眼平台 → 原路回到步道口（有人陪同）"
+    };
+    var BTNS={
+      mrt:'<a class="btn primary" href="https://www.google.com/maps/dir/?api=1&destination=%E6%8D%B7%E9%81%8B%E5%A4%A7%E7%9B%B4%E7%AB%99&travelmode=transit" target="_blank" rel="noopener">🚇 從我這裡到大直站</a>'
+         +'<a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=%E6%8D%B7%E9%81%8B%E5%8A%8D%E6%BD%AD%E7%AB%99&travelmode=transit" target="_blank" rel="noopener">🏠 從劍潭站回家</a>',
+      bike:'<a class="btn primary" href="https://maps.app.goo.gl/644i3cwKW65WkDb3A" target="_blank" rel="noopener">📍 步道口導航</a>'
+    };
+    function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+    function stroke(e,c){e.style.stroke="var("+c+")";return e}
+    function label(g,x,y,t,cls,anchor){var e=el("text",{x:x,y:y,"text-anchor":anchor||"start","class":cls||""},g);e.textContent=t}
+
+    var base=el("g",{opacity:.3},svg);
+    stroke(el("path",{d:SEG.up+" "+SEG.cross.replace(/^M[\d.,]+/,""),fill:"none","stroke-width":7,"stroke-linecap":"round"},base),"--shared");
+    ["bus","ark","jt"].forEach(function(k){stroke(el("path",{d:SEG[k],fill:"none","stroke-width":5,"stroke-linecap":"round","stroke-dasharray":k==="bus"?"2 9":"none"},base),"--mrt")});
+    var hi=el("path",{fill:"none","stroke-width":6,"stroke-linecap":"round","stroke-linejoin":"round"},svg);
+    var nodes=el("g",{},svg);
+    [[318,334,0],[222,310,1],[236,96,1],[112,144,1],[74,248,0],[40,344,0]].forEach(function(n){el("circle",{cx:n[0],cy:n[1],r:n[2]?8:6,"class":"node","stroke-width":2.5},nodes)});
+    var lab=el("g",{},svg);
+    label(lab,318,360,"捷運大直站","big","middle");label(lab,318,374,"13:20 集合","sm","middle");
+    label(lab,234,300,"步道口","big");label(lab,234,286,"13:30 出發","sm");
+    label(lab,248,124,"老地方觀機平台","big");label(lab,248,138,"看 101、松山機場","sm");
+    label(lab,100,142,"北眼平台","big","end");label(lab,100,156,"看士林","sm","end");
+    label(lab,88,252,"森林方舟","big");
+    label(lab,44,368,"捷運劍潭站","big");
+    label(lab,286,316,"公車","sm","middle");
+    var stamp=el("image",{href:LOGO,x:262,y:14,width:80,height:80,opacity:1},svg);
+    stamp.style.transformOrigin="302px 54px"; stamp.style.transformBox="view-box";
+    var mascot=el("image",{href:MASCOT,width:40,height:40,x:-100,y:-100},svg);
+
+    var mode="mrt", raf=null;
+    var plan=document.getElementById("plan"), btns=document.getElementById("mapbtns");
+    function stampAnim(){ stamp.setAttribute("opacity",1); if(stamp.animate) stamp.animate([{transform:"scale(1.8) rotate(-14deg)",opacity:0},{transform:"scale(.92) rotate(4deg)",opacity:1},{transform:"scale(1) rotate(0)",opacity:1}],{duration:520,easing:"cubic-bezier(.2,.8,.3,1.2)"}); }
+    function setMode(m){
+      mode=m;
+      document.querySelectorAll("#map .mode button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.m===m))});
+      hi.setAttribute("d",ROUTE[m]); stroke(hi,m==="mrt"?"--mrt":"--bike");
+      plan.innerHTML=PLAN[m]; btns.innerHTML=BTNS[m];
+    }
+    function rest(){ if(raf)cancelAnimationFrame(raf); raf=null; hi.style.strokeDasharray="none"; hi.style.strokeDashoffset=0; stamp.setAttribute("opacity",1); mascot.setAttribute("x",-100); }
+    function play(){
+      if(raf)cancelAnimationFrame(raf);
+      if(reduceMotion){rest();return;}
+      var L=hi.getTotalLength(), stopAt=0, best=1e9;
+      for(var s=0;s<=L;s+=2){var p=hi.getPointAtLength(s),dd=(p.x-236)*(p.x-236)+(p.y-96)*(p.y-96); if(dd<best){best=dd;stopAt=s}}
+      var back=(mode==="bike"), total=back?2:1, dur=back?7600:5600, t0=null, stamped=false;
+      stamp.setAttribute("opacity",0);
+      hi.style.strokeDasharray=L; hi.style.strokeDashoffset=L;
+      function step(ts){
+        if(!t0)t0=ts; var k=Math.min(1,(ts-t0)/dur), e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2, pos=e*total, len;
+        if(pos<=1){ len=pos*L; hi.style.strokeDashoffset=L-len; } else { hi.style.strokeDashoffset=0; len=(2-pos)*L; }
+        var p=hi.getPointAtLength(len); mascot.setAttribute("x",p.x-20); mascot.setAttribute("y",p.y-34);
+        if(!stamped&&pos<=1&&len>=stopAt){stamped=true;stampAnim()}
+        if(k<1) raf=requestAnimationFrame(step); else { raf=null; setTimeout(function(){ if(!raf) mascot.setAttribute("x",-100); },1200); }
+      }
+      raf=requestAnimationFrame(step);
+    }
+    document.querySelectorAll("#map .mode button").forEach(function(b){b.addEventListener("click",function(){ setMode(b.dataset.m); play(); })});
+    document.getElementById("replay").addEventListener("click",function(){ play(); });
+    document.querySelectorAll(".mcard .see").forEach(function(b){b.addEventListener("click",function(){
+      setMode(b.dataset.mode); document.getElementById("route").scrollIntoView({behavior:reduceMotion?"auto":"smooth",block:"start"}); setTimeout(play,reduceMotion?0:450); })});
+    setMode("mrt"); rest();
+    if("IntersectionObserver" in window){
+      var io=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ io.disconnect(); play(); } },{threshold:.55}); io.observe(document.getElementById("map"));
+    }
+  })();
+
+  // ===== 報名 =====
+  var API_URL = "https://script.google.com/macros/s/AKfycbw1lARt4ddmuFRadPbglRrmcnI3hl6JDkxUd1N2wTX7h22JICP9LtBDd7EysbJsuh-p4A/exec"; // 空白 = 示範模式（資料只存在這支手機）
+  var EDIT_DEADLINE = new Date("2026-11-21T12:00:00+08:00");
+  var KEY="jt-signups-demo", MYKEY="jt-my-signups", mem=[], myMem=[];
+  function dLoad(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){return mem}}
+  function dSave(a){mem=a;try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
+  function myLoad(){try{return JSON.parse(localStorage.getItem(MYKEY)||"[]")}catch(e){return myMem}}
+  function mySave(a){myMem=a;try{localStorage.setItem(MYKEY,JSON.stringify(a))}catch(e){}}
+  function tok(){var s="",c="abcdefghijkmnpqrstuvwxyz23456789";for(var i=0;i<20;i++)s+=c[Math.floor(Math.random()*c.length)];return s}
+  var FIELDS=["name","phone","count","src","note","mode","rain"];
+  function pub(r){var o={token:r.token};FIELDS.forEach(function(k){o[k]=r[k]});o.status=r.status;return o}
+  function demoApi(b){
+    var a=dLoad(), now=new Date().toISOString(), i;
+    function find(t){for(var j=0;j<a.length;j++) if(a[j].token===t) return j; return -1}
+    if(b.action==="signup"){var r={token:tok(),at:now,updated:"",status:"ok"};FIELDS.forEach(function(k){r[k]=b[k]});a.push(r);dSave(a);return {ok:true,token:r.token}}
+    if(b.action==="get"){i=find(b.token);return i<0?{ok:false,error:"找不到報名"}:{ok:true,rec:pub(a[i])}}
+    if(b.action==="update"){i=find(b.token);if(i<0)return {ok:false,error:"找不到報名"};FIELDS.forEach(function(k){a[i][k]=b[k]});a[i].updated=now;a[i].status="ok";dSave(a);return {ok:true}}
+    if(b.action==="cancel"){i=find(b.token);if(i<0)return {ok:false,error:"找不到報名"};a[i].status="cancelled";a[i].updated=now;dSave(a);return {ok:true}}
+    if(b.action==="find"){var t=a.filter(function(r){return r.phone===b.phone&&r.name===b.name&&r.status==="ok"}).map(function(r){return r.token});return t.length?{ok:true,tokens:t}:{ok:false,error:"找不到符合的報名，請確認手機和姓名跟報名時一樣"}}
+    if(b.action==="list"){return b.password==="1121"?{ok:true,rows:a}:{ok:false,error:"密碼不正確"}}
+    return {ok:false,error:"未知的動作"};
+  }
+  function api(body){
+    if(!API_URL) return Promise.resolve(demoApi(JSON.parse(JSON.stringify(body))));
+    return fetch(API_URL,{method:"POST",body:JSON.stringify(body)}).then(function(r){return r.json()});
+  }
+  var closed = new Date() > dl, editClosed = new Date() > EDIT_DEADLINE, editing=null;
+  var form=document.getElementById("form"), err=document.getElementById("err"), srcNote=document.getElementById("srcNote"),
+      formCard=document.getElementById("formCard"), done=document.getElementById("done"), btn=document.getElementById("submitBtn");
+  function showForm(){ formCard.hidden = closed && !editing; document.getElementById("closedMsg").hidden = !(closed && !editing); }
+  showForm();
+  var tabNew=document.getElementById("tabNew"), tabMine=document.getElementById("tabMine"), lookupOpen=false;
+  function syncMineTab(){
+    var has=myLoad().length>0, lk=document.getElementById("lookup"), ol=document.getElementById("openLookup").parentNode;
+    if(editClosed){ lk.hidden=true; ol.hidden=true; document.getElementById("mineClosed").hidden=has; return; }
+    lk.hidden = has && !lookupOpen; ol.hidden = !has || lookupOpen;
+  }
+  function setTab(t){ tabNew.hidden=t!=="new"; tabMine.hidden=t!=="mine";
+    document.querySelectorAll(".seg button").forEach(function(b){b.setAttribute("aria-selected",String(b.dataset.tab===t))});
+    if(t==="mine") syncMineTab(); sheet.querySelector(".sheet-in").scrollTop=0; }
+  document.querySelectorAll(".seg button").forEach(function(b){b.addEventListener("click",function(){ if(editing&&b.dataset.tab==="mine"){endEdit();} setTab(b.dataset.tab); })});
+  document.querySelectorAll('[data-go="signup"]').forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();
+    if(!editing){ form.reset(); setSrc(""); err.textContent=""; done.hidden=true; }
+    showForm(); setTab(myLoad().length?"mine":"new"); openSheet();})});
+  document.querySelectorAll('[data-go="mine"]').forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();
+    if(editing) endEdit(); done.hidden=true; showForm(); setTab("mine"); openSheet();})});
+  window._afterClose=function(){ if(editing) endEdit(); done.hidden=true; showForm(); lookupOpen=false; };
+  function setSrc(v,keep){ if(!keep) srcNote.value=""; if(v==="LINE 群組"||!v){srcNote.hidden=true;return;}
+    srcNote.hidden=false; srcNote.placeholder = v==="朋友邀請"?"是誰邀請你的？":"請簡單說明從哪裡知道的"; }
+  form.addEventListener("change",function(e){ if(e.target.name==="src"){setSrc(e.target.value);srcNote.focus();} });
+  function rainText(r){return r==="可以"?"☔ 若改期到 12/5：可以參加":r==="不參加"?"☔ 若改期到 12/5：不參加":"☔ 雨天備案：尚未回答"}
+  function modeText(m){return m==="大直站"?"13:20 大直站 1 號出口集合":"13:30 在步道口會合（騎車）"}
+
+  // 我的報名
+  function renderMine(){
+    var ts=myLoad(), box=document.getElementById("mine"), list=document.getElementById("mineList");
+    if(!ts.length){box.hidden=true; if(!tabMine.hidden) syncMineTab(); return;}
+    Promise.all(ts.map(function(t){return api({action:"get",token:t}).catch(function(){return null})})).then(function(rs){
+      var keep=[], html="";
+      rs.forEach(function(r,i){ if(!r||!r.ok||r.rec.status!=="ok") return; keep.push(ts[i]); var x=r.rec;
+        html+='<div class="my"><div class="who">'+esc(x.name)+(+x.count>1?"　共 "+x.count+" 位":"")+'</div><div class="meta">'+esc(modeText(x.mode))+'<br>'+esc(rainText(x.rain))+'</div>'
+          +(editClosed?'<div class="meta">已過修改時間，如有變動請告訴邀請你的朋友。</div>':'<div class="acts"><button class="btn" type="button" data-edit="'+x.token+'">✏️ 修改</button><button class="btn danger" type="button" data-cancel="'+x.token+'">取消報名</button></div>')+'</div>';
+      });
+      mySave(keep); list.innerHTML=html; box.hidden=!keep.length;
+      var has=keep.length>0; document.getElementById("barTxt").textContent = has ? "我的報名" : "想要一起走";
+      document.getElementById("formHead").hidden = !has || !!editing || closed;
+      if(!tabMine.hidden) syncMineTab();
+    });
+  }
+  document.getElementById("mineList").addEventListener("click",function(e){
+    var t=e.target.closest("button"); if(!t) return;
+    if(t.dataset.edit) startEdit(t.dataset.edit);
+    if(t.dataset.cancel){ if(!confirm("確定要取消這筆報名嗎？")) return; t.disabled=true;
+      api({action:"cancel",token:t.dataset.cancel}).then(function(r){ if(!r.ok) throw new Error(r.error); toast("已取消報名"); renderMine(); }).catch(function(x){toast(x.message||"取消失敗");t.disabled=false;}); }
+  });
+  function startEdit(token){
+    api({action:"get",token:token}).then(function(r){
+      if(!r.ok) throw new Error(r.error); var x=r.rec; editing=token; showForm(); done.hidden=true; formCard.hidden=false;
+      form.name.value=x.name; form.phone.value=x.phone; form.count.value=String(x.count||1);
+      form.querySelectorAll('input[name=src]').forEach(function(i){i.checked=i.value===x.src}); setSrc(x.src,true); srcNote.value=x.note||"";
+      form.querySelectorAll('input[name=mode]').forEach(function(i){i.checked=i.value===x.mode});
+      form.querySelectorAll('input[name=rain]').forEach(function(i){i.checked=i.value===x.rain});
+      document.getElementById("editBar").hidden=false; document.getElementById("formHead").hidden=true; btn.textContent="儲存修改"; err.textContent="";
+      setTab("new"); openSheet();
+    }).catch(function(x){toast(x.message||"讀取失敗")});
+  }
+  function endEdit(){ editing=null; form.reset(); setSrc(""); document.getElementById("editBar").hidden=true; btn.textContent="送出報名"; showForm(); }
+  document.getElementById("cancelEdit").addEventListener("click",function(){endEdit();renderMine();setTab("mine");});
+
+  form.addEventListener("submit",function(e){
+    e.preventDefault(); var d=new FormData(form);
+    var rec={action:editing?"update":"signup",token:editing||undefined,name:(d.get("name")||"").trim(),phone:(d.get("phone")||"").replace(/[^0-9]/g,""),count:+d.get("count")||1,
+      src:d.get("src")||"",note:(d.get("srcNote")||"").trim(),mode:d.get("mode")||"",rain:d.get("rain")||"",website:d.get("website")||""};
+    if(!rec.name) return err.textContent="請填寫姓名";
+    if(!/^09\d{8}$/.test(rec.phone)) return err.textContent="請填寫正確的手機號碼（09 開頭共 10 碼）";
+    if(!rec.src) return err.textContent="請選擇怎麼知道這個活動";
+    if(rec.src==="朋友邀請"&&!rec.note) return err.textContent="請填寫邀請你的朋友是誰";
+    if(rec.src==="其他"&&!rec.note) return err.textContent="請簡單說明從哪裡知道的";
+    if(rec.src==="LINE 群組") rec.note="";
+    if(!rec.mode) return err.textContent="請選擇當天怎麼來";
+    if(!rec.rain) return err.textContent="請選擇如果改到 12/5 是否可以參加";
+    err.textContent=""; var wasEdit=!!editing; btn.disabled=true; btn.textContent="送出中…";
+    api(rec).then(function(r){
+      if(!r||!r.ok) throw new Error(r&&r.error||"送出失敗");
+      if(!wasEdit){var m=myLoad(); m.push(r.token); mySave(m);}
+      endEdit(); formCard.hidden=true; done.hidden=false;
+      done.querySelector("h3").textContent = wasEdit?"已更新報名！":"報名成功！";
+      document.getElementById("doneText").textContent = rec.name+(rec.count>1?"（共 "+rec.count+" 位）":"")+"，11/21（六）見！"+modeText(rec.mode)+"。"+(rec.rain==="可以"?"若因雨改到 12/5，也等你一起走。":"若因雨改期，我們會再跟你說。")+"之後想修改或取消，點網頁下方「我的報名」就可以。";
+      document.getElementById("cal2").href=cal; renderMine(); sheet.querySelector(".sheet-in").scrollTop=0;
+    }).catch(function(x){err.textContent=(x.message||"送出失敗")+"，請稍後再試，或直接告訴邀請你的朋友。";})
+      .then(function(){btn.disabled=false; if(!editing) btn.textContent="送出報名"; else btn.textContent="儲存修改";});
+  });
+  document.getElementById("again").addEventListener("click",function(){endEdit();done.hidden=true;form.reset();setSrc("");showForm();renderMine();sheet.querySelector(".sheet-in").scrollTop=0;});
+
+  // 找回報名
+  document.getElementById("openLookup").addEventListener("click",function(){ lookupOpen=true; syncMineTab(); document.getElementById("lkPhone").focus(); });
+  document.getElementById("lkGo").addEventListener("click",function(){
+    var ph=document.getElementById("lkPhone").value.replace(/[^0-9]/g,""), nm=document.getElementById("lkName").value.trim(), le=document.getElementById("lkErr"), b=this;
+    if(!/^09\d{8}$/.test(ph)||!nm){le.textContent="請填寫手機和姓名";return;}
+    le.textContent=""; b.disabled=true;
+    api({action:"find",phone:ph,name:nm}).then(function(r){
+      if(!r.ok) throw new Error(r.error); var m=myLoad(); r.tokens.forEach(function(t){if(m.indexOf(t)<0)m.push(t)}); mySave(m);
+      lookupOpen=false; renderMine(); setTab("mine"); toast("找到了！可以修改或取消");
+    }).catch(function(x){le.textContent=x.message||"查詢失敗"}).then(function(){b.disabled=false;});
+  });
+  renderMine();
+
+  // ===== 後台 =====
+  var adm=document.getElementById("admin"), pw="", rows=[];
+  function route(){ adm.hidden = location.hash!=="#admin"; }
+  window.addEventListener("hashchange",route); route();
+  document.getElementById("aclose").addEventListener("click",function(e){e.preventDefault();history.replaceState(null,"",location.pathname+location.search);route();});
+  function fetchList(p){
+    return api({action:"list",password:p}).then(function(r){ if(!r||!r.ok) throw new Error(r&&r.error||"讀取失敗"); rows=r.rows||[]; pw=p; render(); });
+  }
+  document.getElementById("unlock").addEventListener("click",function(){
+    var b=this; b.disabled=true; b.textContent="讀取中…";
+    fetchList(document.getElementById("pw").value).catch(function(x){toast(x.message)}).then(function(){b.disabled=false;b.textContent="進入";});
+  });
+  document.getElementById("pw").addEventListener("keydown",function(e){if(e.key==="Enter")document.getElementById("unlock").click();});
+  document.getElementById("refresh").addEventListener("click",function(){fetchList(pw).then(function(){toast("已更新")},function(x){toast(x.message)});});
+  function esc(s){var x=document.createElement("span");x.textContent=String(s==null?"":s);return x.innerHTML}
+  function n(r){return +r.count||1}
+  function act(r){return r.status!=="cancelled"}
+  function render(){
+    document.getElementById("lock").hidden=true; document.getElementById("panel").hidden=false;
+    var live=rows.filter(act), all=0,mrt=0,c={}; live.forEach(function(r){all+=n(r); if(r.mode==="大直站")mrt+=n(r);
+      var k=r.src==="朋友邀請"&&r.note?r.note+" 邀請":r.src==="其他"&&r.note?"其他："+r.note:r.src; c[k]=(c[k]||0)+n(r);});
+    document.getElementById("sAll").textContent=all; document.getElementById("sMrt").textContent=mrt; document.getElementById("sBike").textContent=all-mrt;
+    var ry=0,rn=0,ru=0; live.forEach(function(r){ if(r.rain==="可以")ry+=n(r); else if(r.rain==="不參加")rn+=n(r); else ru+=n(r); });
+    document.getElementById("rainStat").innerHTML='<b>☔ 如果改到 12/5</b><span class="ok">可以 '+ry+' 位</span><span class="no">不參加 '+rn+' 位</span>'+(ru?'<span class="un">未回答 '+ru+' 位</span>':'');
+    var cx=rows.length-live.length;
+    document.getElementById("sRows").textContent="共 "+live.length+" 筆報名"+(cx?"，另有 "+cx+" 筆已取消（不計入人數）":"");
+    var left=Math.ceil((dl-new Date())/86400000);
+    document.getElementById("dStat").textContent = new Date()>dl ? "報名已截止（11/20 17:00）" : "距離報名截止還有 "+left+" 天";
+    var bike=all-mrt, pm=all?Math.round(mrt/all*100):0;
+    document.getElementById("modeBar").innerHTML = all ? '<div class="bar2"><span style="width:'+pm+'%;background:#1F4D3A">'+(mrt?'大直站 '+mrt:'')+'</span><span style="width:'+(100-pm)+'%;background:#D9661F">'+(bike?'騎車 '+bike:'')+'</span></div><div class="legend"><span>大直站 '+pm+'%</span><span>騎車 '+(100-pm)+'%</span></div>' : '<p class="empty">尚無資料</p>';
+    var cat={"朋友邀請":0,"LINE 群組":0,"其他":0}, ref={}, oth={};
+    live.forEach(function(r){ cat[r.src]=(cat[r.src]||0)+n(r);
+      if(r.src==="朋友邀請"&&r.note) ref[r.note]=(ref[r.note]||0)+n(r);
+      if(r.src==="其他"&&r.note) oth[r.note]=(oth[r.note]||0)+n(r); });
+    function bars(o,label){ var ks=Object.keys(o).sort(function(a,b){return o[b]-o[a]}), mx=Math.max.apply(null,ks.map(function(k){return o[k]}).concat([1]));
+      return ks.map(function(k){return '<div class="hb"><span class="lbl">'+esc(label?label(k):k)+'</span><span class="tr"><i style="width:'+(o[k]/mx*100)+'%"></i></span><b>'+o[k]+' 位</b></div>'}).join(""); }
+    document.getElementById("srcStat").innerHTML = all ? bars(cat,function(k){return k==="LINE 群組"?"LINE 群組":k}) : '<p class="empty">尚無資料</p>';
+    document.getElementById("refBox").hidden=!Object.keys(ref).length; document.getElementById("refStat").innerHTML=bars(ref);
+    document.getElementById("otherBox").hidden=!Object.keys(oth).length;
+    document.getElementById("otherStat").innerHTML=Object.keys(oth).map(function(k){return "<span>"+esc(k)+" × "+oth[k]+"</span>"}).join("");
+    var sorted=live.concat(rows.filter(function(r){return !act(r)})), k=0;
+    document.getElementById("list").innerHTML = rows.length? sorted.map(function(r){
+      var on=act(r), t=new Date(r.at), when=isNaN(t)?"":(t.getMonth()+1)+"/"+t.getDate()+" "+String(t.getHours()).padStart(2,"0")+":"+String(t.getMinutes()).padStart(2,"0");
+      return '<div class="row'+(on?"":" off")+'"><span class="nm">'+(on?(++k)+". ":"")+esc(r.name)+(n(r)>1?'　<small>共 '+n(r)+' 位</small>':'')
+        +(on?(r.updated?'<span class="tag">已修改</span>':''):'<span class="tag">已取消</span>')+'</span><span class="md'+(r.mode==="騎車"?" bike":"")+'">'+(r.mode==="騎車"?"騎車":"大直站")+'</span>'
+        +'<span class="rtag '+(r.rain==="可以"?"ok":r.rain==="不參加"?"no":"un")+'">'+(r.rain==="可以"?"☔ 可改期":r.rain==="不參加"?"改期不參加":"雨天未回答")+'</span>'
+        +'<span class="sub"><a href="tel:'+esc(r.phone)+'">'+esc(r.phone)+'</a>　'+esc(r.src)+(r.note?"："+esc(r.note):"")+'　'+when+'</span></div>'}).join("")
+      : '<p class="empty">還沒有人報名</p>';
+  }
+  document.getElementById("copy").addEventListener("click",function(){
+    var live=rows.filter(act);
+    function grp(m){var g=live.filter(function(r){return (r.mode==="騎車")===(m==="騎車")}),s=0;g.forEach(function(r){s+=n(r)});
+      return m+"（"+s+" 位）\n"+g.map(function(r,i){return (i+1)+". "+r.name+" "+r.phone+(n(r)>1?"（共 "+n(r)+" 位）":"")}).join("\n");}
+    var all=0; live.forEach(function(r){all+=n(r)});
+    var txt="【11/21 劍潭山 報名名單】共 "+all+" 位\n\n"+grp("大直站集合")+"\n\n"+grp("騎車");
+    (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){toast("已複製，可以貼到 LINE")},function(){prompt("請複製：",txt)});
+  });
+  document.getElementById("copyRain").addEventListener("click",function(){
+    var g=rows.filter(act).filter(function(r){return r.rain==="可以"}), s=0; g.forEach(function(r){s+=n(r)});
+    var txt="【改期 12/5（六）劍潭山】可以參加共 "+s+" 位\n搭捷運 9:20 大直站 1 號出口／騎車 9:30 步道口\n\n"+g.map(function(r,i){return (i+1)+". "+r.name+" "+r.phone+(n(r)>1?"（共 "+n(r)+" 位）":"")+"・"+(r.mode==="騎車"?"騎車":"大直站")}).join("\n");
+    (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){toast("已複製，可以貼到 LINE")},function(){prompt("請複製：",txt)});
+  });
+  var seed=document.getElementById("seed"), clr=document.getElementById("clear");
+  seed && seed.addEventListener("click",function(){var a=dLoad(),t=new Date().toISOString();
+    a.push({token:tok(),name:"王小明",phone:"0912345678",count:3,src:"朋友邀請",note:"Jason",mode:"大直站",rain:"可以",at:t,updated:"",status:"ok"},
+           {token:tok(),name:"林美華",phone:"0922333444",count:1,src:"LINE 群組",note:"",mode:"騎車",rain:"不參加",at:t,updated:t,status:"ok"},
+           {token:tok(),name:"陳大同",phone:"0933555666",count:2,src:"其他",note:"教會公布欄",mode:"大直站",rain:"可以",at:t,updated:t,status:"cancelled"});dSave(a);fetchList(pw);});
+  clr && clr.addEventListener("click",function(){ if(confirm("確定清空示範資料？")){dSave([]);mySave([]);fetchList(pw);renderMine();} });
+
+
+  // ===== 字體大小 =====
+  (function(){
+    var btns=document.querySelectorAll(".fsbar button");
+    function setFs(v){ document.documentElement.style.setProperty("--fs",v);
+      btns.forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.fs===v))});
+      try{localStorage.setItem("jt-fs",v)}catch(e){} }
+    btns.forEach(function(b){b.addEventListener("click",function(){setFs(b.dataset.fs)})});
+    var saved=null; try{saved=localStorage.getItem("jt-fs")}catch(e){}
+    if(saved&&["1","1.2","1.4"].indexOf(saved)>=0) setFs(saved);
+  })();
+})();
+</script>
+</body>
+</html>
