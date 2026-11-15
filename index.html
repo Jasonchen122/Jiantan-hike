@@ -328,7 +328,36 @@ section h2{color:var(--forest)}
 .form-head{margin:4px 0 8px;font-weight:700;color:var(--forest)}
 @media (min-width:600px){.sheet{align-items:center}.sheet-in{border-radius:22px;max-height:88vh}}
 @media (prefers-reduced-motion:reduce){.sticker{transition:none}}
+
+/* info card A: calendar page + raised tiles */
+.fx{display:grid;grid-template-columns:calc(92px*min(var(--fs,1),1.15)) minmax(0,1fr);gap:12px;margin:16px 12px 0}
+.fx-cal{grid-row:span 2;display:flex;flex-direction:column;text-align:center;border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid var(--rule);box-shadow:0 4px 0 var(--rule),0 8px 14px rgba(0,0,0,.08)}
+.fx-cal .m{flex:none;background:#B94A2C;color:#fff;font-weight:700;font-size:calc(15px*var(--fs,1));letter-spacing:.1em;padding:4px 0}
+.fx-cal .d{flex:1;display:flex;align-items:center;justify-content:center;font-family:"Huninn",sans-serif;font-size:calc(52px*min(var(--fs,1),1.15));line-height:1;color:var(--ink)}
+.fx-cal .w{flex:none;font-size:calc(14px*var(--fs,1));color:var(--soft);padding-bottom:8px}
+.fx-tile{display:flex;flex-direction:column;gap:2px;justify-content:center;border-radius:16px;padding:12px 14px;min-width:0}
+.fx-cream{background:#F6F1E3;color:#2C3A30;box-shadow:0 4px 0 #E1D6BB,0 8px 14px rgba(40,50,30,.12)}
+.fx-sand{background:#F3E3CC;color:#4A3020;box-shadow:0 4px 0 #DCC3A0,0 8px 14px rgba(95,62,37,.14)}
+.fx-forest{background:linear-gradient(180deg,#2F6049,#24493A);color:#F6F1E3;box-shadow:0 4px 0 #16302A,0 8px 14px rgba(22,48,42,.25)}
+.fx-rain{background:#E3EEF4;color:#2D5B78;box-shadow:0 4px 0 #B9D0DD,0 8px 14px rgba(45,91,120,.14)}
+.fx-big{font-family:"Huninn",sans-serif;font-size:calc(40px*var(--fs,1));line-height:1.1;color:#24493A}
+.fx-ttl{font-weight:700;font-size:calc(17px*min(var(--fs,1),1.25));line-height:1.35}
+.fx-sub{font-size:calc(13.5px*var(--fs,1));line-height:1.5;opacity:.85}
+.fx-row{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,calc(150px*var(--fs,1))),1fr));gap:12px;margin-top:2px}
+.fx-row .fx-tile{justify-content:flex-start}
+.fx-lab{font-size:calc(13.5px*var(--fs,1));font-weight:700;opacity:.9}
+.fx-main{font-family:"Huninn",sans-serif;font-size:calc(22px*var(--fs,1));line-height:1.3;margin:2px 0}
+.fx-main b{font-weight:400;font-size:1.45em;line-height:1;margin:0 2px}
+.fx-forest .fx-main b{color:#FFE7B8}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.admin{z-index:40}
+.rainq legend{line-height:1.6}
+.opt-note{margin:8px 0 0;font-size:calc(13px*var(--fs,1));color:var(--soft);font-weight:400}
+.rainstat{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-top:10px;padding:10px 12px;border-radius:14px;background:var(--surface);border:1px solid var(--rule);font-size:calc(15px*var(--fs,1))}
+.rainstat b{width:100%;color:var(--forest)}
+.rainstat span,.rtag{display:inline-block;border-radius:999px;padding:1px 10px;font-weight:700;font-size:calc(14px*var(--fs,1))}
+.rtag{grid-column:1/-1;justify-self:start;font-size:calc(12px*var(--fs,1));margin-top:2px}
+.ok{background:#DCEFD9;color:#24563A}.no{background:#F6DED2;color:#8A3B16}.un{background:#ECE6C8;color:#5E4E00}
 </style>
 </head>
 <body>
@@ -342,11 +371,14 @@ section h2{color:var(--forest)}
     <button class="sticker" id="sound" type="button">🔊 點我聽邀請</button>
   </div>
 
-  <div class="facts">
-    <div class="when"><span class="d round">11/21（六）</span><span class="t round">13:30</span><span class="end">從步道口出發・約 3 小時</span></div>
-    <p class="where">📍 大直劍潭山步道<small>老地方觀機平台 → 北眼平台</small></p>
-    <div class="deadline">報名截止 11/20（五）17:00 <b id="countdown"></b></div>
-    <p class="rain">☔ 雨天備案：12/5（六）上午，11/18 公告</p>
+  <div class="fx">
+    <div class="fx-cal" aria-label="11 月 21 日 星期六"><span class="m">11 月</span><span class="d num">21</span><span class="w">星期六</span></div>
+    <div class="fx-tile fx-cream fx-time"><span class="fx-big num">13:30</span><span class="fx-sub">步道口出發・約 3 小時</span></div>
+    <div class="fx-tile fx-sand fx-place"><span class="fx-ttl">📍 大直劍潭山步道</span><span class="fx-sub">老地方觀機平台<br>→ 北眼平台</span></div>
+    <div class="fx-row">
+      <div class="fx-tile fx-forest"><span class="fx-lab">報名截止</span><span class="fx-main" id="countdown">還有 <b class="num">5</b> 天</span><span class="fx-sub">11/20（五）17:00<br>截止</span></div>
+      <div class="fx-tile fx-rain"><span class="fx-lab">☔ 雨天備案</span><span class="fx-main">12/5（六）</span><span class="fx-sub">上午 9:30 出發<br>11/18 公告</span></div>
+    </div>
   </div>
 
   <section>
@@ -464,6 +496,11 @@ section h2{color:var(--forest)}
           <label class="opt big"><input type="radio" name="mode" value="大直站" required><span><b>搭捷運</b><br><small>13:20 大直站 1 號出口集合</small></span></label>
           <label class="opt big"><input type="radio" name="mode" value="騎車"><span><b>自行騎車</b><br><small>13:30 步道口會合</small></span></label>
         </fieldset>
+        <fieldset class="f rainq"><legend>☔ 如果因雨改到 <b>12/5（六）上午 9:30</b>（搭捷運 9:20 集合），你可以參加嗎？</legend>
+          <label class="opt"><input type="radio" name="rain" value="可以" required> 可以，改期我也去</label>
+          <label class="opt"><input type="radio" name="rain" value="不參加"> 改期的話，我就不參加</label>
+          <p class="opt-note">11/18（三）會決定是否改期。之後想改答案，可以在「我的報名」修改。</p>
+        </fieldset>
         <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <p class="err" id="err" role="alert"></p>
         <button class="btn primary" type="submit" id="submitBtn" style="width:100%">送出報名</button>
@@ -503,6 +540,7 @@ section h2{color:var(--forest)}
         <div><b id="sMrt">0</b><span>大直站</span></div>
         <div><b id="sBike">0</b><span>騎車</span></div>
       </div>
+      <div class="rainstat" id="rainStat"></div>
       <p class="hint" id="sRows"></p>
       <p class="dstat" id="dStat"></p>
       <h3 class="mrt-h">集合方式</h3>
@@ -516,6 +554,7 @@ section h2{color:var(--forest)}
       <div class="abtns">
         <button class="btn primary" type="button" id="refresh">🔄 重新整理</button>
         <button class="btn" type="button" id="copy">📋 複製名單（可貼到 LINE）</button>
+        <button class="btn" type="button" id="copyRain">☔ 複製「改期也可以」的名單</button>
         
       </div>
     </div>
@@ -527,7 +566,7 @@ section h2{color:var(--forest)}
   // countdown (Taipei time)
   var dl = new Date("2026-11-20T17:00:00+08:00");
   var days = Math.ceil((dl - new Date()) / 86400000);
-  document.getElementById("countdown").textContent = days > 0 ? "還有 " + days + " 天" : "已截止";
+  document.getElementById("countdown").innerHTML = days > 0 ? '還有 <b class="num">' + days + '</b> 天' : "已截止";
 
   // calendar
   var cal = "https://calendar.google.com/calendar/render?action=TEMPLATE"
@@ -651,7 +690,7 @@ section h2{color:var(--forest)}
   function myLoad(){try{return JSON.parse(localStorage.getItem(MYKEY)||"[]")}catch(e){return myMem}}
   function mySave(a){myMem=a;try{localStorage.setItem(MYKEY,JSON.stringify(a))}catch(e){}}
   function tok(){var s="",c="abcdefghijkmnpqrstuvwxyz23456789";for(var i=0;i<20;i++)s+=c[Math.floor(Math.random()*c.length)];return s}
-  var FIELDS=["name","phone","count","src","note","mode"];
+  var FIELDS=["name","phone","count","src","note","mode","rain"];
   function pub(r){var o={token:r.token};FIELDS.forEach(function(k){o[k]=r[k]});o.status=r.status;return o}
   function demoApi(b){
     var a=dLoad(), now=new Date().toISOString(), i;
@@ -681,6 +720,7 @@ section h2{color:var(--forest)}
   function setSrc(v,keep){ if(!keep) srcNote.value=""; if(v==="LINE 群組"||!v){srcNote.hidden=true;return;}
     srcNote.hidden=false; srcNote.placeholder = v==="朋友邀請"?"是誰邀請你的？":"請簡單說明從哪裡知道的"; }
   form.addEventListener("change",function(e){ if(e.target.name==="src"){setSrc(e.target.value);srcNote.focus();} });
+  function rainText(r){return r==="可以"?"☔ 若改期到 12/5：可以參加":r==="不參加"?"☔ 若改期到 12/5：不參加":"☔ 雨天備案：尚未回答"}
   function modeText(m){return m==="大直站"?"13:20 大直站 1 號出口集合":"13:30 在步道口會合（騎車）"}
 
   // 我的報名
@@ -690,7 +730,7 @@ section h2{color:var(--forest)}
     Promise.all(ts.map(function(t){return api({action:"get",token:t}).catch(function(){return null})})).then(function(rs){
       var keep=[], html="";
       rs.forEach(function(r,i){ if(!r||!r.ok||r.rec.status!=="ok") return; keep.push(ts[i]); var x=r.rec;
-        html+='<div class="my"><div class="who">'+esc(x.name)+(+x.count>1?"　共 "+x.count+" 位":"")+'</div><div class="meta">'+esc(modeText(x.mode))+'</div>'
+        html+='<div class="my"><div class="who">'+esc(x.name)+(+x.count>1?"　共 "+x.count+" 位":"")+'</div><div class="meta">'+esc(modeText(x.mode))+'<br>'+esc(rainText(x.rain))+'</div>'
           +(editClosed?'<div class="meta">已過修改時間，如有變動請告訴邀請你的朋友。</div>':'<div class="acts"><button class="btn" type="button" data-edit="'+x.token+'">✏️ 修改</button><button class="btn danger" type="button" data-cancel="'+x.token+'">取消報名</button></div>')+'</div>';
       });
       mySave(keep); list.innerHTML=html; box.hidden=!keep.length;
@@ -710,6 +750,7 @@ section h2{color:var(--forest)}
       form.name.value=x.name; form.phone.value=x.phone; form.count.value=String(x.count||1);
       form.querySelectorAll('input[name=src]').forEach(function(i){i.checked=i.value===x.src}); setSrc(x.src,true); srcNote.value=x.note||"";
       form.querySelectorAll('input[name=mode]').forEach(function(i){i.checked=i.value===x.mode});
+      form.querySelectorAll('input[name=rain]').forEach(function(i){i.checked=i.value===x.rain});
       document.getElementById("editBar").hidden=false; document.getElementById("formHead").hidden=true; btn.textContent="儲存修改"; err.textContent="";
       openSheet(); setTimeout(function(){formCard.scrollIntoView({block:"start"})},60);
     }).catch(function(x){toast(x.message||"讀取失敗")});
@@ -720,7 +761,7 @@ section h2{color:var(--forest)}
   form.addEventListener("submit",function(e){
     e.preventDefault(); var d=new FormData(form);
     var rec={action:editing?"update":"signup",token:editing||undefined,name:(d.get("name")||"").trim(),phone:(d.get("phone")||"").replace(/[^0-9]/g,""),count:+d.get("count")||1,
-      src:d.get("src")||"",note:(d.get("srcNote")||"").trim(),mode:d.get("mode")||"",website:d.get("website")||""};
+      src:d.get("src")||"",note:(d.get("srcNote")||"").trim(),mode:d.get("mode")||"",rain:d.get("rain")||"",website:d.get("website")||""};
     if(!rec.name) return err.textContent="請填寫姓名";
     if(!/^09\d{8}$/.test(rec.phone)) return err.textContent="請填寫正確的手機號碼（09 開頭共 10 碼）";
     if(!rec.src) return err.textContent="請選擇怎麼知道這個活動";
@@ -728,13 +769,14 @@ section h2{color:var(--forest)}
     if(rec.src==="其他"&&!rec.note) return err.textContent="請簡單說明從哪裡知道的";
     if(rec.src==="LINE 群組") rec.note="";
     if(!rec.mode) return err.textContent="請選擇當天怎麼來";
+    if(!rec.rain) return err.textContent="請選擇如果改到 12/5 是否可以參加";
     err.textContent=""; var wasEdit=!!editing; btn.disabled=true; btn.textContent="送出中…";
     api(rec).then(function(r){
       if(!r||!r.ok) throw new Error(r&&r.error||"送出失敗");
       if(!wasEdit){var m=myLoad(); m.push(r.token); mySave(m);}
       endEdit(); formCard.hidden=true; done.hidden=false;
       done.querySelector("h3").textContent = wasEdit?"已更新報名！":"報名成功！";
-      document.getElementById("doneText").textContent = rec.name+(rec.count>1?"（共 "+rec.count+" 位）":"")+"，11/21（六）見！"+modeText(rec.mode)+"。之後想修改或取消，點網頁下方「我的報名」就可以。";
+      document.getElementById("doneText").textContent = rec.name+(rec.count>1?"（共 "+rec.count+" 位）":"")+"，11/21（六）見！"+modeText(rec.mode)+"。"+(rec.rain==="可以"?"若因雨改到 12/5，也等你一起走。":"若因雨改期，我們會再跟你說。")+"之後想修改或取消，點網頁下方「我的報名」就可以。";
       document.getElementById("cal2").href=cal; renderMine(); sheet.querySelector(".sheet-in").scrollTop=0;
     }).catch(function(x){err.textContent=(x.message||"送出失敗")+"，請稍後再試，或直接告訴邀請你的朋友。";})
       .then(function(){btn.disabled=false; if(!editing) btn.textContent="送出報名"; else btn.textContent="儲存修改";});
@@ -777,6 +819,8 @@ section h2{color:var(--forest)}
     var live=rows.filter(act), all=0,mrt=0,c={}; live.forEach(function(r){all+=n(r); if(r.mode==="大直站")mrt+=n(r);
       var k=r.src==="朋友邀請"&&r.note?r.note+" 邀請":r.src==="其他"&&r.note?"其他："+r.note:r.src; c[k]=(c[k]||0)+n(r);});
     document.getElementById("sAll").textContent=all; document.getElementById("sMrt").textContent=mrt; document.getElementById("sBike").textContent=all-mrt;
+    var ry=0,rn=0,ru=0; live.forEach(function(r){ if(r.rain==="可以")ry+=n(r); else if(r.rain==="不參加")rn+=n(r); else ru+=n(r); });
+    document.getElementById("rainStat").innerHTML='<b>☔ 如果改到 12/5</b><span class="ok">可以 '+ry+' 位</span><span class="no">不參加 '+rn+' 位</span>'+(ru?'<span class="un">未回答 '+ru+' 位</span>':'');
     var cx=rows.length-live.length;
     document.getElementById("sRows").textContent="共 "+live.length+" 筆報名"+(cx?"，另有 "+cx+" 筆已取消（不計入人數）":"");
     var left=Math.ceil((dl-new Date())/86400000);
@@ -798,6 +842,7 @@ section h2{color:var(--forest)}
       var on=act(r), t=new Date(r.at), when=isNaN(t)?"":(t.getMonth()+1)+"/"+t.getDate()+" "+String(t.getHours()).padStart(2,"0")+":"+String(t.getMinutes()).padStart(2,"0");
       return '<div class="row'+(on?"":" off")+'"><span class="nm">'+(on?(++k)+". ":"")+esc(r.name)+(n(r)>1?'　<small>共 '+n(r)+' 位</small>':'')
         +(on?(r.updated?'<span class="tag">已修改</span>':''):'<span class="tag">已取消</span>')+'</span><span class="md'+(r.mode==="騎車"?" bike":"")+'">'+(r.mode==="騎車"?"騎車":"大直站")+'</span>'
+        +'<span class="rtag '+(r.rain==="可以"?"ok":r.rain==="不參加"?"no":"un")+'">'+(r.rain==="可以"?"☔ 可改期":r.rain==="不參加"?"改期不參加":"雨天未回答")+'</span>'
         +'<span class="sub"><a href="tel:'+esc(r.phone)+'">'+esc(r.phone)+'</a>　'+esc(r.src)+(r.note?"："+esc(r.note):"")+'　'+when+'</span></div>'}).join("")
       : '<p class="empty">還沒有人報名</p>';
   }
@@ -809,11 +854,16 @@ section h2{color:var(--forest)}
     var txt="【11/21 劍潭山 報名名單】共 "+all+" 位\n\n"+grp("大直站集合")+"\n\n"+grp("騎車");
     (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){toast("已複製，可以貼到 LINE")},function(){prompt("請複製：",txt)});
   });
+  document.getElementById("copyRain").addEventListener("click",function(){
+    var g=rows.filter(act).filter(function(r){return r.rain==="可以"}), s=0; g.forEach(function(r){s+=n(r)});
+    var txt="【改期 12/5（六）劍潭山】可以參加共 "+s+" 位\n搭捷運 9:20 大直站 1 號出口／騎車 9:30 步道口\n\n"+g.map(function(r,i){return (i+1)+". "+r.name+" "+r.phone+(n(r)>1?"（共 "+n(r)+" 位）":"")+"・"+(r.mode==="騎車"?"騎車":"大直站")}).join("\n");
+    (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){toast("已複製，可以貼到 LINE")},function(){prompt("請複製：",txt)});
+  });
   var seed=document.getElementById("seed"), clr=document.getElementById("clear");
   seed && seed.addEventListener("click",function(){var a=dLoad(),t=new Date().toISOString();
-    a.push({token:tok(),name:"王小明",phone:"0912345678",count:3,src:"朋友邀請",note:"Jason",mode:"大直站",at:t,updated:"",status:"ok"},
-           {token:tok(),name:"林美華",phone:"0922333444",count:1,src:"LINE 群組",note:"",mode:"騎車",at:t,updated:t,status:"ok"},
-           {token:tok(),name:"陳大同",phone:"0933555666",count:2,src:"其他",note:"教會公布欄",mode:"大直站",at:t,updated:t,status:"cancelled"});dSave(a);fetchList(pw);});
+    a.push({token:tok(),name:"王小明",phone:"0912345678",count:3,src:"朋友邀請",note:"Jason",mode:"大直站",rain:"可以",at:t,updated:"",status:"ok"},
+           {token:tok(),name:"林美華",phone:"0922333444",count:1,src:"LINE 群組",note:"",mode:"騎車",rain:"不參加",at:t,updated:t,status:"ok"},
+           {token:tok(),name:"陳大同",phone:"0933555666",count:2,src:"其他",note:"教會公布欄",mode:"大直站",rain:"可以",at:t,updated:t,status:"cancelled"});dSave(a);fetchList(pw);});
   clr && clr.addEventListener("click",function(){ if(confirm("確定清空示範資料？")){dSave([]);mySave([]);fetchList(pw);renderMine();} });
 
 
