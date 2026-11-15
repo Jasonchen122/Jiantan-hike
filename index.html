@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>一起走入城市秘境｜11/21 大直劍潭山步道</title>
-<meta name="description" content="11/21（六）13:30 下午輕鬆走劍潭山，到老地方觀機平台看台北。報名截止 11/20（五）17:00。">
+<meta name="description" content="11/21（六）13:30 從步道口出發，走到老地方觀機平台和北眼平台，鳥瞰台北。報名截止 11/20（五）17:00。">
 <meta property="og:title" content="一起走入城市秘境｜11/21 大直劍潭山步道">
-<meta property="og:description" content="11/21（六）13:30 下午輕鬆走劍潭山，到老地方觀機平台看台北。報名截止 11/20（五）17:00。">
+<meta property="og:description" content="11/21（六）13:30 從步道口出發，走到老地方觀機平台和北眼平台，鳥瞰台北。報名截止 11/20（五）17:00。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jasonchen122.github.io/Jiantan-hike/">
 <meta property="og:image" content="https://jasonchen122.github.io/Jiantan-hike/og.jpg">
@@ -19,10 +19,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="劍潭山健行">
-<meta name="apple-mobile-web-app-status-bar-style" content="default"><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Huninn&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#F1F6F1; --surface:#FFFFFF; --ink:#1D2B24; --soft:#53655B;
@@ -227,127 +227,222 @@ legend{padding:0;margin-bottom:6px}
 .toprow{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 12px 0}
 .toprow .fsbar{margin:0 0 0 auto}
 .admin-link{font-size:calc(13px*var(--fs,1));color:var(--soft);text-decoration:none;padding:8px 2px}
+
+/* ===== v3: 森林木棧 palette + 文楷 for quiet lines ===== */
+:root{
+  --bg:#EEF0E4; --surface:#FFFFFF; --ink:#22352B; --soft:#5D6B5F; --rule:#D9DCCD;
+  --forest:#24493A; --wood:#8B5E3C; --maple:#C8611E; --moss:#5E7D3A; --trail:#8B5E3C; --sky:#E7D9C6;
+  --mrt:#2F6FA3; --bike:#D9661F; --shared:#3E7D4F;
+  --poem:"LXGW WenKai TC","Noto Serif TC","PingFang TC",serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141C17; --surface:#1D2822; --ink:#E6EDE6; --soft:#A8B5AA; --rule:#2F3D34;
+  --forest:#9CCFB1; --wood:#D9AE85; --maple:#F0965A; --moss:#A9C46E; --trail:#D9AE85; --sky:#3A3326;
+  --mrt:#7FB3E0; --bike:#F2995A; --shared:#8BC69A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141C17; --surface:#1D2822; --ink:#E6EDE6; --soft:#A8B5AA; --rule:#2F3D34;
+  --forest:#9CCFB1; --wood:#D9AE85; --maple:#F0965A; --moss:#A9C46E; --trail:#D9AE85; --sky:#3A3326;
+  --mrt:#7FB3E0; --bike:#F2995A; --shared:#8BC69A; color-scheme:dark}
+.btn.primary{background:var(--forest);border-color:var(--forest)}
+.bar .in{grid-template-columns:auto minmax(0,1fr);align-items:center}
+.bar .share{min-height:58px;padding:0 12px;border-radius:16px;font-size:calc(15px*min(var(--fs,1),1.1))}
+.go{display:flex;align-items:center;justify-content:center;gap:8px;min-width:0;min-height:58px;padding:0 10px;border:0;border-radius:16px;cursor:pointer;white-space:nowrap;
+  font-family:"Huninn","Noto Sans TC",sans-serif;font-size:calc(21px*min(var(--fs,1),1.1));letter-spacing:.05em;color:#F6F1E3;
+  background:linear-gradient(180deg,#2F6049,#24493A);box-shadow:0 5px 0 #16302A,0 9px 16px rgba(22,48,42,.28);transition:transform .08s ease,box-shadow .08s ease;margin-bottom:5px}
+.go svg{flex:none;width:26px;height:26px}
+.go:active{transform:translateY(4px);box-shadow:0 1px 0 #16302A,0 3px 6px rgba(22,48,42,.25)}
+.go:focus-visible{outline:3px solid #E8A33D;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.go{transition:none}}
+section h2{color:var(--forest)}
+
+/* header: poster title band melting into the invite video */
+.melt{position:relative;margin:12px 12px 0;border-radius:22px;overflow:hidden;background:#000}
+.melt img{position:absolute;left:0;top:0;width:100%;height:auto;display:block;z-index:1;
+  -webkit-mask-image:linear-gradient(#000 80%,transparent 100%);mask-image:linear-gradient(#000 80%,transparent 100%)}
+.melt video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;margin-top:calc(41.3% * .82)}
+.sticker{position:absolute;z-index:2;right:10px;bottom:10px;font:inherit;font-size:calc(14px*var(--fs,1));font-weight:700;border:0;cursor:pointer;
+  background:#FFD54A;color:#3a2a00;padding:6px 12px;border-radius:999px;box-shadow:0 3px 8px rgba(0,0,0,.3)}
+
+.facts{margin:14px 12px 0}
+.when .end{flex-basis:100%;font-size:calc(16px*var(--fs,1));color:var(--soft);margin-top:2px}
+.where{font-weight:500}
+.tips{margin:0 0 16px;padding-left:1.3em;color:var(--soft)}
+.tips li{margin:4px 0}
+.rain{margin:10px 0 0;font-size:calc(14px*var(--fs,1));color:var(--soft)}
+.where small{display:block;font-weight:400;color:var(--soft);font-size:calc(15px*var(--fs,1))}
+.quiet{font-family:var(--poem);font-size:calc(19px*var(--fs,1));line-height:1.8;color:var(--ink);margin:0}
+
+/* meeting cards */
+.meet{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:10px;margin-top:12px}
+.mcard{background:var(--surface);border:1px solid var(--rule);border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.mcard h3{margin:0;font-family:"Huninn",sans-serif;font-weight:400;font-size:calc(19px*var(--fs,1))}
+.mcard.mrt h3{color:var(--mrt)} .mcard.bike h3{color:var(--bike)}
+.mcard .k{font-size:calc(13px*var(--fs,1));color:var(--soft);margin:4px 0 0}
+.mcard .v{font-size:calc(16px*var(--fs,1));font-weight:700;line-height:1.45;margin:0}
+.mcard .v small{display:block;font-weight:400;color:var(--soft);font-size:calc(14px*var(--fs,1));margin-top:2px}
+.mcard .bus{margin:2px 0}
+.mcard .bus span{font-size:calc(13px*var(--fs,1));padding:0 7px}
+.mcard .see{margin-top:auto;font:inherit;font-size:calc(14px*var(--fs,1));font-weight:700;border:1.5px solid currentColor;background:transparent;border-radius:999px;padding:6px 10px;cursor:pointer}
+.mcard.mrt .see{color:var(--mrt)} .mcard.bike .see{color:var(--bike)}
+
+/* route map */
+.map{background:var(--surface);border:1px solid var(--rule);border-radius:20px;padding:14px;margin-top:12px}
+.mode{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:4px;background:var(--rule);border-radius:14px}
+.mode button{font:inherit;font-weight:700;font-size:calc(16px*var(--fs,1));min-height:46px;border:0;border-radius:10px;background:transparent;color:var(--soft);cursor:pointer}
+.mode button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.map svg{display:block;width:100%;height:auto;margin-top:6px}
+.map svg text{font-family:"Noto Sans TC",sans-serif;font-size:12.5px;fill:var(--ink)}
+.map svg text.big{font-size:13.5px;font-weight:700}
+.map svg text.sm{font-size:11px;fill:var(--soft)}
+.map .node{fill:var(--surface);stroke:var(--ink)}
+.plan{margin:6px 0 0;font-size:calc(15px*var(--fs,1));line-height:1.65}
+.plan b{color:var(--forest)}
+.maprow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.maprow .btn{flex:1 1 160px}
+.replay{font:inherit;font-size:calc(13px*var(--fs,1));border:0;background:transparent;color:var(--soft);text-decoration:underline;cursor:pointer;padding:6px 0}
+
+/* clips, seat, find */
+.clips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.clips figure{margin:0;position:relative;border-radius:14px;overflow:hidden;background:#000}
+.clips video{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.clips figcaption{position:absolute;left:8px;top:6px;color:#fff;font-family:"Huninn",sans-serif;font-size:calc(14px*var(--fs,1));text-shadow:0 1px 4px rgba(0,0,0,.75)}
+.whisper{font-family:var(--poem);font-size:calc(17px*var(--fs,1));color:var(--wood);text-align:center;margin:12px 0 0}
+.seat{position:relative;margin:34px 12px 0;border-radius:20px;overflow:hidden}
+.seat img{display:block;width:100%;height:auto}
+.seat-txt{position:absolute;left:0;right:0;bottom:0;padding:56px 16px 14px;background:linear-gradient(transparent,rgba(18,26,20,.85))}
+.seat-txt p{margin:0;color:#F4F2E8}
+.seat-txt .quiet{color:#F4F2E8;font-size:calc(18px*var(--fs,1));line-height:1.7}
+.seat-txt small{display:block;margin-top:6px;font-size:calc(13px*var(--fs,1));opacity:.88}
+.find{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.find img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:3px solid var(--surface);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+
+/* signup sheet */
+.sheet{position:fixed;inset:0;z-index:35;display:flex;align-items:flex-end;justify-content:center}
+.sheet-bg{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.sheet-in{position:relative;width:100%;max-width:560px;max-height:92vh;max-height:92dvh;overflow:auto;-webkit-overflow-scrolling:touch;background:var(--bg);border-radius:22px 22px 0 0;
+  padding:4px max(16px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.sheet-head{position:sticky;top:0;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--bg);padding:12px 0 10px;margin-bottom:8px;border-bottom:1px solid var(--rule)}
+.sheet-head h2{margin:0;font-size:calc(21px*var(--fs,1));color:var(--forest);font-family:"Huninn",sans-serif;font-weight:400}
+.x{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--rule);color:var(--ink);font-size:18px;cursor:pointer}
+#mine{margin-bottom:14px}
+.form-head{margin:4px 0 8px;font-weight:700;color:var(--forest)}
+@media (min-width:600px){.sheet{align-items:center}.sheet-in{border-radius:22px;max-height:88vh}}
+@media (prefers-reduced-motion:reduce){.sticker{transition:none}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 </style>
 </head>
 <body>
 <div class="wrap">
 <div class="toprow"><a class="admin-link" href="#admin">🔒 主辦人後台</a><div class="fsbar" role="group" aria-label="字體大小"><span>字體大小</span><button type="button" data-fs="1" aria-pressed="true">標準</button><button type="button" data-fs="1.2" aria-pressed="false">大</button><button type="button" data-fs="1.4" aria-pressed="false">特大</button></div></div>
-  
-  <div class="hero">
-    <video id="vid" src="video.mp4" poster="video-cover.jpg" autoplay muted loop playsinline webkit-playsinline preload="auto" aria-label="活動邀請短片"></video>
-    <button class="sound" id="sound" type="button">🔈 點我聽邀請</button>
+
+  <h1 class="sr">一起走入城市秘境｜11/21 大直劍潭山步道</h1>
+  <div class="melt">
+    <video id="vid" src="video.mp4" poster="video-cover.jpg" muted autoplay loop playsinline webkit-playsinline preload="auto" aria-label="公仔邀請短片"></video>
+    <img src="band.jpg" alt="一起走入城市秘境：放慢腳步，享受秋日的山林微風。大直劍潭山步道・老地方觀機平台" width="1000" height="413">
+    <button class="sticker" id="sound" type="button">🔊 點我聽邀請</button>
   </div>
 
-  <header class="title">
-    <h1>一起走入城市秘境</h1>
-    <p>放慢腳步，享受秋日的山林微風</p>
-  </header>
-
   <div class="facts">
-    <div class="when"><span class="d round">11/21（六）</span><span class="t round">13:30</span></div>
-    <p class="where">大直劍潭山步道，終點老地方觀機平台<br>約 16:30 結束</p>
+    <div class="when"><span class="d round">11/21（六）</span><span class="t round">13:30</span><span class="end">從步道口出發・約 3 小時</span></div>
+    <p class="where">📍 大直劍潭山步道<small>老地方觀機平台 → 北眼平台</small></p>
     <div class="deadline">報名截止 11/20（五）17:00 <b id="countdown"></b></div>
-    <p class="how">想參加？填一下報名資料，<b>30 秒完成</b>。</p>
-    <div class="btns">
-      <a class="btn primary" href="#signup" data-go="signup">✍️ 我要報名</a>
-      <a class="btn" href="https://maps.app.goo.gl/644i3cwKW65WkDb3A" target="_blank" rel="noopener">📍 步道入口導航</a>
-      <a class="btn" id="cal" href="#" target="_blank" rel="noopener">📅 加入行事曆</a>
+    <p class="rain">☔ 雨天備案：12/5（六）上午，11/18 公告</p>
+  </div>
+
+  <section>
+    <p class="quiet">週六午後，離開城市一下。走一段樹蔭下的山路，在平台上坐下來，看看自己每天生活的台北。</p>
+    <p class="lead" style="margin-top:10px">第一次來很歡迎，找朋友、家人一起來更好。</p>
+  </section>
+
+  <section>
+    <h2>在哪裡集合？</h2>
+    <p class="lead">兩種方式，13:30 在步道口一起出發。</p>
+    <div class="meet">
+      <div class="mcard mrt">
+        <h3>🚇 搭捷運</h3>
+        <p class="k">集合</p>
+        <p class="v">13:20 捷運大直站 1 號出口<small>一起搭公車到步道口，坐到「中央電台」站。有人陪同，不怕坐錯。</small></p>
+        <div class="bus"><span>內湖幹線</span><span>208</span><span>267</span><span>287 區間</span></div>
+        <p class="k">結束</p>
+        <p class="v">一起走到捷運劍潭站<small>回程會經過森林方舟</small></p>
+        <button class="see" type="button" data-mode="mrt">看搭捷運的路線 ↓</button>
+      </div>
+      <div class="mcard bike">
+        <h3>🛵 自己騎車</h3>
+        <p class="k">集合</p>
+        <p class="v">13:30 步道口<small>直接騎到步道口，和搭捷運的朋友會合。</small></p>
+        <p class="k">結束</p>
+        <p class="v">原路回到步道口<small>有人陪同下山，牽車回家</small></p>
+        <button class="see" type="button" data-mode="bike">看騎車的路線 ↓</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="route">
+    <h2>跟著走一遍</h2>
+    <div class="map" id="map">
+      <div class="mode" role="group" aria-label="選擇交通方式">
+        <button type="button" data-m="mrt" aria-pressed="true">🚇 我搭捷運</button>
+        <button type="button" data-m="bike" aria-pressed="false">🛵 我騎車</button>
+      </div>
+      <svg id="mapsvg" viewBox="0 0 360 380" role="img" aria-label="路線示意圖：步道口、老地方觀機平台、北眼平台、森林方舟、捷運劍潭站"></svg>
+      <p class="plan" id="plan"></p>
+      <div class="maprow" id="mapbtns"></div>
+      <button class="replay" type="button" id="replay">↻ 再走一次</button>
+    </div>
+    <div class="clips">
+      <figure><video muted loop playsinline autoplay preload="metadata" src="clip-trail.mp4"></video><figcaption>步道</figcaption></figure>
+      <figure><video muted loop playsinline autoplay preload="metadata" src="clip-laodifang.mp4"></video><figcaption>老地方</figcaption></figure>
+      <figure><video muted loop playsinline autoplay preload="metadata" src="clip-beiyan.mp4"></video><figcaption>北眼</figcaption></figure>
+    </div>
+    <p class="whisper">剩下的，留給你親自去看。</p>
+  </section>
+
+  <div class="seat">
+    <img src="seat.jpg" alt="北眼平台上，大家坐在長椅上望著台北" width="900" height="675" loading="lazy">
+    <div class="seat-txt">
+      <p class="quiet">約 3 小時的山林慢遊，不催不趕。把時間留給眼前的台北，也留給自己。</p>
+      <small>有事想先離開也沒問題，會有人陪你下山。</small>
     </div>
   </div>
 
   <section>
-    <h2>這是什麼活動？</h2>
-    <p class="lead">週六下午，邀大家一起走一段城市裡的山路。不趕路、邊走邊聊，到老地方觀機平台看台北市景和飛機起降。第一次來也很歡迎，找朋友一起來更好。</p>
+    <h2>到現場找找看</h2>
+    <div class="find">
+      <img src="find-1.jpg" alt="" loading="lazy"><img src="find-2.jpg" alt="" loading="lazy"><img src="find-3.jpg" alt="" loading="lazy"><img src="badge.png" alt="" loading="lazy">
+    </div>
+    <p class="whisper">這些藏在路上，你能找到幾個？</p>
   </section>
 
   <section>
-    <h2>當天怎麼走</h2>
-    <ol class="trail">
-      <li><span class="dot"></span><div class="tm">13:20</div>
-        <div class="what">大直站 1 號出口集合</div>
-        <span class="who">搭捷運的朋友在這裡集合，會有人陪大家一起搭公車，坐到「中央電台」站下車</span>
-        <div class="bus"><span>內湖幹線</span><span>208</span><span>267</span><span>287 區間車</span></div>
-        <span class="who">約 8 分鐘，車資 $15，約 4 分鐘一班</span></li>
-      <li><span class="dot"></span><div class="tm">13:30</div>
-        <div class="what">步道入口會合，出發</div>
-        <span class="who">自行騎車的朋友直接到這裡（<a href="https://maps.app.goo.gl/644i3cwKW65WkDb3A" target="_blank" rel="noopener">看地圖</a>）</span></li>
-      <li><span class="dot"></span>
-        <div class="what">沿著步道慢慢上山</div>
-        <span class="who">邊走邊聊，會等大家</span></li>
-      <li class="goal"><span class="dot"></span>
-        <div class="what">老地方觀機平台，看 101 和台北市景</div>
-        <span class="who">拍照、分享零食</span></li>
-      <li><span class="dot"></span>
-<div class="tm">約 16:30</div>
-        <div class="what">下山解散</div>
-        <span class="who">騎車的朋友：回到原步道入口<br>搭捷運的朋友：一起走到捷運劍潭站</span></li>
-    </ol>
+    <h2>新朋友常問</h2>
+    <details><summary>要注意什麼？</summary>
+      <ul class="tips">
+        <li>沿路會有一些階梯，可以自行決定是否攜帶登山杖。</li>
+        <li>挑一雙好走的鞋，穿排汗衣，帶足夠的水和隨身零食。</li>
+      </ul></details>
+    <details><summary>下雨怎麼辦？</summary><p>11/18（三）會看天氣預報決定。如果改期，會改到 <b>12/5（六）上午 9:30</b> 從步道口出發（搭捷運的朋友 9:20 在大直站 1 號出口集合），並在 LINE 社群公告。</p></details>
+    <details><summary>家人朋友可以一起來嗎？</summary><p>很歡迎！報名時填一次，選「總共幾位」就可以，不用每個人分開報。</p></details>
+    <details><summary>報名後想修改或取消？</summary><p>點下方「我的報名」就能修改或取消。換了手機也沒關係，在報名視窗最下面點「已經報名過，想修改或取消？」，輸入手機和姓名就能找回。11/21（六）中午 12:00 前都可以改。</p></details>
   </section>
+</div>
 
-  <section>
-    <h2>搭捷運怎麼去、怎麼回家</h2>
-    <p class="lead">不常搭捷運也沒關係。按下面的按鈕，Google Maps 會從你現在的位置，一步步帶你到大直站。</p>
-    <a class="btn primary mrt-btn" href="https://www.google.com/maps/dir/?api=1&destination=捷運大直站&travelmode=transit" target="_blank" rel="noopener">🚇 從我這裡到大直站</a>
+<nav class="bar" aria-label="快速動作">
+  <div class="in">
+    <button class="btn share" type="button" id="share"><i></i>分享給朋友</button>
+    <button class="go" type="button" data-go="signup" id="barBtn"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22 L11 11 L16 17 L21 9 L29 22"/><path d="M16 30 C14 27 19 25 17 22"/><circle cx="24" cy="5" r="2.2" fill="currentColor" stroke="none"/></g></svg><span id="barTxt">想要一起走</span></button>
+  </div>
+</nav>
 
-    <h3 class="mrt-h">去程：棕色「文湖線」到大直站</h3>
-    <svg class="mrt" viewBox="0 0 360 92" role="img" aria-label="文湖線：忠孝復興、南京復興、中山國中、松山機場、大直">
-      <text class="dir" x="356" y="14">往 南港展覽館 方向 →</text>
-      <line x1="28" y1="44" x2="332" y2="44" stroke="#C48C31" stroke-width="8" stroke-linecap="round"/>
-      <circle cx="28" cy="26" r="5" fill="#0070BD"/>
-      <circle cx="104" cy="26" r="5" fill="#008659"/>
-      <circle cx="28" cy="44" r="7" fill="#fff" stroke="#C48C31" stroke-width="3"/>
-      <circle cx="104" cy="44" r="7" fill="#fff" stroke="#C48C31" stroke-width="3"/>
-      <circle cx="180" cy="44" r="7" fill="#fff" stroke="#C48C31" stroke-width="3"/>
-      <circle cx="256" cy="44" r="7" fill="#fff" stroke="#C48C31" stroke-width="3"/>
-      <circle cx="332" cy="44" r="11" fill="#C48C31" stroke="#fff" stroke-width="3"/>
-      <text class="lb" x="28" y="76">忠孝復興</text>
-      <text class="lb" x="104" y="76">南京復興</text>
-      <text class="lb" x="180" y="76">中山國中</text>
-      <text class="lb" x="256" y="76">松山機場</text>
-      <text class="lb goal" x="332" y="78">大直</text>
-    </svg>
-    <ul class="xfer">
-      <li><i style="background:#E3002C"></i><span>坐<b>紅線</b>：在「大安站」換棕線</span></li>
-      <li><i style="background:#0070BD"></i><span>坐<b>藍線</b>：在「忠孝復興站」換棕線</span></li>
-      <li><i style="background:#008659"></i><span>坐<b>綠線</b>：在「南京復興站」換棕線</span></li>
-      <li><i style="background:#C48C31"></i><span>出站走 <b>1 號出口</b>，13:20 大家在這裡集合</span></li>
-    </ul>
-
-    <h3 class="mrt-h">回程：從劍潭站搭紅色「淡水信義線」</h3>
-    <svg class="mrt" viewBox="0 0 360 92" role="img" aria-label="淡水信義線：劍潭、圓山、民權西路、雙連、中山、台北車站">
-      <text class="dir" x="356" y="14">往 象山 方向 →</text>
-      <line x1="26" y1="44" x2="334" y2="44" stroke="#E3002C" stroke-width="8" stroke-linecap="round"/>
-      <circle cx="149" cy="26" r="5" fill="#F8B61C"/>
-      <circle cx="272" cy="26" r="5" fill="#008659"/>
-      <circle cx="334" cy="26" r="5" fill="#0070BD"/>
-      <circle cx="26" cy="44" r="11" fill="#E3002C" stroke="#fff" stroke-width="3"/>
-      <circle cx="88" cy="44" r="7" fill="#fff" stroke="#E3002C" stroke-width="3"/>
-      <circle cx="149" cy="44" r="7" fill="#fff" stroke="#E3002C" stroke-width="3"/>
-      <circle cx="211" cy="44" r="7" fill="#fff" stroke="#E3002C" stroke-width="3"/>
-      <circle cx="272" cy="44" r="7" fill="#fff" stroke="#E3002C" stroke-width="3"/>
-      <circle cx="334" cy="44" r="7" fill="#fff" stroke="#E3002C" stroke-width="3"/>
-      <text class="lb goal" x="26" y="78">劍潭</text>
-      <text class="lb" x="88" y="76">圓山</text>
-      <text class="lb" x="149" y="76">民權西路</text>
-      <text class="lb" x="211" y="76">雙連</text>
-      <text class="lb" x="272" y="76">中山</text>
-      <text class="lb" x="334" y="76">台北車站</text>
-    </svg>
-    <ul class="xfer">
-      <li><i style="background:#F8B61C"></i><span>要轉<b>橘線</b>：在「民權西路站」換</span></li>
-      <li><i style="background:#008659"></i><span>要轉<b>綠線</b>：在「中山站」換</span></li>
-      <li><i style="background:#0070BD"></i><span>要轉<b>藍線</b>：在「台北車站」換</span></li>
-    </ul>
-    <a class="btn mrt-btn" style="width:100%" href="https://www.google.com/maps/dir/?api=1&origin=捷運劍潭站&travelmode=transit" target="_blank" rel="noopener">🏠 從劍潭站回家怎麼搭</a>
-  </section>
-
-  <section id="signup-sec">
-    <h2>報名</h2>
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-bg" data-close></div>
+  <div class="sheet-in" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet-head"><h2 id="sheetTitle">報名・11/21 劍潭山</h2><button type="button" class="x" data-close aria-label="關閉">✕</button></div>
     <div id="mine" hidden>
       <p class="mine-h">你在這支手機上的報名</p>
       <div id="mineList"></div>
-      <button class="btn" type="button" id="addMore" hidden style="width:100%">＋ 再幫另一組報名</button>
     </div>
+    <p class="form-head" id="formHead" hidden>再幫另一組報名</p>
     <p class="closed card" id="closedMsg" hidden>新報名已截止，謝謝大家！已報名的朋友仍可修改或取消。</p>
     <div class="card" id="formCard">
       <form id="form" novalidate>
@@ -367,7 +462,7 @@ legend{padding:0;margin-bottom:6px}
         </fieldset>
         <fieldset class="f"><legend>當天怎麼來？</legend>
           <label class="opt big"><input type="radio" name="mode" value="大直站" required><span><b>搭捷運</b><br><small>13:20 大直站 1 號出口集合</small></span></label>
-          <label class="opt big"><input type="radio" name="mode" value="騎車"><span><b>自行騎車</b><br><small>13:30 步道入口會合</small></span></label>
+          <label class="opt big"><input type="radio" name="mode" value="騎車"><span><b>自行騎車</b><br><small>13:30 步道口會合</small></span></label>
         </fieldset>
         <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <p class="err" id="err" role="alert"></p>
@@ -390,31 +485,8 @@ legend{padding:0;margin-bottom:6px}
       <a class="btn" id="cal2" href="#" target="_blank" rel="noopener" style="width:100%;margin-top:8px">📅 加入行事曆</a>
       <button class="btn" type="button" id="again" style="width:100%;margin-top:10px">再幫另一組報名</button>
     </div>
-  </section>
-
-  <section>
-    <h2>新朋友常問</h2>
-    <details><summary>報名後想修改或取消？</summary><p>回到這個網頁，在「報名」區塊就會看到你的報名，可以直接修改或取消。換了手機也沒關係，點「已經報名過，想修改或取消？」輸入手機和姓名就能找回。11/21（六）中午 12:00 前都可以改。</p></details>
-    <details><summary>怎麼報名？</summary><p>在這頁下方「報名」填寫資料就完成了，家人朋友一起來的話，填一次並選同行人數即可。11/20（五）下午 5 點前報名。</p></details>
-    <details><summary>下雨怎麼辦？</summary><p>11/20（五）18:00 若預報會下雨就取消，會在 LINE 社群公告。</p></details>
-    <details><summary>要帶什麼？</summary>
-      <div class="gear"><span>好走的鞋</span><span>足夠的水</span><span>想分享的零食</span></div><p></p></details>
-  </section>
-
-  <section>
-    <h2>活動海報</h2>
-    <button class="poster-btn" type="button" id="posterBtn" aria-label="放大海報"><img src="poster.jpg" alt="一起走入城市秘境 活動海報" loading="lazy"></button>
-    <p class="hint">點一下放大，長按可存到手機。</p>
-  </section>
-
-</div>
-
-<nav class="bar" aria-label="快速動作">
-  <div class="in">
-    <button class="btn share" type="button" id="share"><i></i>分享給朋友</button>
-    <a class="btn primary" href="#signup" data-go="signup">✍️ 我要報名</a>
   </div>
-</nav>
+</div>
 
 <div class="admin" id="admin" hidden>
   <div class="admin-in">
@@ -449,9 +521,7 @@ legend{padding:0;margin-bottom:6px}
     </div>
   </div>
 </div>
-<div class="lb" id="lb" role="dialog" aria-label="海報"><button type="button" id="lbClose">關閉</button><img src="poster.jpg" alt="活動海報大圖"></div>
 <div class="toast" id="toast" role="status"></div>
-
 <script>
 (function(){
   // countdown (Taipei time)
@@ -464,21 +534,113 @@ legend{padding:0;margin-bottom:6px}
     + "&text=" + encodeURIComponent("一起走入城市秘境｜劍潭山健行")
     + "&dates=20261121T132000/20261121T163000&ctz=Asia/Taipei"
     + "&location=" + encodeURIComponent("捷運大直站1號出口")
-    + "&details=" + encodeURIComponent("13:20 大直站1號出口集合；騎車 13:30 步道入口會合。\n請穿好走的鞋、帶足飲水。");
-  document.getElementById("cal").href = cal;
+    + "&details=" + encodeURIComponent("搭捷運：13:20 大直站1號出口集合\n騎車：13:30 步道口出發\n約3小時，有事可先離開。請穿好走的鞋、帶足飲水。");
 
   function toast(t){var el=document.getElementById("toast");el.textContent=t;el.classList.add("on");setTimeout(function(){el.classList.remove("on")},1800)}
 
   // share to LINE
   document.getElementById("share").addEventListener("click",function(){
-    var msg = "11/21（六）下午一起走劍潭山！13:30 出發，到老地方觀機平台看台北 🌿\n點連結就能報名（11/20 下午 5 點截止）：\n" + location.href.split("#")[0];
+    var msg = "11/21（六）午後一起走劍潭山 🌿 到老地方觀機平台、北眼平台鳥瞰台北。\n點連結看路線、報名（11/20 下午 5 點截止）：\n" + location.href.split("#")[0];
     location.href = "https://line.me/R/share?text=" + encodeURIComponent(msg);
   });
 
-  // sound
-  var v=document.getElementById("vid"), s=document.getElementById("sound");
-  s.addEventListener("click",function(){ v.muted=!v.muted; if(!v.muted){v.currentTime=0;v.play();} s.textContent=v.muted?"🔈 點我聽邀請":"🔊 關聲音"; });
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; }
+  // ===== 首頁影片聲音 =====
+  var v=document.getElementById("vid"), snd=document.getElementById("sound");
+  snd.addEventListener("click",function(){ v.muted=!v.muted; if(!v.muted){v.currentTime=0;} var p=v.play(); if(p&&p.catch)p.catch(function(){}); snd.textContent=v.muted?"🔊 點我聽邀請":"🔇 關聲音"; });
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) { v.removeAttribute("autoplay"); v.pause(); }
+  document.querySelectorAll(".clips video").forEach(function(c){ if(reduceMotion){c.removeAttribute("autoplay");c.pause();return;} var p=c.play(); if(p&&p.catch)p.catch(function(){}); });
+
+  // ===== 報名視窗 =====
+  var sheet=document.getElementById("sheet"), lastFocus=null;
+  function openSheet(){ lastFocus=document.activeElement; sheet.hidden=false; document.body.style.overflow="hidden";
+    sheet.querySelector(".sheet-in").scrollTop=0; }
+  function closeSheet(){ sheet.hidden=true; document.body.style.overflow=""; if(lastFocus&&lastFocus.focus)lastFocus.focus(); }
+  sheet.addEventListener("click",function(e){ if(e.target.closest("[data-close]")){ closeSheet(); if(window._afterClose)window._afterClose(); } });
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&!sheet.hidden){ closeSheet(); if(window._afterClose)window._afterClose(); } });
+
+  // ===== 路線圖 =====
+  (function(){
+    var NS="http://www.w3.org/2000/svg", svg=document.getElementById("mapsvg");
+    var LOGO="badge.png", MASCOT="mascot.png";
+    var SEG={
+      bus:"M318,334 C292,348 252,330 222,310",
+      up:"M222,310 C186,256 266,190 236,96",
+      cross:"M236,96 C200,70 148,96 112,144",
+      ark:"M112,144 C86,180 98,214 74,248",
+      jt:"M74,248 C56,284 70,316 40,344"
+    };
+    var ROUTE={
+      mrt:"M318,334 C292,348 252,330 222,310 C186,256 266,190 236,96 C200,70 148,96 112,144 C86,180 98,214 74,248 C56,284 70,316 40,344",
+      bike:"M222,310 C186,256 266,190 236,96 C200,70 148,96 112,144"
+    };
+    var PLAN={
+      mrt:"<b>13:20</b> 大直站 1 號出口集合 → 一起搭公車到「中央電台」站 → <b>13:30</b> 步道口出發 → 老地方觀機平台 → 北眼平台 → 經過森林方舟 → 捷運劍潭站",
+      bike:"<b>13:30</b> 步道口出發 → 老地方觀機平台 → 北眼平台 → 原路回到步道口（有人陪同）"
+    };
+    var BTNS={
+      mrt:'<a class="btn primary" href="https://www.google.com/maps/dir/?api=1&destination=%E6%8D%B7%E9%81%8B%E5%A4%A7%E7%9B%B4%E7%AB%99&travelmode=transit" target="_blank" rel="noopener">🚇 從我這裡到大直站</a>'
+         +'<a class="btn" href="https://www.google.com/maps/dir/?api=1&origin=%E6%8D%B7%E9%81%8B%E5%8A%8D%E6%BD%AD%E7%AB%99&travelmode=transit" target="_blank" rel="noopener">🏠 從劍潭站回家</a>',
+      bike:'<a class="btn primary" href="https://maps.app.goo.gl/644i3cwKW65WkDb3A" target="_blank" rel="noopener">📍 步道口導航</a>'
+    };
+    function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+    function stroke(e,c){e.style.stroke="var("+c+")";return e}
+    function label(g,x,y,t,cls,anchor){var e=el("text",{x:x,y:y,"text-anchor":anchor||"start","class":cls||""},g);e.textContent=t}
+
+    var base=el("g",{opacity:.3},svg);
+    stroke(el("path",{d:SEG.up+" "+SEG.cross.replace(/^M[\d.,]+/,""),fill:"none","stroke-width":7,"stroke-linecap":"round"},base),"--shared");
+    ["bus","ark","jt"].forEach(function(k){stroke(el("path",{d:SEG[k],fill:"none","stroke-width":5,"stroke-linecap":"round","stroke-dasharray":k==="bus"?"2 9":"none"},base),"--mrt")});
+    var hi=el("path",{fill:"none","stroke-width":6,"stroke-linecap":"round","stroke-linejoin":"round"},svg);
+    var nodes=el("g",{},svg);
+    [[318,334,0],[222,310,1],[236,96,1],[112,144,1],[74,248,0],[40,344,0]].forEach(function(n){el("circle",{cx:n[0],cy:n[1],r:n[2]?8:6,"class":"node","stroke-width":2.5},nodes)});
+    var lab=el("g",{},svg);
+    label(lab,318,360,"捷運大直站","big","middle");label(lab,318,374,"13:20 集合","sm","middle");
+    label(lab,234,300,"步道口","big");label(lab,234,286,"13:30 出發","sm");
+    label(lab,248,124,"老地方觀機平台","big");label(lab,248,138,"看 101、松山機場","sm");
+    label(lab,100,142,"北眼平台","big","end");label(lab,100,156,"看士林","sm","end");
+    label(lab,88,252,"森林方舟","big");
+    label(lab,44,368,"捷運劍潭站","big");
+    label(lab,286,316,"公車","sm","middle");
+    var stamp=el("image",{href:LOGO,x:262,y:14,width:80,height:80,opacity:1},svg);
+    stamp.style.transformOrigin="302px 54px"; stamp.style.transformBox="view-box";
+    var mascot=el("image",{href:MASCOT,width:40,height:40,x:-100,y:-100},svg);
+
+    var mode="mrt", raf=null;
+    var plan=document.getElementById("plan"), btns=document.getElementById("mapbtns");
+    function stampAnim(){ stamp.setAttribute("opacity",1); if(stamp.animate) stamp.animate([{transform:"scale(1.8) rotate(-14deg)",opacity:0},{transform:"scale(.92) rotate(4deg)",opacity:1},{transform:"scale(1) rotate(0)",opacity:1}],{duration:520,easing:"cubic-bezier(.2,.8,.3,1.2)"}); }
+    function setMode(m){
+      mode=m;
+      document.querySelectorAll("#map .mode button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.m===m))});
+      hi.setAttribute("d",ROUTE[m]); stroke(hi,m==="mrt"?"--mrt":"--bike");
+      plan.innerHTML=PLAN[m]; btns.innerHTML=BTNS[m];
+    }
+    function rest(){ if(raf)cancelAnimationFrame(raf); raf=null; hi.style.strokeDasharray="none"; hi.style.strokeDashoffset=0; stamp.setAttribute("opacity",1); mascot.setAttribute("x",-100); }
+    function play(){
+      if(raf)cancelAnimationFrame(raf);
+      if(reduceMotion){rest();return;}
+      var L=hi.getTotalLength(), stopAt=0, best=1e9;
+      for(var s=0;s<=L;s+=2){var p=hi.getPointAtLength(s),dd=(p.x-236)*(p.x-236)+(p.y-96)*(p.y-96); if(dd<best){best=dd;stopAt=s}}
+      var back=(mode==="bike"), total=back?2:1, dur=back?7600:5600, t0=null, stamped=false;
+      stamp.setAttribute("opacity",0);
+      hi.style.strokeDasharray=L; hi.style.strokeDashoffset=L;
+      function step(ts){
+        if(!t0)t0=ts; var k=Math.min(1,(ts-t0)/dur), e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2, pos=e*total, len;
+        if(pos<=1){ len=pos*L; hi.style.strokeDashoffset=L-len; } else { hi.style.strokeDashoffset=0; len=(2-pos)*L; }
+        var p=hi.getPointAtLength(len); mascot.setAttribute("x",p.x-20); mascot.setAttribute("y",p.y-34);
+        if(!stamped&&pos<=1&&len>=stopAt){stamped=true;stampAnim()}
+        if(k<1) raf=requestAnimationFrame(step); else { raf=null; setTimeout(function(){ if(!raf) mascot.setAttribute("x",-100); },1200); }
+      }
+      raf=requestAnimationFrame(step);
+    }
+    document.querySelectorAll("#map .mode button").forEach(function(b){b.addEventListener("click",function(){ setMode(b.dataset.m); play(); })});
+    document.getElementById("replay").addEventListener("click",function(){ play(); });
+    document.querySelectorAll(".mcard .see").forEach(function(b){b.addEventListener("click",function(){
+      setMode(b.dataset.mode); document.getElementById("route").scrollIntoView({behavior:reduceMotion?"auto":"smooth",block:"start"}); setTimeout(play,reduceMotion?0:450); })});
+    setMode("mrt"); rest();
+    if("IntersectionObserver" in window){
+      var io=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ io.disconnect(); play(); } },{threshold:.55}); io.observe(document.getElementById("map"));
+    }
+  })();
 
   // ===== 報名 =====
   var API_URL = "https://script.google.com/macros/s/AKfycbw1lARt4ddmuFRadPbglRrmcnI3hl6JDkxUd1N2wTX7h22JICP9LtBDd7EysbJsuh-p4A/exec"; // 空白 = 示範模式（資料只存在這支手機）
@@ -512,11 +674,14 @@ legend{padding:0;margin-bottom:6px}
   function showForm(){ formCard.hidden = closed && !editing; document.getElementById("closedMsg").hidden = !(closed && !editing); }
   showForm();
   if(editClosed){document.getElementById("openLookup").parentNode.hidden=true;}
-  document.querySelectorAll('[data-go="signup"]').forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();document.getElementById("signup-sec").scrollIntoView({behavior:"smooth"});})});
+  document.querySelectorAll('[data-go="signup"]').forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();
+    if(!editing){ form.reset(); setSrc(""); err.textContent=""; done.hidden=true; }
+    showForm(); openSheet();})});
+  window._afterClose=function(){ if(editing) endEdit(); done.hidden=true; showForm(); };
   function setSrc(v,keep){ if(!keep) srcNote.value=""; if(v==="LINE 群組"||!v){srcNote.hidden=true;return;}
     srcNote.hidden=false; srcNote.placeholder = v==="朋友邀請"?"是誰邀請你的？":"請簡單說明從哪裡知道的"; }
   form.addEventListener("change",function(e){ if(e.target.name==="src"){setSrc(e.target.value);srcNote.focus();} });
-  function modeText(m){return m==="大直站"?"13:20 大直站 1 號出口集合":"13:30 步道入口會合（騎車）"}
+  function modeText(m){return m==="大直站"?"13:20 大直站 1 號出口集合":"13:30 在步道口會合（騎車）"}
 
   // 我的報名
   function renderMine(){
@@ -529,8 +694,8 @@ legend{padding:0;margin-bottom:6px}
           +(editClosed?'<div class="meta">已過修改時間，如有變動請告訴邀請你的朋友。</div>':'<div class="acts"><button class="btn" type="button" data-edit="'+x.token+'">✏️ 修改</button><button class="btn danger" type="button" data-cancel="'+x.token+'">取消報名</button></div>')+'</div>';
       });
       mySave(keep); list.innerHTML=html; box.hidden=!keep.length;
-      var has=keep.length>0, add=document.getElementById("addMore");
-      if(!editing && done.hidden){ formCard.hidden = has || closed; add.hidden = !has || closed; document.getElementById("closedMsg").hidden=!closed; }
+      var has=keep.length>0; document.getElementById("barTxt").textContent = has ? "我的報名" : "想要一起走";
+      document.getElementById("formHead").hidden = !has || !!editing || closed;
     });
   }
   document.getElementById("mineList").addEventListener("click",function(e){
@@ -545,13 +710,12 @@ legend{padding:0;margin-bottom:6px}
       form.name.value=x.name; form.phone.value=x.phone; form.count.value=String(x.count||1);
       form.querySelectorAll('input[name=src]').forEach(function(i){i.checked=i.value===x.src}); setSrc(x.src,true); srcNote.value=x.note||"";
       form.querySelectorAll('input[name=mode]').forEach(function(i){i.checked=i.value===x.mode});
-      document.getElementById("editBar").hidden=false; document.getElementById("addMore").hidden=true; btn.textContent="儲存修改"; err.textContent="";
-      formCard.scrollIntoView({behavior:"smooth",block:"start"});
+      document.getElementById("editBar").hidden=false; document.getElementById("formHead").hidden=true; btn.textContent="儲存修改"; err.textContent="";
+      openSheet(); setTimeout(function(){formCard.scrollIntoView({block:"start"})},60);
     }).catch(function(x){toast(x.message||"讀取失敗")});
   }
   function endEdit(){ editing=null; form.reset(); setSrc(""); document.getElementById("editBar").hidden=true; btn.textContent="送出報名"; showForm(); }
-  document.getElementById("cancelEdit").addEventListener("click",function(){endEdit();renderMine();});
-  document.getElementById("addMore").addEventListener("click",function(){formCard.hidden=false;this.hidden=true;form.name.focus();});
+  document.getElementById("cancelEdit").addEventListener("click",function(){endEdit();renderMine();sheet.querySelector(".sheet-in").scrollTop=0;});
 
   form.addEventListener("submit",function(e){
     e.preventDefault(); var d=new FormData(form);
@@ -570,12 +734,12 @@ legend{padding:0;margin-bottom:6px}
       if(!wasEdit){var m=myLoad(); m.push(r.token); mySave(m);}
       endEdit(); formCard.hidden=true; done.hidden=false;
       done.querySelector("h3").textContent = wasEdit?"已更新報名！":"報名成功！";
-      document.getElementById("doneText").textContent = rec.name+(rec.count>1?"（共 "+rec.count+" 位）":"")+"，11/21（六）見！"+modeText(rec.mode)+"。之後想修改或取消，回到這個網頁就可以。";
-      document.getElementById("cal2").href=cal; renderMine(); done.scrollIntoView({behavior:"smooth",block:"center"});
+      document.getElementById("doneText").textContent = rec.name+(rec.count>1?"（共 "+rec.count+" 位）":"")+"，11/21（六）見！"+modeText(rec.mode)+"。之後想修改或取消，點網頁下方「我的報名」就可以。";
+      document.getElementById("cal2").href=cal; renderMine(); sheet.querySelector(".sheet-in").scrollTop=0;
     }).catch(function(x){err.textContent=(x.message||"送出失敗")+"，請稍後再試，或直接告訴邀請你的朋友。";})
       .then(function(){btn.disabled=false; if(!editing) btn.textContent="送出報名"; else btn.textContent="儲存修改";});
   });
-  document.getElementById("again").addEventListener("click",function(){endEdit();done.hidden=true;formCard.hidden=closed;document.getElementById("addMore").hidden=true;});
+  document.getElementById("again").addEventListener("click",function(){endEdit();done.hidden=true;form.reset();setSrc("");showForm();renderMine();sheet.querySelector(".sheet-in").scrollTop=0;});
 
   // 找回報名
   document.getElementById("openLookup").addEventListener("click",function(){var l=document.getElementById("lookup");l.hidden=!l.hidden;if(!l.hidden)document.getElementById("lkPhone").focus();});
@@ -586,7 +750,7 @@ legend{padding:0;margin-bottom:6px}
     api({action:"find",phone:ph,name:nm}).then(function(r){
       if(!r.ok) throw new Error(r.error); var m=myLoad(); r.tokens.forEach(function(t){if(m.indexOf(t)<0)m.push(t)}); mySave(m);
       document.getElementById("lookup").hidden=true; renderMine(); toast("找到了！可以修改或取消");
-      document.getElementById("mine").scrollIntoView({behavior:"smooth"});
+      sheet.querySelector(".sheet-in").scrollTop=0;
     }).catch(function(x){le.textContent=x.message||"查詢失敗"}).then(function(){b.disabled=false;});
   });
   renderMine();
@@ -663,11 +827,6 @@ legend{padding:0;margin-bottom:6px}
     var saved=null; try{saved=localStorage.getItem("jt-fs")}catch(e){}
     if(saved&&["1","1.2","1.4"].indexOf(saved)>=0) setFs(saved);
   })();
-  // lightbox
-  var lb=document.getElementById("lb");
-  document.getElementById("posterBtn").addEventListener("click",function(){lb.classList.add("on")});
-  document.getElementById("lbClose").addEventListener("click",function(){lb.classList.remove("on")});
-  lb.addEventListener("click",function(e){if(e.target===lb)lb.classList.remove("on")});
 })();
 </script>
 </body>
