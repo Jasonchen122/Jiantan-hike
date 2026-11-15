@@ -754,8 +754,8 @@ section h2{color:var(--forest)}
   // 我的報名
   function renderMine(){
     var ts=myLoad(), box=document.getElementById("mine"), list=document.getElementById("mineList");
-    if(!ts.length){box.hidden=true; if(!tabMine.hidden) syncMineTab(); return;}
-    Promise.all(ts.map(function(t){return api({action:"get",token:t}).catch(function(){return null})})).then(function(rs){
+    if(!ts.length){box.hidden=true; if(!tabMine.hidden) syncMineTab(); return Promise.resolve(0);}
+    return Promise.all(ts.map(function(t){return api({action:"get",token:t}).catch(function(){return null})})).then(function(rs){
       var keep=[], html="";
       rs.forEach(function(r,i){ if(!r||!r.ok||r.rec.status!=="ok") return; keep.push(ts[i]); var x=r.rec;
         html+='<div class="my"><div class="who">'+esc(x.name)+(+x.count>1?"　共 "+x.count+" 位":"")+'</div><div class="meta">'+esc(modeText(x.mode))+'<br>'+esc(rainText(x.rain))+'</div>'
@@ -765,6 +765,7 @@ section h2{color:var(--forest)}
       var has=keep.length>0; document.getElementById("barTxt").textContent = has ? "我的報名" : "想要一起走";
       document.getElementById("formHead").hidden = !has || !!editing || closed;
       if(!tabMine.hidden) syncMineTab();
+      return keep.length;
     });
   }
   document.getElementById("mineList").addEventListener("click",function(e){
@@ -820,7 +821,10 @@ section h2{color:var(--forest)}
     le.textContent=""; b.disabled=true;
     api({action:"find",phone:ph,name:nm}).then(function(r){
       if(!r.ok) throw new Error(r.error); var m=myLoad(); r.tokens.forEach(function(t){if(m.indexOf(t)<0)m.push(t)}); mySave(m);
-      lookupOpen=false; renderMine(); setTab("mine"); toast("找到了！可以修改或取消");
+      return renderMine().then(function(n){
+        if(n>0){ lookupOpen=false; setTab("mine"); toast("找到了！可以修改或取消"); }
+        else { lookupOpen=true; syncMineTab(); le.textContent="有找到你的資料，但暫時打不開。請稍後再試，或直接告訴邀請你的朋友。"; }
+      });
     }).catch(function(x){le.textContent=x.message||"查詢失敗"}).then(function(){b.disabled=false;});
   });
   renderMine();
